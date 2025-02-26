@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio d'Alessandro Bocquet, designer UX et UI, étudiant en Digital and Interaction Design au Politecnico Di Milano.">
+        <meta name="keywords" content="UX design, UI design, portfolio, digital design, interaction design, webdesign, HTML, CSS, JavaScript">
+        <title>Alessandro Bocquet - Portfolio de Design UX/UI</title>
+        <link rel="stylesheet" href="/index.css">
+        <link rel="icon" href="/assets/logoprovisoir.png">
+    </head>
+<body>
+<div id="about" class="inside">
+<div class="tout">
+    <div class="bulles-cont">
+        <div class="bulles jaune"></div>
+        <div class="bulles rouge"></div>
+        <div class="bulles bleue"></div>
+    </div>
+
+    <header class="sticky">
+        
+        <nav id="menu">
+            <div class="nav-links">
+                <a href="#about">À propos</a>
+                <a href="#work">Projets</a>
+                <a href="#contact">Contacts</a>
+            </div>
+        </nav>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="/assets/flag-icon.svg" alt="Language" class="flag-icon">
+            </button>
+            <div class="dropdown-content">
+                <a href="#" class="active-flag"><img src="/assets/france-flag.svg" alt="French" class="flag-icon"></a>
+                <a href="/francais/landing/index.html"><img src="/assets/uk-flag.svg" alt="English" class="flag-icon"></a>
+                <a href="/italien/landing/index.html"><img src="/assets/italy-flag.svg" alt="Italian" class="flag-icon"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="texte-about">
+            <h3>Bonjour, je m'appelle Alessandro Bocquet. Je suis un designer UX et UI qui étudie dans le cadre du master<a class="project-date" href="https://www.polimi.it/en/education/laurea-magistrale-programmes/programme-detail/digital-and-interaction-design" target="_blank"> Digital and Interaction Design</a>au Politecnico Di Milano. Je réalise principalement mes projets à l'aide de Figma et avec du code en HTML, CSS et Javascript (GSAP et JQuery).</h3>
+        </div>
+        <div class="competence-about">
+            <div class="list-skills">
+                <h3 class="gras">Quelques compétences</h3>
+                <h3>Ma formation et mon expérience m'ont permis de développer un savoir-faire complet, me permettant de relever des défis visuels sur tout type de supports.</h3>
+            </div>
+            <div class="list-skills">
+                <h3 class="project-date-2">01</h3>
+                <h3>WEBDESIGN</h3>
+            </div>
+            <div class="list-skills">
+                <h3 class="project-date-2">02</h3>
+                <h3>HTML/CSS</h3>
+            </div>
+            <div class="list-skills">
+                <h3 class="project-date-2">03</h3>
+                <h3>C++</h3>
+            </div>
+        </div>
+    </section>
+
+    <div id="work">
+        <div id="projet-1" class="hero">
+            <div>
+                <a href="/projets/projet-numistral.html">
+                    <h1>Projet Numistral</h1>
+                    <div class="descr">
+                        <p class="projet-descr">Webdesign</p>
+                        <p class="projet-descr">2023</p>
+                        <p class="projet-descr">UX/UI Design</p>
+                    </div>
+                
+            </div>
+            <div class="projet-img">
+                <img src="/projets/assets-projets/pres1projetnumistral.png" alt="Projet numistral">
+            </a>
+            </div>
+        </div>
+
+        <div id="projet-2" class="hero">
+            <div>
+                <a href="/projets/projet-planetarium.html"
+                    <h1>Strasbourg planétarium</h1>
+                    <div class="descr">
+                        <p class="projet-descr">Webdesign</p>
+                        <p class="projet-descr">2023</p>
+                        <p class="projet-descr">UX/UI Design</p>
+                    </div>
+                
+            </div>
+            <div class="projet-img">
+                <img src="/projets/assets-projets/planet.png" alt="Projet numistral">
+            </div>
+        </a>
+        </div>
+
+        <div id="projet-3" class="hero">
+            <div>
+                <a href="/projets/projet-2secondes.html">
+                    <h1>2 Secondes avant l'extase</h1>
+                    <div class="descr">
+                        <p class="projet-descr">Graphic Design</p>
+                        <p class="projet-descr">2022</p>
+                    </div>
+                
+            </div>
+            <div class="projet-img">
+                <img src="/projets/assets-projets/AfficheAntigoneA2.png" alt="Projet numistral">
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div>
+            <h1 class="gras">Vous pouvez me contacter via ces réseaux</h1>
+        </div>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/alessandro-bocquet/" target="_blank" class="project-date">Linkedin</a>
+            <a href="https://github.com/AlessandroBocquet" target="_blank" class="project-date">Github</a>
+        </div>
+        <!-- <div class="contact-me">
+            <h1 class="italique">Or contact me</h1>
+            <a href="mailto:albocquet@outlook.com">
+                <div class="blur-background">
+                <button class="button-text">
+                    Email Me
+                </button>
+                </div>
+            </a>
+        </div> -->
+    </section>
+
+    <section class="footer">
+      <div class="footer-taille">
+        <h3>Site réalisé en HTML/CSS et Javascript
+            <br><span id="current-year"></span> Alessandro Bocquet.</h3>
+        </div>
+    </section>
+</div>
+</div>
+
+<svg class="bubulle">
+    <filter id='noiseFilter'>
+        <feTurbulence type='fractalNoise' baseFrequency='1.6' stitchTiles='stitch'/>
+        <feColorMatrix in="colorNoise" type="matrix" values="1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="over" in2="SourceGraphic" result="monoNoise"/>
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+</svg>
+<script src="index.js"></script>
+</body>
+</html>
