@@ -246,6 +246,83 @@ header #menu.sticky {
 header #menu.sticky a {
   color: var(--texte);
 }
+/* Cacher la navbar sur tel */
+
+@media only screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    position: fixed;
+    top: 5%;
+    right: 2rem;
+    background: hsla(0, 0%, 92%, 0.5);
+    border-radius: 22px;
+    -webkit-backdrop-filter: blur(11.5px);
+    backdrop-filter: blur(11.5px);
+    padding: 0.2rem;
+    z-index: 998;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: hsla(0, 0%, 92%, 0.5);
+    min-width: 50px;
+    max-width: 56px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 22px;
+    -webkit-backdrop-filter: blur(11.5px);
+    backdrop-filter: blur(11.5px);
+    top: 100%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0.3s ease;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown-content a:hover {
+    background-color: var(--bleu);
+    border-radius: 22px;
+    color: white;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  .dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flag-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .active-flag {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+  }
+  .active-flag-middle {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
 
 .inside {
   max-width: 35rem;

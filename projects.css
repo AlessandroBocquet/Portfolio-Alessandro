@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 .inside-projet {
   display: flex;
   flex-direction: column;
@@ -18,29 +19,53 @@
   width: 100%;
 }
 
+/* Adjusting the imagesdescr class for proper wrapping */
 .imagesdescr {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures equal spacing between images */
+  align-items: center;
+  gap: 1rem; /* Adds spacing between the images */
+  flex-wrap: wrap; /* Allows images to wrap to the next row if needed */
+  width: 100%; /* Ensures the container fits within the .inside class */
+  max-width: 100%; 
+  overflow-x: hidden; 
 }
-
-#imagesdescr{
+.imagesdescr5 {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  max-width: 100%;
+  justify-content: space-between; /* Ensures equal spacing between images */
+  align-items: center;
+  gap: 1rem; /* Adds spacing between the images */
+  height: 400px;
+  flex-wrap: wrap; /* Allows images to wrap to the next row if needed */
+  width: 100%; /* Ensures the container fits within the .inside class */
+  max-width: 100%; 
+  overflow-x: hidden; 
 }
 
-.imgdescr{
+
+#imagesdescr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Ensures equal spacing between images */
+  align-items: center;
+  gap: 1rem; /* Adds spacing between the images */
+  width: 100%; /* Makes the container fit the width of the .inside class */
+}
+
+.imgdescr {
   height: 100%;
   width: 100%;
 }
+
+/* Adjusting the imgdescr4 class for consistent sizing */
 .imgdescr4 {
-  height: 100%;
-  width: 50%;
-  flex: 0 0 auto;
+  flex: 1 1 calc(33.33% - 1rem); /* Ensures each image takes up one-third of the row with spacing */
+  max-width: calc(33.33% - 1rem); /* Prevents images from exceeding their allocated space */
+  height: auto; /* Maintains the aspect ratio of the images */
+  object-fit: cover; /* Ensures images fit nicely within their container */
+  box-sizing: border-box; /* Includes padding and border in the width/height calculation */
 }
 
 .imgdescr2 {
