@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "about": "Su di me",
+    "work": "Progetti",
+    "contact": "Contatti"
+  },
+  "aboutDesc": "Ciao, mi chiamo Alessandro Bocquet. Sono un UX e UI designer che sta studiando nel master Digital and Interaction Design al Politecnico di Milano. Creo il mio lavoro principalmente con Figma e codificando con HTML, CSS e JavaScript (GSAP e jQuery).",
+  "skillsTitle": "Alcune competenze",
+  "skillsDesc": "La mia formazione e la mia esperienza mi hanno permesso di sviluppare un know-how completo, che mi consente di affrontare sfide visive su tutti i tipi di media.",
+  "contactTitle": "Potete contattarmi tramite queste reti",
+  "mainFooter": "Sito progettato in HTML/CSS e JavaScript",
+  "projects": {
+    "numistral": {
+      "title": "Progetto Numistral",
+      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+    },
+    "planetarium": {
+      "title": "Planetario di Strasburgo",
+      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+    },
+    "secondes": {
+      "title": "2 Secondes avant l'Extase",
+      "shortDesc": ["Graphic Design", "2022"]
+    }
+  },
+  "planetarium": {
+    "title": "Applicazione per il Planetario di Strasburgo",
+    "subtitle": "Università di Strasburgo",
+    "desc1": "L'utente scorre l'applicazione ed esplora le diverse scale dell'universo. Questo progetto offre ai visitatori un nuovo approccio prima di visitare il planetario di Strasburgo. L'ambizione è quella di offrire una narrazione, nell'immagine del planetario, e un viaggio attraverso l'universo.",
+    "desc2": "La sfida principale del progetto è stata quella di offrire un'applicazione narrativa che fosse divertente e accessibile a tutti. È stato quindi necessario offrire un tutorial al momento del lancio.",
+    "footer": "Sito progettato in HTML/CSS e Javascript"
+  },
+  "numistral": {
+    "title": "Redesign Numistral",
+    "subtitle": "Università di Strasburgo",
+    "desc1": "Questo progetto è una riprogettazione del sito web di Numistral, con l'obiettivo di migliorare la navigazione e la ricerca negli archivi. Il primo passo è stato esaminare i punti di forza e di debolezza del sito originale.",
+    "desc2": "È stato progettato per mantenere un'interfaccia utente uniforme. Poiché l'obiettivo del sito è riunire tutte le risorse archivistiche di diverse organizzazioni, è importante stabilire uno standard per ogni archivio e un indice.",
+    "desc3": "La revisione dello strumento di selezione e recupero dell'archivio è stata una fase fondamentale di questo progetto.",
+    "footer": "Sito realizzato in HTML/CSS e Javascript"
+  },
+  "secondes": {
+    "desc1": "Questo manifesto è stato prodotto per lo spettacolo teatrale \"2 Secondes avant l'Extase\", rappresentato a Berlino.",
+    "footer": "Sito progettato in HTML/CSS e Javascript"
+  }
+}

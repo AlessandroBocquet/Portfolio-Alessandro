@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "about": "About",
+    "work": "Projects",
+    "contact": "Contact"
+  },
+  "aboutDesc": "Hello, my name is Alessandro Bocquet. I'm a UX and UI designer studying in the master Digital and Interaction Design at the Politecnico di Milano. I mainly create my work through Figma and coding via HTML, CSS, and JavaScript (GSAP and jQuery).",
+  "skillsTitle": "Some of my skills",
+  "skillsDesc": "My varied training and experience have enabled me to develop comprehensive know-how, enabling me to meet visual challenges on all types of media.",
+  "contactTitle": "You can contact me through my socials",
+  "mainFooter": "Website designed in HTML/CSS and JavaScript",
+  "projects": {
+    "numistral": {
+      "title": "Project Numistral",
+      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+    },
+    "planetarium": {
+      "title": "Strasbourg Planetarium",
+      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+    },
+    "secondes": {
+      "title": "2 Secondes avant l'Extase",
+      "shortDesc": ["Graphic Design", "2022"]
+    }
+  },
+  "planetarium": {
+    "title": "Application for the Strasbourg Planetarium",
+    "subtitle": "University of Strasbourg",
+    "desc1": "The user scrolls down the application and explores the different scales of the universe. This project offers visitors a new approach before visiting the Strasbourg planetarium. Its ambition is to offer a narrative, in the image of the planetarium, and a journey through the universe.",
+    "desc2": "The project's main challenge was to offer a narrative application that was fun and accessible to all. It was therefore necessary to offer a tutorial at launch.",
+    "footer": "Website designed in HTML/CSS and JavaScript"
+  },
+  "numistral": {
+    "title": "Redesign Numistral",
+    "subtitle": "University of Strasbourg",
+    "desc1": "This project is a redesign of the Numistral website, with the aim of improving navigation and archive searching. The first step was to examine the strengths and weaknesses of the original site.",
+    "desc2": "It has been designed to maintain a uniform user interface. As the aim of the site is to bring together all the archive resources of different organizations, it is important to establish a standard for each archive and an index.",
+    "desc3": "Overhauling the archive sorting and retrieval tool was a key stage in this project.",
+    "footer": "Website designed in HTML/CSS and JavaScript"
+  },
+  "secondes": {
+    "desc1": "This poster was produced for the play \"2 Secondes avant l'Extase\" in Berlin.",
+    "footer": "Website designed in HTML/CSS and JavaScript"
+  }
+}

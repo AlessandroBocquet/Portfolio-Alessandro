@@ -19,29 +19,38 @@
     <section class="inside">
         <div class="tout">
             <header class="sticky">
-               
                 <nav id="menu">
                     <div class="nav-links">
-                        <a href="/index.html#about">À propos</a>
-                        <a href="/index.html#work">Projets</a>
-                        <a href="/index.html#contact">Contacts</a>
+                        <a href="/index.html#about" data-translate="nav.about">À propos</a>
+                        <a href="/index.html#work" data-translate="nav.work">Projets</a>
+                        <a href="/index.html#contact" data-translate="nav.contact">Contacts</a>
                     </div>
                 </nav>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <img src="/assets/flag-icon.svg" alt="Language" class="flag-icon">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="active-flag" data-lang="fr"><img src="/assets/france-flag.svg" alt="French" class="flag-icon"></a>
+                        <a href="#" data-lang="en"><img src="/assets/uk-flag.svg" alt="English" class="flag-icon"></a>
+                        <a href="#" data-lang="it"><img src="/assets/italy-flag.svg" alt="Italian" class="flag-icon"></a>
+                    </div>
+                </div>
             </header>
             <div class="project-name">
                 <div class="inside-projet">
                     <div>
-                        <h1>Application pour le Planétarium de Strasbourg</h1>
-                        <h2 class="project-date-2">2023 - UI/UX Design - <a href="https://www.unistra.fr/" target="_blank" class="project-date">Université de Strasbourg</a></h2>
+                        <h1 data-translate="planetarium.title">Application pour le Planétarium de Strasbourg</h1>
+                        <h2 class="project-date-2">2023 - UI/UX Design - <a href="https://www.unistra.fr/" target="_blank" class="project-date" data-translate="planetarium.subtitle">Université de Strasbourg</a></h2>
                     </div>
                     <div class="imagesdescr">
                         <img class="imgdescr" src="/assets/rendumockuppngplanetarium.png" alt="Mockup of the Strasbourg Planetarium application">
                     </div>
-                    <h3>
+                    <h3 data-translate="planetarium.desc1">
                         L'utilisateur fait défiler l'application vers le bas et explore les différentes échelles de l'univers. Ce projet propose aux visiteurs une nouvelle approche avant de visiter le planétarium de Strasbourg. Son ambition est de proposer une narration, à l'image du planétarium, et un voyage dans l'univers.
                     </h3>
                     <img src="/assets/Group 304 1.png" alt="Design element of the application">
-                    <h3>
+                    <h3 data-translate="planetarium.desc2">
                         Le principal défi du projet était de proposer une application narrative, ludique et accessible à tous. Il était donc nécessaire de proposer un tutoriel lors du lancement.
                     </h3>
                     <img src="/assets/planet 1.png" alt="Planet illustration in the application">
@@ -49,12 +58,22 @@
             </div>
             <section class="footer">
                 <div class="footer-taille">
-                    <h3>Site réalisé en HTML/CSS et Javascript
+                    <h3><span data-translate="planetarium.footer">Site réalisé en HTML/CSS et Javascript</span>
                         <br><span id="current-year"></span> Alessandro Bocquet.</h3>
                 </div>
             </section>
         </div>
     </section>
-    <script src="/index.js"></script>
+    
+<svg class="bubulle">
+    <filter id='noiseFilter'>
+        <feTurbulence type='fractalNoise' baseFrequency='1.6' stitchTiles='stitch'/>
+        <feColorMatrix in="colorNoise" type="matrix" values="1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="over" in2="SourceGraphic" result="monoNoise"/>
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+</svg>
+<script src="/translations.js"></script>
+<script src="/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "about": "À propos",
+    "work": "Projets",
+    "contact": "Contacts"
+  },
+  "aboutDesc": "Bonjour, je m'appelle Alessandro Bocquet. Je suis un designer UX et UI qui étudie dans le cadre du master Digital and Interaction Design au Politecnico Di Milano. Je réalise principalement mes projets à l'aide de Figma et avec du code en HTML, CSS et Javascript (GSAP et JQuery).",
+  "skillsTitle": "Quelques compétences",
+  "skillsDesc": "Ma formation et mon expérience m'ont permis de développer un savoir-faire complet, me permettant de relever des défis visuels sur tout type de supports.",
+  "contactTitle": "Vous pouvez me contacter via ces réseaux",
+  "mainFooter": "Site réalisé en HTML/CSS et Javascript",
+  "projects": {
+    "numistral": {
+      "title": "Projet Numistral",
+      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+    },
+    "planetarium": {
+      "title": "Strasbourg planétarium",
+      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+    },
+    "secondes": {
+      "title": "2 Secondes avant l'Extase",
+      "shortDesc": ["Graphic Design", "2022"]
+    }
+  },
+  "planetarium": {
+    "title": "Application pour le Planétarium de Strasbourg",
+    "subtitle": "Université de Strasbourg",
+    "desc1": "L'utilisateur fait défiler l'application vers le bas et explore les différentes échelles de l'univers. Ce projet propose aux visiteurs une nouvelle approche avant de visiter le planétarium de Strasbourg. Son ambition est de proposer une narration, à l'image du planétarium, et un voyage dans l'univers.",
+    "desc2": "Le principal défi du projet était de proposer une application narrative, ludique et accessible à tous. Il était donc nécessaire de proposer un tutoriel lors du lancement.",
+    "footer": "Site réalisé en HTML/CSS et Javascript"
+  },
+  "numistral": {
+    "title": "Redesign Numistral",
+    "subtitle": "Université de Strasbourg",
+    "desc1": "Ce projet est une refonte du site internet de Numistral, dans le but d'améliorer la navigation et la recherche d'archives. La première étape a consisté à examiner les points faibles et les points forts du site original.",
+    "desc2": "Il a été conçu pour maintenir une interface utilisateur uniforme. L'objectif du site étant de rassembler toutes les ressources d'archives de différents organismes, il est important d'établir un standard pour chaque archive et un index.",
+    "desc3": "La refonte de l'outil de tri et de recherche des archives a été une étape clé de ce projet.",
+    "footer": "Site réalisé en HTML/CSS et Javascript"
+  },
+  "secondes": {
+    "desc1": "Cette affiche a été créée pour la pièce « 2 Secondes avant l'Extase » jouée à Berlin.",
+    "footer": "Site réalisé en HTML/CSS et Javascript"
+  }
+}

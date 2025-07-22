@@ -21,42 +21,62 @@
             <header class="sticky">
                 <nav id="menu">
                     <div class="nav-links">
-                        <a href="/index.html#about">À propos</a>
-                        <a href="/index.html#work">Projets</a>
-                        <a href="/index.html#contact">Contacts</a>
+                        <a href="/index.html#about" data-translate="nav.about">À propos</a>
+                        <a href="/index.html#work" data-translate="nav.work">Projets</a>
+                        <a href="/index.html#contact" data-translate="nav.contact">Contacts</a>
                     </div>
                 </nav>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <img src="/assets/flag-icon.svg" alt="Language" class="flag-icon">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="active-flag" data-lang="fr"><img src="/assets/france-flag.svg" alt="French" class="flag-icon"></a>
+                        <a href="#" data-lang="en"><img src="/assets/uk-flag.svg" alt="English" class="flag-icon"></a>
+                        <a href="#" data-lang="it"><img src="/assets/italy-flag.svg" alt="Italian" class="flag-icon"></a>
+                    </div>
+                </div>
             </header>
             <div class="project-name">
                 <div class="inside-projet">
                     <div>
-                        <h1>Redesign Numistral</h1>
-                        <h2 class="project-date-2">2024 - UI/UX Design - <a href="https://www.unistra.fr/" target="_blank" class="project-date">Université de Strasbourg</a></h2>
+                        <h1 data-translate="numistral.title">Redesign Numistral</h1>
+                        <h2 class="project-date-2">2024 - UI/UX Design - <a href="https://www.unistra.fr/" target="_blank" class="project-date" data-translate="numistral.subtitle">Université de Strasbourg</a></h2>
                     </div>
                     <div class="padding-img">
                         <img src="/assets/pres1projetnumistral.png" alt="Capture d'écran du redesign de Numistral">
                     </div>
-                    <h3>Ce projet est une refonte du site internet de Numistral, dans le but d'améliorer la navigation et la recherche d'archives. La première étape a consisté à examiner les points faibles et les points forts du site original.</h3>
+                    <h3 data-translate="numistral.desc1">Ce projet est une refonte du site internet de Numistral, dans le but d'améliorer la navigation et la recherche d'archives. La première étape a consisté à examiner les points faibles et les points forts du site original.</h3>
                     <div class="imagesdescr5">
                         <img class="imgdescr4" src="/assets/Landing 3.png" alt="Page d'accueil du redesign de Numistral">
                         <img class="imgdescr4" src="/assets/Trésors 2.png" alt="Section trésors du redesign de Numistral">
                         <img class="imgdescr4" src="/assets/Landing-1 1.png" alt="Autre vue de la page d'accueil du redesign de Numistral">
                     </div>
-                    <h3>Il a été conçu pour maintenir une interface utilisateur uniforme. L'objectif du site étant de rassembler toutes les ressources d'archives de différents organismes, il est important d'établir un standard pour chaque archive et un index.</h3>
+                    <h3 data-translate="numistral.desc2">Il a été conçu pour maintenir une interface utilisateur uniforme. L'objectif du site étant de rassembler toutes les ressources d'archives de différents organismes, il est important d'établir un standard pour chaque archive et un index.</h3>
                     <div class="imagesdescr">
                         <img class="imgdescr" src="/assets/werqew.png" alt="Interface utilisateur uniforme du redesign de Numistral">
                     </div>
-                    <h3>La refonte de l'outil de tri et de recherche des archives a été une étape clé de ce projet.</h3>
+                    <h3 data-translate="numistral.desc3">La refonte de l'outil de tri et de recherche des archives a été une étape clé de ce projet.</h3>
                 </div>
             </div>
             <section class="footer">
                 <div class="footer-taille">
-                    <h3>Site réalisé en HTML/CSS et Javascript
+                    <h3><span data-translate="numistral.footer">Site réalisé en HTML/CSS et Javascript</span>
                         <br><span id="current-year"></span> Alessandro Bocquet.</h3>
                 </div>
             </section>
         </div>
     </section>
-    <script src="/index.js"></script>
+    
+<svg class="bubulle">
+    <filter id='noiseFilter'>
+        <feTurbulence type='fractalNoise' baseFrequency='1.6' stitchTiles='stitch'/>
+        <feColorMatrix in="colorNoise" type="matrix" values="1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+        <feComposite operator="over" in2="SourceGraphic" result="monoNoise"/>
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+    </filter>
+</svg>
+<script src="/translations.js"></script>
+<script src="/index.js"></script>
 </body>
 </html>
