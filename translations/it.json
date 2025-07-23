@@ -8,6 +8,11 @@
   "skillsTitle": "Alcune competenze",
   "skillsDesc": "La mia formazione e la mia esperienza mi hanno permesso di sviluppare un know-how completo, che mi consente di affrontare sfide visive su tutti i tipi di media.",
   "contactTitle": "Potete contattarmi tramite queste reti",
+  "contactGreeting": "Mettiamoci in contatto",
+  "contactText": "Potete contattarmi tramite questi social",
+  "downloadCV": "Scarica il mio CV",
+  "github": "GitHub",
+  "linkedin": "LinkedIn",
   "mainFooter": "Sito progettato in HTML/CSS e JavaScript",
   "projects": {
     "numistral": {

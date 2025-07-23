@@ -1,22 +1,15 @@
-// Translation system for Alessandro Bocquet Portfolio
+// Translation Management
 class TranslationManager {
     constructor() {
-        this.currentLanguage = 'fr'; // Default language
+        this.currentLanguage = 'fr';
         this.translations = {};
         this.init();
     }
 
     async init() {
-        // Load default language
         await this.loadLanguage(this.currentLanguage);
-        
-        // Set up language switcher event listeners
         this.setupLanguageSwitcher();
-        
-        // Apply translations to the page
         this.applyTranslations();
-        
-        // Update active flag
         this.updateActiveFlag();
     }
 
@@ -30,7 +23,6 @@ class TranslationManager {
             this.currentLanguage = language;
         } catch (error) {
             console.error('Error loading language:', error);
-            // Fallback to French if loading fails
             if (language !== 'fr') {
                 await this.loadLanguage('fr');
             }
@@ -49,6 +41,13 @@ class TranslationManager {
     }
 
     async changeLanguage(language) {
+        // Instantly hide all translatable content
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(element => {
+            element.style.visibility = 'hidden';
+        });
+        
+        // Load new language and apply translations
         await this.loadLanguage(language);
         this.applyTranslations();
         this.updateActiveFlag();
@@ -58,6 +57,11 @@ class TranslationManager {
         
         // Store language preference
         localStorage.setItem('preferred-language', language);
+        
+        // Show content again instantly
+        elements.forEach(element => {
+            element.style.visibility = 'visible';
+        });
     }
 
     applyTranslations() {
@@ -90,6 +94,14 @@ class TranslationManager {
                 }
             }
         });
+        
+        // Update cursor position after translation changes
+        setTimeout(() => {
+            const activeLink = document.querySelector('#menu a.active');
+            if (activeLink && window.updateCursorPosition) {
+                window.updateCursorPosition(activeLink);
+            }
+        }, 50);
     }
 
     getNestedValue(obj, path) {
@@ -99,15 +111,12 @@ class TranslationManager {
     }
 
     updateActiveFlag() {
-        // Remove active class from all flags
         document.querySelectorAll('[data-lang]').forEach(flag => {
             flag.classList.remove('active-flag', 'active-flag-middle');
         });
         
-        // Add active class to current language flag
         const currentFlag = document.querySelector(`[data-lang="${this.currentLanguage}"]`);
         if (currentFlag) {
-            // Apply different classes based on position (you might want to adjust this logic)
             if (this.currentLanguage === 'en') {
                 currentFlag.classList.add('active-flag-middle');
             } else {
@@ -116,7 +125,6 @@ class TranslationManager {
         }
     }
 
-    // Initialize from stored preference
     initializeFromStorage() {
         const storedLanguage = localStorage.getItem('preferred-language');
         if (storedLanguage && ['fr', 'en', 'it'].includes(storedLanguage)) {
@@ -125,10 +133,8 @@ class TranslationManager {
     }
 }
 
-// Initialize translation manager when DOM is loaded
+// Initialize Translation Manager
 document.addEventListener('DOMContentLoaded', () => {
     const translationManager = new TranslationManager();
-    
-    // Check for stored language preference
     translationManager.initializeFromStorage();
 });

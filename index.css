@@ -1,5 +1,5 @@
 :root {
-  --fond: #def8fb;
+  --fond: #f5f5f5;
   --texte: #26363c;
   --texteblanc: #ffffff;
   --jaune: #adf28d;
@@ -76,12 +76,12 @@ img {
   height: 100%;
 }
 
-/* ABOUT */
+/* About Section */
 #about {
   padding-top: 2rem;
 }
 
-/* LISTE SKILLS */
+/* Skills Section */
 .competence-about {
   margin-top: 3rem;
   padding-bottom: 3rem;
@@ -100,7 +100,8 @@ img {
 .petit-texte-about {
   margin-top: 3rem;
 }
-/* DROPDOWN */
+
+/* Language Dropdown */
 .dropdown {
   position: fixed;
   top: 5%;
@@ -177,8 +178,7 @@ header #menu.sticky a {
   color: var(--texte);
 }
 
-
-/* NAVBAR */
+/* Navigation */
 header {
   width: 100%;
   display: flex;
@@ -201,7 +201,7 @@ header>:first-child :first-child {
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  transition: background 0.6s;
+  transition: background 0.6s ease, backdrop-filter 0.6s ease;
   background: hsla(0, 0%, 92%, 0.5);
   display: flex;
   justify-content: center;
@@ -211,31 +211,68 @@ header>:first-child :first-child {
   padding: 0 2rem;
 }
 
+/* Navigation bar styling - blur background only */
+/* Individual nav items get white background when active */
+
 header #menu .nav-links {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+/* Sliding cursor */
+.nav-cursor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 22px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: -1;
 }
 
 header #menu a {
   width: 100px;
-  text-decoration: none;
+  text-decoration: none !important;
   border-radius: 22px;
   text-align: center;
   flex-shrink: 0;
   font-size: 12px;
   line-height: 50px;
-  color: #26363c;
+  color: #26363c !important;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: none !important;
+}
+
+header #menu a.active {
+  color: #26363c !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+header #menu a:hover:not(.active) {
+  color: #26363c !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 header #menu div a.active,
 header #menu div a:hover {
-  color: var(--bleu);
+  color: #26363c !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 
 header #menu.sticky {
@@ -246,8 +283,8 @@ header #menu.sticky {
 header #menu.sticky a {
   color: var(--texte);
 }
-/* Cacher la navbar sur tel */
 
+/* Mobile Navigation */
 @media only screen and (max-width: 768px) {
   #menu {
     display: none;
@@ -417,7 +454,7 @@ header #menu.sticky a {
   color: var(--texteblanc);
 }
 
-/* Bulles */
+/* Background Bubbles */
 .bulles-cont {
   display: flex;
   flex-direction: column;
@@ -431,38 +468,37 @@ header #menu.sticky a {
 }
 
 .bulles {
-  border-radius: 100px;
-  filter: blur(60px);
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(35px);
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  will-change: transform;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
 }
 
 .jaune {
-  background-color: var(--jaune);
-  position: absolute;
-  top: 200px;
-  left: 100px;
-  height: 200px;
-  width: 200px;
-  animation: jaune 8s infinite ease;
+  background: radial-gradient(circle at 30% 30%, #ffd700, #ffeb3b, #fff176);
+  width: 108px;
+  height: 108px;
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.4);
 }
 
 .bleue {
-  background-color: var(--bleu);
-  position: absolute;
-  top: 80px;
-  right: -20px;
-  height: 200px;
-  width: 250px;
-  animation: bleue 8s infinite ease;
+  background: radial-gradient(circle at 40% 40%, #64b5f6, #42a5f5, #2196f3);
+  width: 132px;
+  height: 132px;
+  box-shadow: 0 0 50px rgba(100, 181, 246, 0.3);
 }
 
 .rouge {
-  background-color: var(--rouge);
-  position: absolute;
-  right: 0;
-  top: 300px;
-  height: 250px;
-  width: 200px;
-  animation: rouge 8s infinite linear;
+  background: radial-gradient(circle at 35% 35%, #ff7eb3, #ff49db, #ff0a78);
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 45px rgba(255, 126, 179, 0.35);
 }
 
 @keyframes jaune {
@@ -486,14 +522,103 @@ header #menu.sticky a {
   100% { top: 250px; right: 0px; transform: scale(1); }
 }
 
-/* Contact */
+/* Contact Section */
 #contact {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   width: 100%;
+  min-height: 60vh;
 }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-greeting {
+  font-size: 1.5rem;
+  color: var(--gris);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.main-email {
+  margin-bottom: 4rem;
+}
+
+.email-link {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--texte);
+  text-decoration: none;
+  border-bottom: none;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+  word-break: break-all;
+}
+
+.email-link:hover {
+  color: var(--bleu);
+  border-bottom: none;
+}
+
+.contact-text {
+  margin-bottom: 3rem;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  color: var(--gris);
+  margin-bottom: 1rem;
+}
+
+.cv-link {
+  color: var(--texte);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cv-link:hover {
+  color: var(--bleu);
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.social-link {
+  color: var(--gris);
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--texte);
+}
+
+.copyright {
+  margin-top: auto;
+}
+
+.copyright p {
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
 .gras{
   font-weight: 600;
 }
@@ -519,7 +644,6 @@ header #menu.sticky a {
 }
 
 /* Footer */
-
 .footer {
   margin-top: 2rem;
   transition: background 0.6s;
@@ -536,7 +660,8 @@ header #menu.sticky a {
 .footer-taille{
   display: flex;
 }
-/* Media Queries for Responsiveness */
+
+/* Responsive Design */
 @media only screen and (max-width: 1000px) {
   body {
       margin: 1em;
@@ -611,6 +736,29 @@ header #menu.sticky a {
       align-items: flex-start;
   }
 
+  .contact-container {
+      padding: 0 1rem;
+  }
+
+  .contact-greeting {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+  }
+
+  .main-email {
+      margin-bottom: 3rem;
+  }
+
+  .email-link {
+      font-size: clamp(0.9rem, 4vw, 1.5rem);
+  }
+
+  .social-links {
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+  }
+
   .footer {
       padding-top: 3rem;
   }
@@ -639,7 +787,7 @@ header #menu.sticky a {
   }
 }
 
-/* Burger menu */
+/* Burger Menu */
 .burger-menu {
   display: none;
   flex-direction: column;
@@ -699,7 +847,7 @@ header #menu.sticky a {
   }
 }
 
-/* CONTACT */
+/* Contact Links */
 .links:hover{
   color: var(--bleu);
 }
@@ -719,7 +867,7 @@ header #menu.sticky a {
   padding-bottom: 2rem;
 }
 
-/* EMAIL ME */
+/* Email Button */
 .blur-background {
   position: relative;
   width: 200px;
