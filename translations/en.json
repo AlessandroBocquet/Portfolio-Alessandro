@@ -1,4 +1,5 @@
 {
+  
   "nav": {
     "about": "About",
     "work": "Projects",
@@ -58,6 +59,10 @@
   "viewAppPrototype": "View app prototype",
   "viewWebsitePrototype": "View website prototype"
   },
+
+
+
+
   "instay": {
     "projectType": "Branding · UI/UX Design",
     "labels": {
@@ -69,16 +74,17 @@
     },
     "description": "InStay is a smart hospitality ecosystem integrating IoT devices, Smart TV, and a remote-control system to enhance the guest experience and streamline property management. Designed for both tenants and owners, it offers intuitive control, energy efficiency, and secure device management within short-term rentals.",
     "problem": "Guests face difficulty adjusting lighting and climate, finding essential information, and adapting to unfamiliar systems. Owners deal with wasted energy, device misuse, and limited control over property resources. InStay needed a cohesive, user-friendly solution that works seamlessly across devices while maintaining security and brand identity.",
-    "solution": "We designed a connected ecosystem combining Smart TV, IoT devices, and a dedicated remote, all integrated into a unified interface. The Smart TV provides a central, intuitive hub for tenants, while owners access advanced controls and monitoring via an app. The UI was validated through low-, mid-, and high-fidelity prototypes, with emphasis on reducing clicks, ensuring clarity, and preserving a sense of hospitality. The design uses a minimal aesthetic, clear iconography, and a soft color palette to convey trust, innovation, and ease of use.",
+    "solution": "We designed a connected ecosystem uniting Smart TV, IoT devices, and a dedicated remote within a single interface. The Smart TV serves as an intuitive hub for tenants, while owners manage and monitor via an app. Through iterative prototypes, we refined clarity, reduced clicks, and maintained a sense of hospitality. The final UI features a minimal aesthetic, clear iconography, and a soft palette that conveys trust, innovation, and simplicity.",
     "categoryValue": "UX/UI Design – IoT, Hospitality Tech",
   "dateValue": "2025",
     "ownerApp": {
       "label": "Owner App",
-      "text": "The InStay App is the owner’s central hub for connected hospitality spaces: monitor in real time, control devices remotely, and tailor the Smart TV experience — all from a phone or tablet."
+      "text": "The InStay App is the owner’s central hub for connected hospitality spaces: monitor in real time, control devices remotely, and tailor the Smart TV experience, all from a phone or tablet."
     },
     "remote": {
       "label": "Remote",
-      "text": "The InStay Remote is an ergonomic, all-in-one controller for hospitality spaces, letting guests easily manage lighting, temperature, and media from one device. Its minimal design, tested through multiple prototypes, ensures intuitive use and complements any interior with five subtle color options."
+      "text": "The InStay Remote is an ergonomic, all-in-one controller for hospitality spaces, letting guests easily manage lighting, temperature, and media from one device. Its minimal design, tested through multiple prototypes, ensures intuitive use and complements any interior with five subtle color options.",
+      "animation": "A single remote that connects, controls, and personalizes the in-room experience."
     },
     "ui": {
       "label": "Smart TV UI",
@@ -112,16 +118,21 @@
       "credits": "Credits",
       "prototype": "Prototypes"
     },
-    "credits": {
-      "text": "Project conceived and realized with Mert Güven, Luciano Lettieri  Michele, Simona Invitti and Sabrina Maida at Politecnico di Milano."
-    },
     "crossfade": {
       "prefix": "From",
       "low": "low fidelity",
       "connector": "to",
       "high": "high fidelity"
     }
+    "credits": {
+      "text": "Project conceived and realized with Mert Güven, Luciano Lettieri  Michele, Simona Invitti and Sabrina Maida at Politecnico di Milano."
+    },
+
   },  
+
+
+
+
   "soltar": {
     "projectType": "Electronics · UX/UI Design · Motion",
     "labels": {
@@ -170,6 +181,10 @@
     }
   }
   ,
+
+
+
+
   "capsound": {
   "projectType": "UX/UI Design",
     "labels": {

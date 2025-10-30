@@ -85,7 +85,8 @@
     },
     "remote": {
       "label": "Télécommande",
-      "text": "La télécommande InStay est intégrée et crée un tout-en-un pour les logements à louer. Conçue pour les locataires, elle simplifie la gestion de l’éclairage, de la température et des médias depuis un seul appareil. Son design minimaliste, validé par des tests utilisateurs, assure une utilisation intuitive et s’adapte à tout intérieur grâce à cinq finitions subtiles."
+      "text": "La télécommande InStay est intégrée et crée un tout-en-un pour les logements à louer. Conçue pour les locataires, elle simplifie la gestion de l'éclairage, de la température et des médias depuis un seul appareil. Son design minimaliste, validé par des tests utilisateurs, assure une utilisation intuitive et s'adapte à tout intérieur grâce à cinq finitions subtiles.",
+      "animation": "Une seule télécommande qui connecte, contrôle et personnalise l'expérience en chambre."
     },
     "ui": {
       "label": "Interface TV",

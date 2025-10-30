@@ -85,7 +85,8 @@
     },
     "remote": {
       "label": "Telecomando",
-      "text": "Il telecomando InStay è un controller ergonomico tutto-in-uno per gli spazi di ospitalità. Progettato per gli ospiti, semplifica il controllo di luci, temperatura e media da un unico dispositivo. Il suo design minimale, validato attraverso test utente, garantisce un uso intuitivo e si adatta a qualsiasi interno grazie a cinque raffinate finiture.."
+      "text": "Il telecomando InStay è un controller ergonomico tutto-in-uno per gli spazi di ospitalità. Progettato per gli ospiti, semplifica il controllo di luci, temperatura e media da un unico dispositivo. Il suo design minimale, validato attraverso test utente, garantisce un uso intuitivo e si adatta a qualsiasi interno grazie a cinque raffinate finiture..",
+      "animation": "Un unico telecomando che connette, controlla e personalizza l'esperienza in camera."
     },
     "ui": {
       "label": "Interfaccia TV",

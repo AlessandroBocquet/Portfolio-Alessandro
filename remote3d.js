@@ -1,10 +1,8 @@
 // Remote 3D Scroll Animation
-// Uses Three.js and GSAP for scroll-driven 3D model animation
 
 (function() {
   'use strict';
 
-  // Check if Three.js is loaded
   if (typeof THREE === 'undefined') {
     console.error('Three.js not loaded. Loading from CDN...');
     const script = document.createElement('script');
@@ -33,10 +31,20 @@
       return;
     }
 
+    // Check if mobile device
+    const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
+    
+    if (isMobile) {
+      // On mobile: just show static image, no 3D
+      textOverlay.style.opacity = '1';
+      textOverlay.style.transform = 'none';
+      return;
+    }
+
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, -0.5, 5);
+    camera.position.set(0, -0.5, 6);
 
     const renderer = new THREE.WebGLRenderer({ 
       canvas: canvas, 
@@ -52,7 +60,6 @@
     renderer.toneMappingExposure = 1.0;
     renderer.physicallyCorrectLights = true;
 
-    // Lighting - optimized for accurate color reproduction
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
     scene.add(ambientLight);
 
@@ -66,9 +73,10 @@
 
     // Load 3D model
     let model = null;
+    let baseModel = null;
     const loader = new THREE.GLTFLoader();
     
-    // Fallback: create a simple box if model fails to load
+    // Creates a simple box if model fails to load
     const createFallbackModel = () => {
       const geometry = new THREE.BoxGeometry(1, 2, 0.3);
       const material = new THREE.MeshPhongMaterial({ 
@@ -76,23 +84,71 @@
         shininess: 60
       });
       model = new THREE.Mesh(geometry, material);
-      model.position.set(-5, -0.5, 0);
+      model.position.set(-2.5, 3, 0);
       scene.add(model);
       console.log('Using fallback 3D model');
     };
 
     loader.load(
+      '/assets/remotebase.glb',
+      (gltf) => {
+        baseModel = gltf.scene;
+        baseModel.position.set(-3.8, -1.5, 0);
+        baseModel.rotation.y = 0;
+        baseModel.rotation.x = 0.2;
+        baseModel.rotation.z = -0.1;
+        baseModel.traverse((child) => {
+          if (child.isMesh) {
+            child.material = new THREE.MeshPhysicalMaterial({
+              color: 0xf5f5f5, // Frosted milky white
+              transparent: true,
+              opacity: 1,
+              roughness: 0.6,
+              metalness: 0.0,
+              clearcoat: 0.3,
+              clearcoatRoughness: 0.4,
+              transmission: 0.85,
+              ior: 1.35,
+              thickness: 0.25
+            });
+            child.material.needsUpdate = true;
+          }
+        });
+        // Scale the base
+        const box = new THREE.Box3().setFromObject(baseModel);
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const scale = 1.3 / maxDim;
+        baseModel.scale.setScalar(scale);
+        scene.add(baseModel);
+        console.log('Base model loaded successfully');
+      },
+      (progress) => {},
+      (error) => {
+        console.error('Error loading base model:', error);
+      }
+    );
+
+    loader.load(
       '/assets/remotewebsite.glb',
       (gltf) => {
         model = gltf.scene;
-        model.position.set(-5, -0.5, 0);
+        
+        // Position based on device type
+        if (isMobile) {
+          model.position.set(0, 0, 0);
+          model.rotation.y = 0; 
+          model.rotation.x = 0;
+          model.rotation.z = 0;
+        } else {
+          model.position.set(-3.5, 3.5, 0); 
+        }
         
         // Enable transparency and glass materials
         model.traverse((child) => {
           if (child.isMesh) {
             child.material.transparent = true;
             child.material.needsUpdate = true;
-            // Enable proper rendering for glass/transparent materials
             if (child.material.transmission !== undefined) {
               child.material.transmission = child.material.transmission;
             }
@@ -103,14 +159,13 @@
         const box = new THREE.Box3().setFromObject(model);
         const size = box.getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 1.3 / maxDim;
+        const scale = 1.8/ maxDim;
         model.scale.setScalar(scale);
         
         scene.add(model);
         console.log('3D model loaded successfully');
       },
       (progress) => {
-        // Loading progress
       },
       (error) => {
         console.error('Error loading 3D model:', error);
@@ -123,19 +178,19 @@
     let rafId = null;
     let isAnimating = false;
 
-    // Scroll handler
     function handleScroll() {
+      if (isMobile) return; 
+      
       const rect = wrapper.getBoundingClientRect();
       const wrapperHeight = wrapper.offsetHeight;
       const viewportHeight = window.innerHeight;
       
-      // Calculate scroll progress (0 to 1)
       const scrollStart = rect.top;
       const scrollEnd = scrollStart - (wrapperHeight - viewportHeight);
       
       if (scrollStart <= 0 && scrollStart >= scrollEnd) {
-        scrollProgress = Math.abs(scrollStart) / (wrapperHeight - viewportHeight);
-        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+        let rawProgress = Math.abs(scrollStart) / (wrapperHeight - viewportHeight);
+        scrollProgress = Math.min(1, rawProgress * 1.5);
         isAnimating = true;
       } else if (scrollStart > 0) {
         scrollProgress = 0;
@@ -148,35 +203,40 @@
       updateAnimation();
     }
 
-    // Update animation based on scroll progress
     function updateAnimation() {
       if (!model) return;
+      if (isMobile) return; 
 
-      // Smooth easing function
       const easeInOutCubic = (t) => {
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
       };
 
       const easedProgress = easeInOutCubic(scrollProgress);
 
-      // Move model from left (-5) to right (4)
-      model.position.x = -4.5 + (easedProgress * 9);
+      model.position.x = -2.16;
+      
+  model.position.y = 3.35 - (easedProgress * 5); 
 
-      // Rotate model - starts showing back, gradually rotates to front
-      model.rotation.y = Math.PI + (easedProgress * Math.PI);
-      model.rotation.x = Math.sin(easedProgress * Math.PI) * 0.15;
-      model.rotation.z = Math.sin(easedProgress * Math.PI) * 0.1;
+      const startRotation = Math.PI; 
+      const endRotation = 9.4;
+      model.rotation.y = startRotation + (easedProgress * (endRotation - startRotation));
+      model.rotation.x = 0;
+      model.rotation.z = 0;
 
-      // Text fade in/out - appears later (after 30% scroll progress) and stays visible
-      let textProgress = 0;
-      if (scrollProgress > 0.5) {
-        // Map 0.3-0.7 to 0-1 for fade in, then stays at 1
-        if (scrollProgress <= 0.7) {
-          textProgress = (scrollProgress - 0.3) / 0.4; // 0.3 to 0.7 = fade in
-        } else {
-          textProgress = 1; // Stay at full opacity after 0.7
+      model.traverse((child) => {
+        if (child.isMesh && child.material) {
+          const startR = 1, startG = 1, startB = 1; 
+          const endR = 0xb5 / 255, endG = 0xc3 / 255, endB = 0xd7 / 255; // #b5c3d7
+          const red = startR + (endR - startR) * easedProgress;
+          const green = startG + (endG - startG) * easedProgress;
+          const blue = startB + (endB - startB) * easedProgress;
+          
+          child.material.color.setRGB(red, green, blue);
         }
-      }
+      });
+
+      // Text settings
+      const textProgress = scrollProgress > 0.2 ? 1 : scrollProgress / 0.2;
       textOverlay.style.opacity = textProgress;
       textOverlay.style.transform = `translate(-50%, -50%) scale(${0.9 + textProgress * 0.1})`;
     }
@@ -198,7 +258,9 @@
     animate();
 
     // Event listeners
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    if (!isMobile) {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
     
     window.addEventListener('resize', () => {
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -207,7 +269,9 @@
     });
 
     // Initial update
-    handleScroll();
+    if (!isMobile) {
+      handleScroll();
+    }
 
     // Cleanup
     window.addEventListener('beforeunload', () => {

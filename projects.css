@@ -156,7 +156,7 @@
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
-  user-select: none;
+  user-select: text;
 }
 .prev {
   left: 0;
@@ -649,7 +649,10 @@ html, body {
 .instay-zoom-stage {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-top: 2rem;
+  margin-top: -80vh;
+  margin-bottom: -80vh;
+  padding-top: 80vh;
+  padding-bottom: 80vh;
 }
 
 .instay-zoom-wrapper {
@@ -709,17 +712,39 @@ html, body {
   transform: scale(1) !important;
 }
 
-/* Mobile: always show TV statically*/
+/* Mobile: disable scroll-jacking, show static layout */
 @media (pointer: coarse), (max-width: 900px) {
-  .instay-zoom-stage .instay-zoom-wrapper::after { height: 0 !important; }
-  .instay-zoom-stage .instay-zoom-pin { position: relative; height: auto; }
-  .instay-zoom-stage .instay-zoom-image { transform: none !important; }
+  .instay-zoom-stage {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .instay-zoom-stage .instay-zoom-wrapper::after { 
+    height: 0 !important; 
+  }
+  
+  .instay-zoom-stage .instay-zoom-pin { 
+    position: relative !important;
+    height: auto;
+    min-height: 50vh;
+  }
+  
+  .instay-zoom-stage .instay-zoom-image { 
+    transform: none !important;
+    position: relative;
+  }
+}
 }
 
 .instay-crossfade-stage {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-top: 1.5rem;
+  margin-top: -60vh;
+  margin-bottom: -60vh;
+  padding-top: 60vh;
+  padding-bottom: 60vh;
 }
 
 .instay-crossfade-wrapper { position: relative; width: 100%; }
@@ -789,18 +814,40 @@ html, body {
 }
 
 @media (pointer: coarse), (max-width: 900px) {
-  .instay-crossfade-wrapper::after { height: 0 !important; }
-  .instay-crossfade-pin { position: relative; height: auto; }
-  .instay-before { opacity: 0 !important; transition: none; }
-  .instay-crossfade-caption { filter: none !important; }
+  .instay-crossfade-stage {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .instay-crossfade-wrapper::after { 
+    height: 0 !important; 
+  }
+  
+  .instay-crossfade-pin { 
+    position: relative !important;
+    height: auto;
+  }
+  
+  .instay-before { 
+    opacity: 0 !important;
+    transition: none;
+  }
+  
+  .instay-crossfade-caption { 
+    filter: none !important;
+  }
 }
 
 /* Remote 3D Scroll Animation */
 .remote-3d-stage {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: -100vh;
+  margin-bottom: -100vh;
+  padding-top: 100vh;
+  padding-bottom: 100vh;
 }
 
 .remote-3d-wrapper {
@@ -811,7 +858,7 @@ html, body {
 .remote-3d-wrapper::after {
   content: '';
   display: block;
-  height: 300vh;
+  height: 150vh;
 }
 
 .remote-3d-pin {
@@ -843,14 +890,14 @@ html, body {
 .remote-3d-text {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  right: 0%;
+  transform: translateY(-50%);
+  text-align: left;
   z-index: 5;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  max-width: 90%;
+  max-width: 35%;
   padding: 0 2rem;
 }
 
@@ -867,12 +914,50 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  /* Disable scroll-jacking on mobile*/
+  .remote-3d-stage {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
   .remote-3d-wrapper::after {
-    height: 200vh;
+    height: 0 !important;
+  }
+  
+  .remote-3d-pin {
+    position: relative !important;
+    height: auto !important;
+    display: block !important;
+    background: transparent !important;
+  }
+  
+  .remote-3d-pin::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40vh;
+    background-image: url('/assets/remote.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .remote-3d-canvas {
+    display: none !important;
   }
   
   .remote-3d-text {
-    padding: 0 1rem;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    max-width: 100%;
   }
   
   .remote-3d-text p {
@@ -880,7 +965,6 @@ html, body {
   }
 }
 
-/* Fallback for devices that don't support the animation */
 .remote-3d-stage.remote-3d-fallback .remote-3d-wrapper::after {
   height: 0 !important;
 }
