@@ -4,47 +4,193 @@
     "work": "Projects",
     "contact": "Contact"
   },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "title": "UX & UI Designer",
+    "subtitle": "I craft digital experiences through design and code"
+  },
   "aboutDesc": "Hello, my name is Alessandro Bocquet. I'm a UX and UI designer studying in the master Digital and Interaction Design at the Politecnico di Milano. I mainly create my work through Figma and coding via HTML, CSS, and JavaScript (GSAP and jQuery).",
-  "skillsTitle": "Some of my skills",
-  "skillsDesc": "My varied training and experience have enabled me to develop comprehensive know-how, enabling me to meet visual challenges on all types of media.",
-  "contactTitle": "You can contact me through my socials",
-  "contactGreeting": "Let's get in touch",
-  "contactText": "You can contact me through my socials",
-  "downloadCV": "Download my CV",
-  "github": "GitHub",
-  "linkedin": "LinkedIn",
-  "mainFooter": "Website designed in HTML/CSS and JavaScript",
-  "projects": {
-    "numistral": {
-      "title": "Project Numistral",
-      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+  "skillsTitle": "Design Stack",
+  "skillsDesc": "My diverse background in interaction design, digital heritage, and visual systems equips me to tackle visual and user experience challenges across all media with a thoughtful, product-oriented approach",
+  "stats": {
+    "skills": "Skills",
+    "years": "Years",
+    "ideas": "Ideas"
+  },
+  "skills": {
+    "designCreation": {
+      "title": "Design & Creation",
+      "figma": "Figma",
+      "protopie": "Protopie",
+      "framer": "Framer",
+      "notion": "Notion",
+      "photoshop": "Photoshop",
+      "premierePro": "Premiere Pro",
+      "illustrator": "Illustrator",
+      "htmlCss": "HTML/CSS"
     },
-    "planetarium": {
-      "title": "Strasbourg Planetarium",
-      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
-    },
-    "secondes": {
-      "title": "2 Secondes avant l'Extase",
-      "shortDesc": ["Graphic Design", "2022"]
+    "uxProcess": {
+      "title": "UX Process",
+      "usabilityTesting": "Usability testing",
+      "wireframing": "Wireframing",
+      "userFlows": "User flows",
+      "heuristicEvaluations": "Heuristic evaluations",
+      "cardSorting": "Card sorting",
+      "accessibilityTesting": "Accessibility Testing",
+      "dataDrivenDesign": "Data Driven Design",
+      "seqUeq": "SEQ, UEQ"
     }
   },
-  "planetarium": {
-    "title": "Application for the Strasbourg Planetarium",
-    "subtitle": "University of Strasbourg",
-    "desc1": "The user scrolls down the application and explores the different scales of the universe. This project offers visitors a new approach before visiting the Strasbourg planetarium. Its ambition is to offer a narrative, in the image of the planetarium, and a journey through the universe.",
-    "desc2": "The project's main challenge was to offer a narrative application that was fun and accessible to all. It was therefore necessary to offer a tutorial at launch.",
-    "footer": "Website designed in HTML/CSS and JavaScript"
+  "featuredProjectsTitle": "Featured Projects",
+  "featuredProjectsDesc": "A selection of my recent work in UX/UI design and visual creation",
+  "contact": {
+    "title": "🤝 Let's get in touch",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities.",
+    "emailButton": "Say Hello",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "Resume"
   },
-  "numistral": {
-    "title": "Redesign Numistral",
-    "subtitle": "University of Strasbourg",
-    "desc1": "This project is a redesign of the Numistral website, with the aim of improving navigation and archive searching. The first step was to examine the strengths and weaknesses of the original site.",
-    "desc2": "It has been designed to maintain a uniform user interface. As the aim of the site is to bring together all the archive resources of different organizations, it is important to establish a standard for each archive and an index.",
-    "desc3": "Overhauling the archive sorting and retrieval tool was a key stage in this project.",
-    "footer": "Website designed in HTML/CSS and JavaScript"
+  "mainFooter": "Website designed in HTML/CSS and JavaScript",
+  "common": {
+  "viewPrototype": "View prototype",
+  "viewTvPrototype": "View TV prototype",
+  "viewAppPrototype": "View app prototype",
+  "viewWebsitePrototype": "View website prototype"
   },
-  "secondes": {
-    "desc1": "This poster was produced for the play \"2 Secondes avant l'Extase\" in Berlin.",
-    "footer": "Website designed in HTML/CSS and JavaScript"
+  "instay": {
+    "projectType": "Branding · UI/UX Design",
+    "labels": {
+      "description": "Description",
+      "problem": "Problem:",
+      "solution": "Solution:",
+      "category": "Category:",
+      "date": "Date:"
+    },
+    "description": "InStay is a smart hospitality ecosystem integrating IoT devices, Smart TV, and a remote-control system to enhance the guest experience and streamline property management. Designed for both tenants and owners, it offers intuitive control, energy efficiency, and secure device management within short-term rentals.",
+    "problem": "Guests face difficulty adjusting lighting and climate, finding essential information, and adapting to unfamiliar systems. Owners deal with wasted energy, device misuse, and limited control over property resources. InStay needed a cohesive, user-friendly solution that works seamlessly across devices while maintaining security and brand identity.",
+    "solution": "We designed a connected ecosystem combining Smart TV, IoT devices, and a dedicated remote, all integrated into a unified interface. The Smart TV provides a central, intuitive hub for tenants, while owners access advanced controls and monitoring via an app. The UI was validated through low-, mid-, and high-fidelity prototypes, with emphasis on reducing clicks, ensuring clarity, and preserving a sense of hospitality. The design uses a minimal aesthetic, clear iconography, and a soft color palette to convey trust, innovation, and ease of use.",
+    "categoryValue": "UX/UI Design – IoT, Hospitality Tech",
+  "dateValue": "2025",
+    "ownerApp": {
+      "label": "Owner App",
+      "text": "The InStay App is the owner’s central hub for connected hospitality spaces: monitor in real time, control devices remotely, and tailor the Smart TV experience — all from a phone or tablet."
+    },
+    "remote": {
+      "label": "Remote",
+      "text": "The InStay Remote is an ergonomic, all-in-one controller for hospitality spaces, letting guests easily manage lighting, temperature, and media from one device. Its minimal design, tested through multiple prototypes, ensures intuitive use and complements any interior with five subtle color options."
+    },
+    "ui": {
+      "label": "Smart TV UI",
+      "text": "The InStay Smart TV UI turns the television into the guest’s central hub, unifying entertainment, property information, and smart‑home controls in a familiar environment. Guests can access streaming, local TV, Wi‑Fi details, tourist information, house rules, and control lighting, climate, locks, and more—directly from the TV."
+    },
+    "research": {
+      "label": "Research",
+      "heading": "InStay Research – From Insights to Interaction",
+      "intro": "InStay’s design was driven by lean research to make guest and owner interactions intuitive and efficient.",
+      "methods": {
+        "title": "Methods:",
+        "interviews": "Interviews: captured guest/owner pain points (lighting/climate setup, energy waste).",
+        "ia": "Tree tests with 47+ participants in 4 languages; 87.25% success validating hierarchy.",
+        "prototypes": "Prototypes: low→high fidelity to refine navigation, button layout, hierarchy and tests through each step."
+      },
+      "findings": {
+        "title": "Key findings:",
+        "reducedClicks": "Fewer clicks by surfacing core actions on the home screen.",
+        "addedActions": "Added clear Log Out and a Onboarding allowing to change language and having the house rules explained.",
+        "confirmedErgonomics": "Remote ergonomics and layout validated in hands‑on trials."
+      },
+      "outcome": {
+        "title": "Outcome:",
+        "text": "Delivered high usability and a warm feel, balancing control with hospitality."
+      }
+  },
+  "headers": {
+      "ecosystem": "The ecosystem",
+      "alwaysPresent": "Always present but invisible",
+      "research": "The research",
+      "credits": "Credits",
+      "prototype": "Prototypes"
+    },
+    "credits": {
+      "text": "Project conceived and realized with Mert Güven, Luciano Lettieri  Michele, Simona Invitti and Sabrina Maida at Politecnico di Milano."
+    },
+    "crossfade": {
+      "prefix": "From",
+      "low": "low fidelity",
+      "connector": "to",
+      "high": "high fidelity"
+    }
+  },  
+  "soltar": {
+    "projectType": "Electronics · UX/UI Design · Motion",
+    "labels": {
+      "description": "Description",
+      "problem": "Problem:",
+      "solution": "Solution:",
+      "category": "Category:",
+      "date": "Date:"
+    },
+    "description": "Soltar is an embodied interaction system that blends a wearable, haptic cues, and adaptive music to unlock emotional release through dance. For solo or group use, it eases social anxiety, strengthens body awareness, and syncs people through shared rhythm.",
+    "problem": "Dance spaces can feel intimidating, limiting expression. People often lack guidance to align movement and emotion, and many can’t reach events. Soltar needed a portable, safe, and social experience that works anywhere—indoors or outdoors.",
+    "solution": "I co-designed a wearable + app that uses vibration motors, IMU sensors, and adaptive music to guide movement in real time. Haptics build body awareness while the app tunes music and vibrations to intensity and goals. Prototyped with 30+ participants; supports solo or group modes with a minimal UI and mood‑based playlists.",
+    "categoryValue": "UX/UI Design – Wearable Tech, Embodied Interaction, Emotional Wellbeing",
+    "dateValue": "2025",
+    "headers": {
+      "overview": "Overview",
+      "research": "The research",
+      "credits": "Credits",
+      "prototype": "Prototype"
+    },
+    "app": {
+      "label": "Application",
+      "text": "Soltar is a wearable and app-based system that uses haptic feedback, adaptive music, and real-time motion sensing to guide users into an immersive dance experience—individually or in groups. Designed to support emotional release and social connection, it helps overcome barriers like anxiety, self-consciousness, and lack of time for traditional dance events."
+    },
+    "wearable": {
+      "label": "Wearable device",
+      "text": "The Soltar wearable is a lightweight, body-mounted device integrating vibration motors, IMU sensors, and wireless connectivity to create an embodied guidance system for dance. Placed on the upper arms and wrists for optimal perception, it delivers adaptive vibration patterns that respond in real time to movement intensity, guiding rhythm and flow. The form factor is built from flexible fabric, secure fastenings, and a compact electronics module to ensure comfort, stability, and freedom of motion. Extensive iteration refined motor placement, vibration amplitude, and cable management, resulting in a design that is stable, perceptible, and comfortable for both individual and group dance sessions."
+    },
+    "research": {
+      "label": "Research",
+      "intro": "The development of Soltar was grounded in extensive exploratory research on the emotional and social dynamics of dance.",
+      "paths": {
+        "title": "Multiple investigation paths shaped the concept:",
+        "caseStudies": "Case studies of wearable haptic devices for movement, posture, and proprioception.",
+        "literature": "Literature review on somaesthetic design, body mapping, and emotional regulation through bodily awareness.",
+        "feasibility": "Technology feasibility testing with vibration motors, IMU sensors, and real-time music modulation via TouchDesigner."
+      },
+      "outro": "Over 30 participants took part in iterative prototype testing across seven dimensions—vibration placement, haptic patterns, IMU positioning, music adaptation, wearable comfort, UI clarity, and group experience."
+    },
+    "outcome": {
+      "title": "Outcome",
+      "text": "Our research allowed us to create a user flow supported by calibrated haptic feedback and adaptive music patterns. Iterative testing validated the system's effectiveness in facilitating bodily expression, reducing social anxiety, and creating authentic connections through synchronized movement."
+    },
+    "credits": {
+      "text": "Project conceived and realized with Aranza Villarreal, Efe Eren Can Bakır, Kexin Ma, Sherif Rateb, Yifan Lu at Politecnico di Milano."
+    }
+  }
+  ,
+  "capsound": {
+  "projectType": "UX/UI Design",
+    "labels": {
+      "description": "Description",
+      "problem": "Problem:",
+      "solution": "Solution:",
+      "category": "Category:",
+      "date": "Date:"
+    },
+    "description": "Capsound is a customizable keyboard platform that allows users to design, assemble, and upgrade their own keyboards. Instead of purchasing a fixed, pre-built product, customers can select individual components—cases, keycaps, switches, and PCBs—to create a setup tailored to their preferences. By focusing on modularity, reusability, and recycling, Capsound promotes a circular economy model that reduces waste and extends the lifespan of every keyboard.",
+    "problem": "Most keyboards on the market are mass-produced with fixed designs, limiting personalisation and often forcing users to compromise on aesthetics, feel, or ergonomics. When a single component breaks or becomes outdated, the entire keyboard is often discarded, generating unnecessary waste. Enthusiasts who wish to build their own keyboards face fragmented sourcing, higher costs, and a lack of beginner-friendly guidance. A unified, sustainable, and accessible solution was needed.",
+    "solution": "Capsound offers a centralised shop where users can purchase compatible keyboard components individually or as part of curated build kits. The platform’s modular system enables customers to repair, upgrade, or fully redesign their keyboards without replacing the entire product. By integrating recycling programs for old parts and offering educational resources for first-time builders, Capsound makes mechanical keyboard customisation both sustainable and accessible. This approach reduces material waste while empowering users to create a product that reflects their exact needs and style.",
+    "categoryValue": "E-commerce – Product Design – Circular Economy – Customisable Hardware",
+    "dateValue": "2023",
+    "ui": {
+      "label": "Website UI",
+      "text": "Capsound is a streamlined, customization‑first shop. A component configurator lets users mix cases, switches, keycaps, and PCBs with real‑time visuals and compatibility cues. “Reuse & Recycle” prompts suggest upgrades and trade‑ins, while clear hierarchy, modular cards, and step‑by‑step guidance keep the flow simple. High‑res renders and interactive previews make designs tangible, blending the excitement of personalization with practical, sustainable shopping."
+    },
+  "headers": { "credits": "Credits", "prototype": "Prototype" },
+    "credits": {
+      "text": "Project conceived and realized with Tifenn Seveon at the University of Strasbourg."
+    }
   }
 }

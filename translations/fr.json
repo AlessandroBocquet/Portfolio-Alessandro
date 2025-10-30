@@ -4,47 +4,195 @@
     "work": "Projets",
     "contact": "Contacts"
   },
+  "hero": {
+    "greeting": "Bonjour, je m'appelle",
+    "title": "UX & UI Designer",
+    "subtitle": "Je crée des expériences numériques par le design et le code"
+  },
   "aboutDesc": "Bonjour, je m'appelle Alessandro Bocquet. Je suis un designer UX et UI qui étudie dans le cadre du master Digital and Interaction Design au Politecnico Di Milano. Je réalise principalement mes projets à l'aide de Figma et avec du code en HTML, CSS et Javascript (GSAP et JQuery).",
-  "skillsTitle": "Quelques compétences",
-  "skillsDesc": "Ma formation et mon expérience m'ont permis de développer un savoir-faire complet, me permettant de relever des défis visuels sur tout type de supports.",
-  "contactTitle": "Vous pouvez me contacter via ces réseaux",
-  "contactGreeting": "Prenons contact",
-  "contactText": "Vous pouvez me contacter via ces réseaux",
-  "downloadCV": "Télécharger mon CV",
-  "github": "GitHub",
-  "linkedin": "LinkedIn",
-  "mainFooter": "Site réalisé en HTML/CSS et Javascript",
-  "projects": {
-    "numistral": {
-      "title": "Projet Numistral",
-      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
+  "skillsTitle": "Outils pour mes design",
+  "skillsDesc": "Mon parcours diversifié en design d'interaction, patrimoine numérique et systèmes visuels me permet d'aborder les défis visuels et d'expérience utilisateur sur tous les médias avec une approche réfléchie et orientée produit",
+  "stats": {
+    "skills": "Compétences",
+    "years": "Années",
+    "ideas": "Idées"
+  },
+  "skills": {
+    "designCreation": {
+      "title": "Design & Création",
+      "figma": "Figma",
+      "protopie": "Protopie",
+      "framer": "Framer",
+      "notion": "Notion",
+      "photoshop": "Photoshop",
+      "premierePro": "Premiere Pro",
+      "illustrator": "Illustrator",
+      "htmlCss": "HTML/CSS"
     },
-    "planetarium": {
-      "title": "Strasbourg planétarium",
-      "shortDesc": ["Webdesign", "2023", "UX/UI Design"]
-    },
-    "secondes": {
-      "title": "2 Secondes avant l'Extase",
-      "shortDesc": ["Graphic Design", "2022"]
+    "uxProcess": {
+      "title": "Processus UX",
+      "usabilityTesting": "Tests d'utilisabilité",
+      "wireframing": "Wireframing",
+      "userFlows": "User Flow",
+      "heuristicEvaluations": "Évaluations heuristiques",
+      "cardSorting": "Card sorting",
+      "accessibilityTesting": "Tests d'accessibilité",
+      "dataDrivenDesign": "Design orienté données",
+      "seqUeq": "SEQ, UEQ"
     }
   },
-  "planetarium": {
-    "title": "Application pour le Planétarium de Strasbourg",
-    "subtitle": "Université de Strasbourg",
-    "desc1": "L'utilisateur fait défiler l'application vers le bas et explore les différentes échelles de l'univers. Ce projet propose aux visiteurs une nouvelle approche avant de visiter le planétarium de Strasbourg. Son ambition est de proposer une narration, à l'image du planétarium, et un voyage dans l'univers.",
-    "desc2": "Le principal défi du projet était de proposer une application narrative, ludique et accessible à tous. Il était donc nécessaire de proposer un tutoriel lors du lancement.",
-    "footer": "Site réalisé en HTML/CSS et Javascript"
+  "featuredProjectsTitle": "Projets vedettes",
+  "featuredProjectsDesc": "Une sélection de mes travaux récents en design UX/UI et création visuelle",
+  "contact": {
+    "title": "🤝 Prenons contact",
+    "description": "Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives ou d'opportunités.",
+    "emailButton": "Contactez moi",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "CV"
   },
-  "numistral": {
-    "title": "Redesign Numistral",
-    "subtitle": "Université de Strasbourg",
-    "desc1": "Ce projet est une refonte du site internet de Numistral, dans le but d'améliorer la navigation et la recherche d'archives. La première étape a consisté à examiner les points faibles et les points forts du site original.",
-    "desc2": "Il a été conçu pour maintenir une interface utilisateur uniforme. L'objectif du site étant de rassembler toutes les ressources d'archives de différents organismes, il est important d'établir un standard pour chaque archive et un index.",
-    "desc3": "La refonte de l'outil de tri et de recherche des archives a été une étape clé de ce projet.",
-    "footer": "Site réalisé en HTML/CSS et Javascript"
+  "mainFooter": "Site réalisé en HTML/CSS et Javascript",
+  "common": {
+    "viewPrototype": "Voir le prototype",
+    "viewTvPrototype": "Voir le prototype TV",
+    "viewAppPrototype": "Voir le prototype de l'app",
+    "viewWebsitePrototype": "Voir le prototype du site"
   },
-  "secondes": {
-    "desc1": "Cette affiche a été créée pour la pièce « 2 Secondes avant l'Extase » jouée à Berlin.",
-    "footer": "Site réalisé en HTML/CSS et Javascript"
+  "instay": {
+    "projectType": "Branding · UI/UX Design",
+    "labels": {
+      "description": "Description",
+      "problem": "Problématique :",
+      "solution": "Solution :",
+      "category": "Catégorie :",
+      "date": "Date :"
+    },
+    "description": "InStay est un écosystème connecté qui intègre des appareils IoT, une Smart TV et une télécommande dédiée pour améliorer l'expérience des locataires et optimiser la gestion des propriétés. Conçu pour les locataires comme pour les propriétaires, il offre un contrôle intuitif, une meilleure efficacité énergétique et une gestion sécurisée des appareils dans le cadre des locations de courte durée.",
+    "problem": "Les locataires ont des difficultés à régler l'éclairage et le climat, à trouver les informations essentielles et à s'adapter à des systèmes inconnus. Ils n'utilisent souvent pas ou presque pas les télévisions dans les logements à curte durée. Les propriétaires font face au gaspillage d'énergie, aux mauvais usages des appareils, à un contrôle limité des ressources et au non respect des règles de leur appartement. InStay nécessitait une solution cohérente et simple d'utilisation, fonctionnant de manière fluide sur tous les appareils tout en préservant la sécurité et l'identité de marque.",
+    "solution": "Nous avons conçu un écosystème connecté combinant Smart TV, appareils IoT et télécommande dédiée, le tout intégré dans une interface unifiée. La Smart TV sert de hub central intuitif pour les locataires, tandis que les propriétaires accèdent à des contrôles avancés et à un suivi en temps réel via une application. L'UI a été validée à travers des prototypes low, mid et high fidelity, en mettant l'accent sur la réduction des clics, la clarté et la dimension hospitalière. Le design adopte une esthétique minimale, une iconographie claire et une palette douce inspirant confiance, innovation et simplicité d'usage.",
+    "categoryValue": "UX/UI Design – IoT, Hospitality Tech",
+    "dateValue": "2025",
+    "headers": {
+      "ecosystem": "L'écosystème",
+      "alwaysPresent": "Toujours présent mais invisible",
+      "research": "La recherche",
+      "credits": "Crédits",
+      "prototype": "Prototypes"
+    },
+    "ownerApp": {
+      "label": "Application Propriétaire",
+      "text": "L'application InStay est le centre de contrôle du propriétaire pour les espaces d'hospitalité connectés : surveiller en temps réel, contrôler les appareils à distance et personnaliser l'expérience Smart TV en changeant les paramètres esthétiques de la télévision pour l'adapter à un design intérieur — le tout depuis un téléphone ou une tablette."
+    },
+    "remote": {
+      "label": "Télécommande",
+      "text": "La télécommande InStay est intégrée et crée un tout-en-un pour les logements à louer. Conçue pour les locataires, elle simplifie la gestion de l’éclairage, de la température et des médias depuis un seul appareil. Son design minimaliste, validé par des tests utilisateurs, assure une utilisation intuitive et s’adapte à tout intérieur grâce à cinq finitions subtiles."
+    },
+    "ui": {
+      "label": "Interface TV",
+      "text": "L'interface TV InStay transforme la télévision en hub central du locataire, sans pour autant la rendre intrusive, unifiant divertissement, informations sur le logement et contrôles domotiques dans un environnement familier. Les invités accèdent au streaming, à la TV locale, aux informations Wi‑Fi, au tourisme et au règlement intérieur, et contrôlent lumière, climat, serrures et plus encore — directement depuis la TV."
+    },
+    "research": {
+      "label": "Recherche",
+      "heading": "InStay – De l'idée à l'interaction",
+      "intro": "La conception d'InStay s'appuie sur une recherche ciblée pour rendre l'interaction intuitive et efficace côté invités et propriétaires.",
+      "methods": {
+        "title": "Méthodes :",
+        "interviews": "Entretiens : problèmes locataire/propriétaires (réglages lumière/climat, gaspillage énergétique).",
+        "ia": "Tree tests (47 participants, 4 langues) — 87,25% de réussite.",
+        "prototypes": "Prototypes : low→high fidelity pour affiner navigation, placement et hiérarchie."
+      },
+      "findings": {
+        "title": "Principaux constats :",
+        "reducedClicks": "Moins de clics en exposant les actions clés sur l'accueil.",
+        "addedActions": "Ajout de \"Déconnexion\" et \"Veille\" claires.",
+        "confirmedErgonomics": "Ergonomie et layout de la télécommande validés en essais pratiques."
+      },
+      "outcome": {
+        "title": "Résultat :",
+        "text": "Haute utilisabilité et ressenti chaleureux, entre contrôle et hospitalité."
+      }
+    },
+    "credits": {
+      "text": "Projet réalisé avec Mert Güven, Luciano Lettieri  Michele, Simona Invitti et Sabrina Maida au Politecnico di Milano."
+    },
+    "crossfade": {
+      "prefix": "De la",
+      "low": "low fidelity",
+      "connector": "à la",
+      "high": "high fidelity"
+    }
+  },
+  "soltar": {
+    "projectType": "Branding · UI/UX · Motion",
+    "labels": {
+      "description": "Description",
+      "problem": "Problématique :",
+      "solution": "Solution :",
+      "category": "Catégorie :",
+      "date": "Date :"
+    },
+    "description": "Soltar est un système d'appareil connecté qui combine un wearable, des signaux haptiques et une musique s'adaptant aux mouvements pour favoriser la libération émotionnelle par la danse. En solo ou en groupe, l'appareil est conçu pour réduire l'anxiété sociale, renforcer la conscience corporelle et synchronise les participants via un rythme partagé.",
+    "problem": "Les espaces de danse peuvent paraître intimidants et brider l'expression. Il manque souvent un guidage pour aligner mouvement et émotion, et beaucoup ne peuvent pas se rendre aux événements. Soltar avait besoin d'une expérience portable, sûre et sociale, utilisable partout — en intérieur comme en extérieur.",
+    "solution": "Nous avons conçu un écosystème connecté et une application qui utilise des moteurs à vibration, des capteurs IMU et une musique qui s'adapte pour guider le mouvement en temps réel. Les vibrations haptiques développent la conscience corporelle tandis que l'app ajuste la musique et les vibrations selon l'intensité et les objectifs. Prototypé avec plus de 30 participants ; modes solo et groupe ; UI minimale et playlists selon l'humeur.",
+    "categoryValue": "UX/UI Design – Wearable Tech, Embodied Interaction, Emotional Wellbeing",
+    "dateValue": "2025",
+    "headers": {
+      "overview": "Aperçu",
+      "research": "La recherche",
+      "credits": "Crédits",
+      "prototype": "Prototype"
+    },
+    "app": {
+      "label": "Application",
+      "text": "Soltar est un système d'appareil connecté qui fonctionne avec une app qui utilise des retours haptiques, de la musique adaptative et une détection du mouvement en temps réel pour guider une expérience de danse immersive — en solo ou en groupe. Conçu pour la libération émotionnelle et le lien social, il aide à dépasser l'anxiété, le gêne et le manque de temps pour les événements traditionnels."
+    },
+    "wearable": {
+      "label": "Appareil connecté",
+      "text": "L'appareil connecté Soltar est un dispositif léger fixé au corps, intégrant moteurs vibrants, capteurs IMU et connectivité sans fil pour créer un guidage incarné de la danse. Placé sur les bras et les poignets pour une perception optimale, il crée des vibrations adaptatives en temps réel selon l'intensité du mouvement. La forme combine textile flexible, attaches sûres et module électronique compact pour le confort et la liberté de mouvement. De nombreuses itérations ont affiné placement des moteurs, amplitude vibratoire et gestion des câbles afin d'obtenir un design stable, perceptible et confortable en solo comme en groupe."
+    },
+    "research": {
+      "label": "Recherche",
+      "intro": "Le développement de Soltar s'appuie sur une recherche exploratoire des dynamiques émotionnelles et sociales de la danse.",
+      "paths": {
+        "title": "Plusieurs axes d'enquête ont structuré le concept :",
+        "caseStudies": "Études de cas de wearables haptiques pour mouvement, posture et proprioception.",
+        "literature": "Revue de littérature : somaesthétique, cartographie corporelle, régulation émotionnelle par l'awareness corporelle.",
+        "feasibility": "Faisabilité technologique : moteurs vibrants, capteurs IMU, modulation musicale en temps réel via TouchDesigner."
+      },
+      "outro": "30+ participants ont testé des prototypes sur sept dimensions — placement des vibrations, patterns haptiques, position de l'IMU, adaptation musicale, confort du wearable, clarté de l'UI et expérience de groupe."
+    },
+    "outcome": {
+      "title": "Résultats",
+      "text": "Notre recherche nous a permis de créer un parcours utilisateur soutenu par des retours haptiques calibrés et des motifs musicaux adaptatifs. Les tests itératifs ont validé l'efficacité du système à faciliter l'expression corporelle, réduire l'anxiété sociale et créer des connexions authentiques à travers le mouvement synchronisé."
+    },
+    "credits": {
+      "text": "Projet réalisé avec Aranza Villarreal, Efe Eren Can Bakır, Kexin Ma, Sherif Rateb et Yifan Lu au Politecnico di Milano."
+    }
+  },
+  "capsound": {
+    "projectType": "UX/UI Design",
+    "labels": {
+      "description": "Description",
+      "problem": "Problématique :",
+      "solution": "Solution :",
+      "category": "Catégorie :",
+      "date": "Date :"
+    },
+    "description": "Capsound est une plateforme de claviers personnalisables qui permet aux utilisateurs de concevoir, assembler et améliorer leurs propres claviers. Plutôt que d'acheter un produit figé et pré‑assemblé, les clients choisissent les composants — coques, keycaps, switches et PCB — pour créer une configuration adaptée à leurs préférences. En misant sur la modularité, la réutilisation et le recyclage, Capsound promeut une économie circulaire qui réduit les déchets et prolonge la durée de vie de chaque clavier.",
+    "problem": "La plupart des claviers du marché sont produits en série avec des designs fixes, limitant la personnalisation et forçant souvent à des compromis sur l'esthétique, le ressenti ou l'ergonomie. Lorsqu'un seul composant casse ou devient obsolète, le clavier entier est souvent jeté, générant des déchets inutiles. Les passionnés qui souhaitent construire leur propre clavier font face à des sources fragmentées, à des coûts plus élevés et à un manque de guidage pour débutants. Une solution unifiée, durable et accessible était nécessaire.",
+    "solution": "Capsound propose une boutique centralisée où l'on peut acheter des composants compatibles à l'unité ou via des kits sélectionnés. Le système modulaire permet de réparer, mettre à niveau ou repenser complètement son clavier sans tout remplacer. En intégrant des programmes de recyclage pour les pièces usagées et des choix sur le type de livraison, Capsound rend la personnalisation des claviers mécaniques durable et accessible. Cette approche réduit les déchets matériels tout en permettant de créer un produit réellement aligné sur ses besoins et son style.",
+    "categoryValue": "E‑commerce – UX/UI Design – Économie circulaire – Matériel personnalisable",
+    "dateValue": "2023",
+    "ui": {
+      "label": "Interface du site",
+      "text": "Capsound est une boutique pensée d'abord pour la personnalisation. Un configurateur de composants permet de combiner coques, switches, keycaps et PCB avec des visuels en temps réel et des indications de compatibilité. Des suggestions \"Réutiliser & Recycler\" encouragent les upgrades et reprises, tandis qu'une hiérarchie claire, des cartes modulaires et une interface intuitive simplifie le parcours. Des rendus haute définition et des aperçus interactifs rendent les designs tangibles, alliant excitation de la personnalisation et achat durable et pratique."
+    },
+    "headers": { 
+      "credits": "Crédits", 
+      "prototype": "Prototype" 
+    },
+    "credits": {
+      "text": "Projet réalisé avec Tifenn Seveon à l'Université de Strasbourg."
+    }
   }
 }

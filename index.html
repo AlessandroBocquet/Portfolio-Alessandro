@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Portfolio d'Alessandro Bocquet, designer UX et UI, étudiant en Digital and Interaction Design au Politecnico Di Milano.">
-        <meta name="keywords" content="UX design, UI design, portfolio, digital design, interaction design, webdesign, HTML, CSS, JavaScript">
-        <title>Alessandro Bocquet - Portfolio de Design UX/UI</title>
+        <meta name="keywords" content="UX design, UI design, portfolio, Digital design, interaction design, webdesign, HTML, CSS, Politecnico di Milano, Polimi, UX/UI Design">
+        <title>Alessandro Bocquet</title>
         <link rel="stylesheet" href="index.css">
         <link rel="icon" href="/assets/logoprovisoir.png">
         <meta property="og:title" content="Alessandro Bocquet - Portfolio de Design UX/UI">
@@ -16,19 +16,13 @@
 <body>
 <div id="about" class="inside">
 <div class="tout">
-    <div class="bulles-cont">
-        <div class="bulles jaune"></div>
-        <div class="bulles rouge"></div>
-        <div class="bulles bleue"></div>
-    </div>
-
+    
     <header class="sticky">
-        
         <nav id="menu">
             <div class="nav-links">
-                <a href="#about" data-translate="nav.about">À propos</a>
-                <a href="#work" data-translate="nav.work">Projets</a>
-                <a href="#contact" data-translate="nav.contact">Contacts</a>
+                <a href="#about" data-translate="nav.about">About</a>
+                <a href="#work" data-translate="nav.work">Projects</a>
+                <a href="#contact" data-translate="nav.contact">Contact</a>
             </div>
         </nav>
         <div class="dropdown">
@@ -36,156 +30,158 @@
                 <img src="/assets/flag-icon.svg" alt="Language" class="flag-icon">
             </button>
             <div class="dropdown-content">
-                <a href="#" class="active-flag" data-lang="fr"><img src="/assets/france-flag.svg" alt="French" class="flag-icon"></a>
-                <a href="#" data-lang="en"><img src="/assets/uk-flag.svg" alt="English" class="flag-icon"></a>
+                <a href="#" class="active-flag" data-lang="en"><img src="/assets/uk-flag.svg" alt="English" class="flag-icon"></a>
+                <a href="#" data-lang="fr"><img src="/assets/france-flag.svg" alt="French" class="flag-icon"></a>
                 <a href="#" data-lang="it"><img src="/assets/italy-flag.svg" alt="Italian" class="flag-icon"></a>
             </div>
         </div>
     </header>
-
+    
+    <!-- Hero Section -->
+    <section class="hero-main">
+        <div class="hero-content">
+            <div class="hero-greeting" data-translate="hero.greeting">Hello, I'm</div>
+            <h1 class="hero-name unique-hero-title">Alessandro Bocquet</h1>
+            <div class="hero-typewriter">
+                <span class="typewriter-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="hero-subtitle" data-translate="hero.subtitle">Crafting digital experiences through design and code</div>
+        </div>
+    </section>
+    
     <section class="about">
-        <div class="texte-about">
-            <h3 data-translate="aboutDesc">Bonjour, je m'appelle Alessandro Bocquet. Je suis un designer UX et UI qui étudie dans le cadre du master<a class="project-date" href="https://www.polimi.it/en/education/laurea-magistrale-programmes/programme-detail/digital-and-interaction-design" target="_blank"> Digital and Interaction Design</a>au Politecnico Di Milano. Je réalise principalement mes projets à l'aide de Figma et avec du code en HTML, CSS et Javascript (GSAP et JQuery).</h3>
-        </div>
+        
         <div class="competence-about">
-            <div class="list-skills">
-                <h3 class="gras" data-translate="skillsTitle">Quelques compétences</h3>
-                <h3 data-translate="skillsDesc">Ma formation et mon expérience m'ont permis de développer un savoir-faire complet, me permettant de relever des défis visuels sur tout type de supports.</h3>
-            </div>
-            <div class="list-skills">
-                <h3 class="project-date-2">01</h3>
-                <h3>WEBDESIGN</h3>
-            </div>
-            <div class="list-skills">
-                <h3 class="project-date-2">02</h3>
-                <h3>HTML/CSS</h3>
-            </div>
-            <div class="list-skills">
-                <h3 class="project-date-2">03</h3>
-                <h3>C++</h3>
-            </div>
-        </div>
-        <div class="skills-section">
-            <div class="skills-columns">
-                <div class="skills-col">
-                    <h3 class="skills-title">Design creation</h3>
-                    <ul class="skills-list">
-                        <li>Figma</li>
-                        <li>Protopie</li>
-                        <li>Framer</li>
-                        <li>Notion</li>
-                        <li>Photoshop</li>
-                        <li>Premiere Pro</li>
-                        <li>Illustrator</li>
-                        <li>HTML/CSS</li>
-                    </ul>
+            <div class="skills-professional-container">
+                <div class="skills-header-professional">
+                    <h2 class="skills-title-professional2" data-translate="skillsTitle">Design Stack</h2>
+                    <p class="skills-description-professional2" data-translate="skillsDesc">My diverse training and experience have enabled me to develop comprehensive know-how, enabling me to meet visual challenges on all types of media</p>
                 </div>
-                <div class="skills-col">
-                    <h3 class="skills-title">UX Process</h3>
-                    <ul class="skills-list">
-                        <li>Usability testing</li>
-                        <li>Wireframing</li>
-                        <li>User flows</li>
-                        <li>Heuristic evaluations</li>
-                        <li>Card sorting</li>
-                        <li>Accessibility Testing</li>
-                        <li>Data Driven Design</li>
-                        <li>SEQ, UEQ</li>
-                    </ul>
+                <div class="skills-clean">
+                    <div class="skills-section-clean">
+                        <h3 class="skills-category-clean" data-translate="skills.designCreation.title">Design & Creation</h3> 
+                        <div class="skills-list-clean">
+                            <span class="skill-item" data-translate="skills.designCreation.figma">Figma</span>
+                            <span class="skill-item" data-translate="skills.designCreation.protopie">Protopie</span>
+                            <span class="skill-item" data-translate="skills.designCreation.framer">Framer</span>
+                            <span class="skill-item" data-translate="skills.designCreation.notion">Notion</span>
+                            <span class="skill-item" data-translate="skills.designCreation.photoshop">Photoshop</span>
+                            <span class="skill-item" data-translate="skills.designCreation.premierePro">Premiere Pro</span>
+                            <span class="skill-item" data-translate="skills.designCreation.illustrator">Illustrator</span>
+                            <span class="skill-item" data-translate="skills.designCreation.htmlCss">HTML/CSS</span>
+                        </div>
+                    </div>
+                    <div class="skills-section-clean">
+                        <h3 class="skills-category-clean2" data-translate="skills.uxProcess.title">UX Process</h3>
+                        <div class="skills-list-clean">
+                            <span class="skill-item" data-translate="skills.uxProcess.usabilityTesting">Usability testing</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.wireframing">Wireframing</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.userFlows">User flows</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.heuristicEvaluations">Heuristic evaluations</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.cardSorting">Card sorting</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.accessibilityTesting">Accessibility Testing</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.dataDrivenDesign">Data Driven Design</span>
+                            <span class="skill-item" data-translate="skills.uxProcess.seqUeq">SEQ, UEQ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-professional">
+                    <div class="stat-professional" data-target="16">
+                        <span class="stat-number-professional">0</span>
+                        <span class="stat-label-professional" data-translate="stats.skills">Skills</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-professional" data-target="4">
+                        <span class="stat-number-professional">0</span>
+                        <span class="stat-label-professional" data-translate="stats.years">Years</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-professional" data-target="∞">
+                        <span class="stat-number-professional">0</span>
+                        <span class="stat-label-professional" data-translate="stats.ideas">Ideas</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <div id="work">
-        <div id="projet-1" class="hero">
-            <div>
-                <a href="projets/projet-numistral.html">
-                    <h1 data-translate="projects.numistral.title">Projet Numistral</h1>
-                    <div class="descr">
-                        <p class="projet-descr" data-translate="projects.numistral.shortDesc.0">Webdesign</p>
-                        <p class="projet-descr" data-translate="projects.numistral.shortDesc.1">2023</p>
-                        <p class="projet-descr" data-translate="projects.numistral.shortDesc.2">UX/UI Design</p>
-                    </div>
-                
-            </div>
-            <div class="projet-img">
-                <img src="/assets/pres1projetnumistral.png" alt="Projet numistral">
-            </a>
+        <div class="skills-professional-container">
+            <div class="skills-header-professional">
+                <h2 class="skills-title-professional2" data-translate="featuredProjectsTitle">Featured Projects</h2>
+                <p class="skills-description-professional" data-translate="featuredProjectsDesc">A selection of my recent work in UX/UI design and visual creation</p>
             </div>
         </div>
 
-        <div id="projet-2" class="hero">
-            <div>
-                <a href="projets/projet-planetarium.html">
-                    <h1 data-translate="projects.planetarium.title">Strasbourg planétarium</h1>
-                    <div class="descr">
-                        <p class="projet-descr" data-translate="projects.planetarium.shortDesc.0">Webdesign</p>
-                        <p class="projet-descr" data-translate="projects.planetarium.shortDesc.1">2023</p>
-                        <p class="projet-descr" data-translate="projects.planetarium.shortDesc.2">UX/UI Design</p>
+        <a href="projets/InStay.html" class="hero-link">
+            <div class="hero-card" style="background-image: url('/assets/InstayThumbnail.png'); background-size: cover; background-position: center;">
+                <div class="hero-card-overlay">
+                    <div class="hero-card-content">
+                        <h1 class="hero-card-title">InStay Smart TV</h1>
+                        <div class="hero-card-meta">
+                            <span class="hero-card-category">Branding · UI/UX Design</span>
+                            <span class="hero-card-year">2025</span>
+                            <span class="hero-card-type">Connected ecosystem</span>
+                        </div>
                     </div>
-                
-            </div>
-            <div class="projet-img">
-                <img src="assets/planet 1.png" alt="Projet numistral">
+                </div>
             </div>
         </a>
-        </div>
-
-        <div id="projet-3" class="hero">
-            <div>
-                <a href="projets/projet-2secondes.html">
-                    <h1 data-translate="projects.secondes.title">2 Secondes avant l'Extase</h1>
-                    <div class="descr">
-                        <p class="projet-descr" data-translate="projects.secondes.shortDesc.0">Graphic Design</p>
-                        <p class="projet-descr" data-translate="projects.secondes.shortDesc.1">2022</p>
+        
+        <a href="projets/Soltar.html" class="hero-link">
+            <div class="hero-card" style="background-image: url('/assets/SoltarThumbnail.png'); background-size: cover; background-position: center;">
+                <div class="hero-card-overlay">
+                    <div class="hero-card-content">
+                        <h1 class="hero-card-title">Soltar</h1>
+                        <div class="hero-card-meta">
+                            <span class="hero-card-category">Electronics · UX/UI Design · Motion</span>
+                            <span class="hero-card-year">2025</span>
+                            <span class="hero-card-type">Wellbeing</span>
+                        </div>
                     </div>
-                
+                </div>
             </div>
-            <div class="projet-img">
-                <img src="assets/AfficheAntigoneA2.png" alt="Affiche Antigone">
-            </a>
+        </a>
+        
+        <a href="projets/Capsound.html" class="hero-link">
+            <div class="hero-card" style="background-image: url('/assets/CapsoundThumbnail.png'); background-size: cover; background-position: center;">
+                <div class="hero-card-overlay">
+                    <div class="hero-card-content">
+                        <h1 class="hero-card-title">Capsound</h1>
+                        <div class="hero-card-meta">
+                            <span class="hero-card-category">UI/UX Design</span>
+                            <span class="hero-card-year">2023</span>
+                            <span class="hero-card-type">Online business</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
-
     <section id="contact">
         <div class="contact-container">
-            <h2 class="contact-greeting" data-translate="contactGreeting">Let's get in touch</h2>
-            
-            <div class="main-email">
-                <a href="mailto:contact@alessandrobocquet.fr" class="email-link">contact@alessandrobocquet.fr</a>
-            </div>
-            
-            <div class="contact-text">
-                <p data-translate="contactText">Are you interested in a long-term relationship?</p>
-                <a href="/assets/CV_Alessandro_Bocquet.pdf" target="_blank" class="cv-link" data-translate="downloadCV">Download my CV</a>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://github.com/AlessandroBocquet" target="_blank" class="social-link" data-translate="github">GitHub</a>
-                <a href="https://www.linkedin.com/in/alessandro-bocquet/" target="_blank" class="social-link" data-translate="linkedin">LinkedIn</a>
+            <h2 class="contact-title" data-translate="contact.title">Let's get in touch</h2>
+            <p class="contact-description" data-translate="contact.description">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            </p>
+            <a href="mailto:contact@alessandrobocquet.fr" class="contact-email-button" data-translate="contact.emailButton">
+                Say Hello
+            </a>
+            <div class="contact-socials">
+                <a href="https://www.linkedin.com/in/alessandro-bocquet" target="_blank" class="social-link" data-translate="contact.linkedin">LinkedIn</a>
+                <a href="https://github.com/AlessandroBocquet" target="_blank" class="social-link" data-translate="contact.github">GitHub</a>
+                <a href="/assets/CV_Alessandro_Bocquet.pdf" target="_blank" class="social-link" data-translate="contact.cv">Resume</a>
             </div>
         </div>
     </section>
-
     <section class="footer">
       <div class="footer-taille">
-        <h3><span data-translate="mainFooter">Site réalisé en HTML/CSS et Javascript</span>
+        <h3><span data-translate="mainFooter">Website designed in HTML/CSS and JavaScript</span>
             <br><span id="current-year"></span> Alessandro Bocquet.</h3>
         </div>
     </section>
 </div>
 </div>
-
-<svg class="bubulle">
-    <filter id='noiseFilter'>
-        <feTurbulence type='fractalNoise' baseFrequency='1.6' stitchTiles='stitch'/>
-        <feColorMatrix in="colorNoise" type="matrix" values="1 1 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
-        <feComposite operator="over" in2="SourceGraphic" result="monoNoise"/>
-        <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
-    </filter>
-</svg>
 <script src="translations.js"></script>
 <script src="index.js"></script>
 </body>
