@@ -19,7 +19,6 @@
         <link rel="preload" href="/assets/InstayAssets/InstayThumbnail.png" as="image">
         <link rel="preload" href="/assets/SoltarAssets/SoltarThumbnail.png" as="image">
         <link rel="preload" href="/assets/CapsoundAssets/CapsoundThumbnail.png" as="image">
-        <link rel="preload" href="/assets/PlanetariumAssets/PlanetariumThumbnail.png" as="image">
         
         <link rel="prefetch" href="/translations/en.json" as="fetch">
         <link rel="prefetch" href="/translations/fr.json" as="fetch">
@@ -39,6 +38,14 @@
     <meta property="og:url" content="https://alessandrobocquet.fr/">
     </head>
 <body>
+<!-- Loading Screen -->
+<div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+        <img src="/assets/logoprovisoir.png" alt="Logo" class="loading-logo" id="loading-logo">
+        <div class="loading-spinner"></div>
+    </div>
+</div>
+
 <div id="about" class="inside">
 <div class="tout">
     
@@ -183,20 +190,6 @@
             </div>
         </a>
         
-        <a href="projets/Planetarium.html" class="hero-link">
-            <div class="hero-card" style="background-image: url('/assets/PlanetariumAssets/PlanetariumThumbnail.png'); background-size: cover; background-position: center;">
-                <div class="hero-card-overlay">
-                    <div class="hero-card-content">
-                        <h1 class="hero-card-title">Planetarium</h1>
-                        <div class="hero-card-meta">
-                            <span class="hero-card-category">UI/UX Design · Branding</span>
-                            <span class="hero-card-year">2023</span>
-                            <span class="hero-card-type">Museum & Education</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
     </div>
     <section id="contact">
         <div class="contact-container">

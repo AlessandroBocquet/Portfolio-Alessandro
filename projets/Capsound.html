@@ -13,6 +13,12 @@
     <meta property="og:description" content="A project exploring sound and interaction.">
     <meta property="og:image" content="/assets/CapsoundAssets/PresWebsiteFlat.png">
     <meta property="og:url" content="/projets/Capsound.html">
+    <script>
+        // Mark that user has visited the site (prevents loading screen on index.html)
+        if (typeof sessionStorage !== 'undefined') {
+            sessionStorage.setItem('hasVisitedSite', 'true');
+        }
+    </script>
 </head>
 <body>
     <section class="inside">

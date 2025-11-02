@@ -1,3 +1,194 @@
+// Loading Screen Management
+(function initLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const body = document.body;
+    
+    if (!loadingScreen || !body) {
+        // Elements not found, skip loading screen
+        return;
+    }
+    
+    // Check if user came from another page on the same site
+    const referrer = document.referrer;
+    let cameFromSameSite = false;
+    let cameFromProjectPage = false;
+    
+    if (referrer) {
+        try {
+            const referrerUrl = new URL(referrer);
+            const referrerHost = referrerUrl.host;
+            const referrerPath = referrerUrl.pathname;
+            const currentHost = window.location.host;
+            
+            // Check if came from same domain
+            cameFromSameSite = referrerHost === currentHost;
+            
+            // Check if came from a project page (projets folder)
+            cameFromProjectPage = referrerPath.includes('/projets/') || referrerPath.includes('projets/');
+        } catch (e) {
+            // Invalid referrer URL, ignore
+            cameFromSameSite = false;
+            cameFromProjectPage = false;
+        }
+    }
+    
+    // Check if this is the first direct visit to index page in this session
+    const hasVisitedIndex = sessionStorage.getItem('hasVisitedIndex');
+    
+    // Also check if user has visited any page in this session
+    const hasVisitedSite = sessionStorage.getItem('hasVisitedSite');
+    
+    // Hide loading if:
+    // 1. Already visited index page this session
+    // 2. Came from another page on same site
+    // 3. Came from a project page
+    // 4. Has visited the site before in this session
+    if (hasVisitedIndex || cameFromSameSite || cameFromProjectPage || hasVisitedSite) {
+        // Not first visit or came from another page, hide loading screen immediately
+        loadingScreen.classList.add('hidden');
+        body.classList.remove('loading');
+        // Mark that they've visited the site
+        if (!hasVisitedSite) {
+            sessionStorage.setItem('hasVisitedSite', 'true');
+        }
+        return;
+    }
+    
+    // First visit - show loading screen and load assets
+    body.classList.add('loading');
+    
+    // Define assets to load in priority order
+    const priorityAssets = [
+        // Priority 1: Critical assets
+        '/assets/InstayAssets/tvanimation/Try2.png',
+        '/assets/InstayAssets/remotebase.glb',
+        '/assets/InstayAssets/remotewebsite.glb',
+        // Priority 2: Thumbnails
+        '/assets/InstayAssets/InstayThumbnail.png',
+        '/assets/SoltarAssets/SoltarThumbnail.png',
+        '/assets/CapsoundAssets/CapsoundThumbnail.png',
+        // Priority 3: Videos
+        '/assets/InstayAssets/InStayVideo.mp4',
+        '/assets/SoltarAssets/EmbodiedVid.mp4',
+        '/assets/CapsoundAssets/CapsoundMockupVideo.mp4'
+    ];
+    
+    const totalAssets = priorityAssets.length;
+    
+    function loadAsset(url) {
+        return new Promise((resolve, reject) => {
+            if (url.endsWith('.glb')) {
+                // Load GLB files using fetch
+                fetch(url, { 
+                    method: 'GET',
+                    mode: 'cors',
+                    credentials: 'same-origin'
+                })
+                .then(response => {
+                    if (response.ok) {
+                        resolve();
+                    } else {
+                        reject(new Error(`Failed to load ${url}`));
+                    }
+                })
+                .catch(reject);
+            } else if (url.endsWith('.mp4')) {
+                // Load videos
+                const video = document.createElement('video');
+                video.preload = 'auto';
+                video.oncanplaythrough = () => resolve();
+                video.onerror = () => reject(new Error(`Failed to load video ${url}`));
+                video.src = url;
+            } else {
+                // Load images
+                const img = new Image();
+                img.onload = () => resolve();
+                img.onerror = () => {
+                    // Don't fail completely if one image fails
+                    console.warn(`Failed to load image: ${url}`);
+                    resolve();
+                };
+                img.src = url;
+            }
+        });
+    }
+    
+    let currentIndex = 0;
+    const batchSize = 3; // Load 3 assets at a time
+    
+    function loadNextBatch() {
+        if (currentIndex >= totalAssets) {
+            // All assets loaded
+            sessionStorage.setItem('hasVisitedIndex', 'true');
+            sessionStorage.setItem('hasVisitedSite', 'true');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+                body.classList.remove('loading');
+                // Remove loading screen from DOM after animation
+                setTimeout(() => {
+                    if (loadingScreen.parentNode) {
+                        loadingScreen.style.display = 'none';
+                    }
+                }, 600);
+            }, 300);
+            return;
+        }
+        
+        const endIndex = Math.min(currentIndex + batchSize, totalAssets);
+        const promises = [];
+        
+        for (let i = currentIndex; i < endIndex; i++) {
+            promises.push(
+                loadAsset(priorityAssets[i]).catch(() => {
+                    // Continue loading even if one asset fails
+                    console.warn(`Failed to load asset: ${priorityAssets[i]}`);
+                })
+            );
+        }
+        
+        currentIndex = endIndex;
+        
+        // After current batch is done, start next batch
+        Promise.all(promises).then(() => {
+            if (currentIndex < totalAssets) {
+                setTimeout(loadNextBatch, 100); // Small delay between batches
+            } else {
+                // All assets loaded
+                sessionStorage.setItem('hasVisitedIndex', 'true');
+                sessionStorage.setItem('hasVisitedSite', 'true');
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                    body.classList.remove('loading');
+                    // Remove loading screen from DOM after animation
+                    setTimeout(() => {
+                        if (loadingScreen.parentNode) {
+                            loadingScreen.style.display = 'none';
+                        }
+                    }, 600);
+                }, 300);
+            }
+        });
+    }
+    
+    // Start loading assets
+    loadNextBatch();
+    
+    // Fallback: hide loading screen after max 5 seconds even if assets aren't loaded
+    setTimeout(() => {
+        if (body.classList.contains('loading')) {
+            sessionStorage.setItem('hasVisitedIndex', 'true');
+            sessionStorage.setItem('hasVisitedSite', 'true');
+            loadingScreen.classList.add('hidden');
+            body.classList.remove('loading');
+            setTimeout(() => {
+                if (loadingScreen.parentNode) {
+                    loadingScreen.style.display = 'none';
+                }
+            }, 600);
+        }
+    }, 5000);
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
 
     function initTypewriter() {
