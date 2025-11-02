@@ -655,28 +655,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    setTimeout(() => {
-        const resourcesToPrefetch = [
-            { href: '/assets/InstayAssets/InStayVideo.mp4', as: 'video' },
-            { href: '/assets/SoltarAssets/EmbodiedVid.mp4', as: 'video' },
-            { href: '/assets/CapsoundAssets/CapsoundMockupVideo.mp4', as: 'video' },
-            { href: '/assets/InstayAssets/remotebase.glb', as: 'fetch', crossorigin: 'anonymous' },
-            { href: '/assets/InstayAssets/remotewebsite.glb', as: 'fetch', crossorigin: 'anonymous' }
-        ];
-        
-        resourcesToPrefetch.forEach(resource => {
-            const link = document.createElement('link');
-            link.rel = 'prefetch';
-            link.as = resource.as;
-            link.href = resource.href;
-            if (resource.crossorigin) {
-                link.crossOrigin = resource.crossorigin;
-            }
-            document.head.appendChild(link);
-        });
-        
-        console.log('Started prefetching videos and 3D models');
-    }, 3000);
     
     // Language switching - Remove this duplicate handler as it's already handled by TranslationManager
     // The TranslationManager.setupLanguageSwitcher() already handles all [data-lang] clicks

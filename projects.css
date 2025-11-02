@@ -858,7 +858,7 @@ html, body {
 .remote-3d-wrapper::after {
   content: '';
   display: block;
-  height: 150vh;
+  height: 250vh;
 }
 
 .remote-3d-pin {

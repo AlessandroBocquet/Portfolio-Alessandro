@@ -12,7 +12,6 @@
     return;
   }
 
-  // Wait for DOM to be ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initRemote3D);
   } else {
@@ -36,11 +35,9 @@
       return;
     }
 
-    // Check if mobile device
     const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
     
     if (isMobile) {
-      // On mobile: just show static image, no 3D
       textOverlay.style.opacity = '1';
       textOverlay.style.transform = 'none';
       return;
@@ -48,6 +45,7 @@
 
     // Intersection Observer for lazy loading
     let modelsLoaded = false;
+    let modelsReady = false;
     let scene = null;
     let camera = null;
     let renderer = null;
@@ -58,13 +56,11 @@
     let scrollProgress = 0;
     let isAnimating = false;
 
-    // Setup scene and load models when section is near viewport
     const loadModels = () => {
       if (modelsLoaded) return;
       modelsLoaded = true;
       console.log('Starting to load 3D models...');
 
-      // Scene setup
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
       camera.position.set(0, -0.5, 6);
@@ -94,10 +90,8 @@
       directionalLight2.position.set(-5, 3, -3);
       scene.add(directionalLight2);
 
-      // Load 3D models
       loader = new THREE.GLTFLoader();
       
-      // Creates a simple box if model fails to load
       const createFallbackModel = () => {
         const geometry = new THREE.BoxGeometry(1, 2, 0.3);
         const material = new THREE.MeshPhongMaterial({ 
@@ -108,6 +102,19 @@
         model.position.set(-2.5, 3, 0);
         scene.add(model);
         console.log('Using fallback 3D model');
+      };
+
+      let baseModelLoaded = false;
+      let websiteModelLoaded = false;
+      
+      const checkModelsReady = () => {
+        if (baseModelLoaded && websiteModelLoaded && !modelsReady) {
+          modelsReady = true;
+          console.log('Both 3D models fully loaded and ready');
+          animate();
+          window.addEventListener('scroll', handleScroll, { passive: true });
+          handleScroll();
+        }
       };
 
       loader.load(
@@ -121,32 +128,35 @@
           baseModel.traverse((child) => {
             if (child.isMesh) {
               child.material = new THREE.MeshPhysicalMaterial({
-                color: 0x000000, // Black tint
+                color: 0x000000,
                 transparent: true,
                 opacity: 1,
                 roughness: 0.6,
                 metalness: 0.0,
                 clearcoat: 0.3,
                 clearcoatRoughness: 0.4,
-                transmission: 0.1, // Reduced transmission for more solid black
+                transmission: 0.1,
                 ior: 1.35,
                 thickness: 0.25
               });
               child.material.needsUpdate = true;
             }
           });
-          // Scale the base
           const box = new THREE.Box3().setFromObject(baseModel);
           const size = box.getSize(new THREE.Vector3());
           const maxDim = Math.max(size.x, size.y, size.z);
           const scale = 1.3 / maxDim;
           baseModel.scale.setScalar(scale);
           scene.add(baseModel);
+          baseModelLoaded = true;
           console.log('Base model loaded successfully');
+          checkModelsReady();
         },
         (progress) => {},
         (error) => {
           console.error('Error loading base model:', error);
+          baseModelLoaded = true;
+          checkModelsReady();
         }
       );
 
@@ -154,9 +164,11 @@
         '/assets/InstayAssets/remotewebsite.glb',
         (gltf) => {
           model = gltf.scene;
-          model.position.set(-3.5, 3.5, 0); 
+          model.position.set(-2.16, 3.35, 0); 
+          model.rotation.y = Math.PI;
+          model.rotation.x = 0;
+          model.rotation.z = 0;
           
-          // Enable transparency and glass materials
           model.traverse((child) => {
             if (child.isMesh) {
               child.material.transparent = true;
@@ -167,7 +179,6 @@
             }
           });
           
-          // Scale the model appropriately
           const box = new THREE.Box3().setFromObject(model);
           const size = box.getSize(new THREE.Vector3());
           const maxDim = Math.max(size.x, size.y, size.z);
@@ -175,23 +186,17 @@
           model.scale.setScalar(scale);
           
           scene.add(model);
-          console.log('3D model loaded successfully');
-          
-          // Start animation loop after models are loaded
-          animate();
-          
-          // Set up scroll handler
-          window.addEventListener('scroll', handleScroll, { passive: true });
-          handleScroll();
+          websiteModelLoaded = true;
+          console.log('Website model loaded successfully');
+          checkModelsReady();
         },
         (progress) => {
         },
         (error) => {
           console.error('Error loading 3D model:', error);
           createFallbackModel();
-          animate();
-          window.addEventListener('scroll', handleScroll, { passive: true });
-          handleScroll();
+          websiteModelLoaded = true;
+          checkModelsReady();
         }
       );
     };
@@ -199,7 +204,7 @@
     // Intersection Observer - load when section is 1000px away from viewport
     const observerOptions = {
       root: null,
-      rootMargin: '1000px 0px', // Start loading 1000px before entering viewport
+      rootMargin: '1000px 0px',
       threshold: 0
     };
 
@@ -207,7 +212,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting && !modelsLoaded) {
           loadModels();
-          observer.disconnect(); // Stop observing once we start loading
+          observer.disconnect();
         }
       });
     }, observerOptions);
@@ -224,7 +229,7 @@
     }, 500);
 
     function handleScroll() {
-      if (!scene || !model) return;
+      if (!modelsReady || !scene || !model) return;
       if (isMobile) return; 
       
       const rect = wrapper.getBoundingClientRect();
@@ -232,11 +237,12 @@
       const viewportHeight = window.innerHeight;
       
       const scrollStart = rect.top;
-      const scrollEnd = scrollStart - (wrapperHeight - viewportHeight);
+      const scrollDistance = wrapperHeight - viewportHeight;
+      const scrollEnd = scrollStart - scrollDistance;
       
       if (scrollStart <= 0 && scrollStart >= scrollEnd) {
-        let rawProgress = Math.abs(scrollStart) / (wrapperHeight - viewportHeight);
-        scrollProgress = Math.min(1, rawProgress * 1.5);
+        let rawProgress = Math.abs(scrollStart) / scrollDistance;
+        scrollProgress = Math.min(1, rawProgress);
         isAnimating = true;
       } else if (scrollStart > 0) {
         scrollProgress = 0;
@@ -250,7 +256,7 @@
     }
 
     function updateAnimation() {
-      if (!model) return;
+      if (!modelsReady || !model) return;
       if (isMobile) return; 
 
       const easeInOutCubic = (t) => {
@@ -272,7 +278,7 @@
       model.traverse((child) => {
         if (child.isMesh && child.material) {
           const startR = 1, startG = 1, startB = 1; 
-          const endR = 0xb5 / 255, endG = 0xc3 / 255, endB = 0xd7 / 255; // #b5c3d7
+          const endR = 0xb5 / 255, endG = 0xc3 / 255, endB = 0xd7 / 255;
           const red = startR + (endR - startR) * easedProgress;
           const green = startG + (endG - startG) * easedProgress;
           const blue = startB + (endB - startB) * easedProgress;
@@ -281,7 +287,6 @@
         }
       });
 
-      // Text settings
       const textProgress = scrollProgress > 0.2 ? 1 : scrollProgress / 0.2;
       textOverlay.style.opacity = textProgress;
       textOverlay.style.transform = `translate(-50%, -50%) scale(${0.9 + textProgress * 0.1})`;
@@ -289,12 +294,11 @@
 
     // Animation loop
     function animate() {
-      if (!scene || !renderer || !camera) return;
+      if (!modelsReady || !scene || !renderer || !camera) return;
       
       rafId = requestAnimationFrame(animate);
       
       if (model) {
-        // Add subtle continuous rotation when not scrolling
         if (!isAnimating) {
           model.rotation.y += 0.002;
         }
