@@ -53,13 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(typeWriter, speed);
         }
         
-        // Typewriter delay
         setTimeout(() => {
             typeWriter();
         }, 250);
     }
     
-    // Initialize typewriter
     initTypewriter();
     
     const burgerMenu = document.querySelector('.burger-menu');
@@ -321,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // InStay horizontal scroll-jacked 
+    // InStay horizontal scroll gallery
     (function initInStayScrollGallery() {
         const section = document.querySelector('.instay-scroll-gallery');
         const pin = section?.querySelector('.instay-scroll-pin');
@@ -360,7 +358,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function clamp(n, min, max) { return Math.min(max, Math.max(min, n)); }
 
-        // Depth effect: highlight only the most centered screen via a CSS class (perf friendly)
         let depthRaf = null;
         let lastCenterIdx = -1;
         const applyDepthEffect = () => {
@@ -429,7 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scheduleDepthUpdate();
     })();
 
-    // InStay pinned zoom → unzoom section
+    // InStay zoom section
     (function initInStayZoomSection() {
         const stage = document.querySelector('.instay-zoom-stage');
         const pin = stage?.querySelector('.instay-zoom-pin');
@@ -590,7 +587,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return shuffled;
     }
 
-    // Initialize patterns and set random pattern on page load
+    // Hero pattern initialization
     function initializePatterns() {
         if (!heroMain) return;
         
@@ -620,7 +617,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (heroMain) {
-        // Initialize patterns immediately
         initializePatterns();
         
         let mouseEntropy = 0;
@@ -650,7 +646,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = new Date().getFullYear();
     currentYearElement.textContent = currentYear;
     
-    // Copy background images to CSS variables for zoom effect
+    // Hero card zoom effect
     const heroCards = document.querySelectorAll('.hero-card');
     heroCards.forEach(card => {
         const bgImage = window.getComputedStyle(card).backgroundImage;
@@ -659,17 +655,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Language switching functionality
-    const languageLinks = document.querySelectorAll('.dropdown-content a[data-lang]');
-    languageLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
-            if (window.translations && window.setLanguage) {
-                window.setLanguage(lang);
-                document.querySelectorAll('.dropdown-content a').forEach(a => a.classList.remove('active-flag', 'active-flag-middle'));
-                this.classList.add('active-flag');
+    setTimeout(() => {
+        const resourcesToPrefetch = [
+            { href: '/assets/InstayAssets/InStayVideo.mp4', as: 'video' },
+            { href: '/assets/SoltarAssets/EmbodiedVid.mp4', as: 'video' },
+            { href: '/assets/CapsoundAssets/CapsoundMockupVideo.mp4', as: 'video' },
+            { href: '/assets/InstayAssets/remotebase.glb', as: 'fetch', crossorigin: 'anonymous' },
+            { href: '/assets/InstayAssets/remotewebsite.glb', as: 'fetch', crossorigin: 'anonymous' }
+        ];
+        
+        resourcesToPrefetch.forEach(resource => {
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.as = resource.as;
+            link.href = resource.href;
+            if (resource.crossorigin) {
+                link.crossOrigin = resource.crossorigin;
             }
+            document.head.appendChild(link);
         });
-    });
+        
+        console.log('Started prefetching videos and 3D models');
+    }, 3000);
+    
+    // Language switching - Remove this duplicate handler as it's already handled by TranslationManager
+    // The TranslationManager.setupLanguageSwitcher() already handles all [data-lang] clicks
 });

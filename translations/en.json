@@ -110,8 +110,8 @@
         "title": "Outcome:",
         "text": "Delivered high usability and a warm feel, balancing control with hospitality."
       }
-  },
-  "headers": {
+    },
+    "headers": {
       "ecosystem": "The ecosystem",
       "alwaysPresent": "Always present but invisible",
       "research": "The research",
@@ -123,11 +123,10 @@
       "low": "low fidelity",
       "connector": "to",
       "high": "high fidelity"
-    }
+    },
     "credits": {
       "text": "Project conceived and realized with Mert Güven, Luciano Lettieri  Michele, Simona Invitti and Sabrina Maida at Politecnico di Milano."
-    },
-
+    }
   },  
 
 

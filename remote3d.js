@@ -111,7 +111,7 @@
       };
 
       loader.load(
-        '/assets/remotebase.glb',
+        '/assets/InstayAssets/remotebase.glb',
         (gltf) => {
           baseModel = gltf.scene;
           baseModel.position.set(-3.8, -1.5, 0);
@@ -151,7 +151,7 @@
       );
 
       loader.load(
-        '/assets/remotewebsite.glb',
+        '/assets/InstayAssets/remotewebsite.glb',
         (gltf) => {
           model = gltf.scene;
           model.position.set(-3.5, 3.5, 0); 

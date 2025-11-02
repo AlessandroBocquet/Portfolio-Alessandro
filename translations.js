@@ -2,11 +2,15 @@ class TranslationManager {
     constructor() {
         this.currentLanguage = 'en';
         this.translations = {};
+        this.languageSwitcherSetup = false;
         this.init();
     }
     async init() {
         await this.loadLanguage(this.currentLanguage);
-        this.setupLanguageSwitcher();
+        if (!this.languageSwitcherSetup) {
+            this.setupLanguageSwitcher();
+            this.languageSwitcherSetup = true;
+        }
         this.applyTranslations();
         this.updateActiveFlag();
     }
@@ -26,16 +30,32 @@ class TranslationManager {
         }
     }
     setupLanguageSwitcher() {
-        const languageButtons = document.querySelectorAll('[data-lang]');
-        languageButtons.forEach(button => {
-            button.addEventListener('click', async (e) => {
+        // Use event delegation to avoid duplicate listeners - only set up once
+        if (this._languageClickHandler) {
+            return; // Already set up
+        }
+        this._languageClickHandler = async (e) => {
+            const languageButton = e.target.closest('[data-lang]');
+            if (languageButton) {
                 e.preventDefault();
-                const language = button.getAttribute('data-lang');
-                await this.changeLanguage(language);
-            });
-        });
+                e.stopPropagation();
+                const language = languageButton.getAttribute('data-lang');
+                if (language && ['en', 'fr', 'it'].includes(language)) {
+                    await this.changeLanguage(language);
+                }
+            }
+        };
+        document.addEventListener('click', this._languageClickHandler);
     }
     async changeLanguage(language) {
+        if (!language || !['en', 'fr', 'it'].includes(language)) {
+            console.warn('Invalid language:', language);
+            return;
+        }
+        // Prevent unnecessary language changes
+        if (language === this.currentLanguage) {
+            return;
+        }
         const elements = document.querySelectorAll('[data-translate]');
         elements.forEach(element => {
             element.style.visibility = 'hidden';
@@ -100,14 +120,21 @@ class TranslationManager {
             }
         }
     }
-    initializeFromStorage() {
+    async initializeFromStorage() {
         const storedLanguage = localStorage.getItem('preferred-language');
-        if (storedLanguage && ['fr', 'en', 'it'].includes(storedLanguage)) {
-            this.changeLanguage(storedLanguage);
+        if (storedLanguage && ['fr', 'en', 'it'].includes(storedLanguage) && storedLanguage !== this.currentLanguage) {
+            await this.changeLanguage(storedLanguage);
         }
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
-    const translationManager = new TranslationManager();
-    translationManager.initializeFromStorage();
+    window.translationManager = new TranslationManager();
+    window.translationManager.initializeFromStorage();
+    
+    // Expose setLanguage for compatibility with existing code
+    window.setLanguage = async (language) => {
+        if (window.translationManager) {
+            await window.translationManager.changeLanguage(language);
+        }
+    };
 });
