@@ -81,7 +81,7 @@
     },
     "ownerApp": {
       "label": "Application Propriétaire",
-      "text": "L'application InStay est le centre de contrôle du propriétaire pour les espaces d'hospitalité connectés : surveiller en temps réel, contrôler les appareils à distance et personnaliser l'expérience Smart TV en changeant les paramètres esthétiques de la télévision pour l'adapter à un design intérieur — le tout depuis un téléphone ou une tablette."
+      "text": "L'application InStay est le centre de contrôle du propriétaire pour les espaces d'hospitalité connectés : surveiller en temps réel, contrôler les appareils à distance et personnaliser l'expérience Smart TV en changeant les paramètres esthétiques de la télévision pour l'adapter à un design intérieur. Le tout depuis un téléphone ou une tablette."
     },
     "remote": {
       "label": "Télécommande",
@@ -90,7 +90,7 @@
     },
     "ui": {
       "label": "Interface TV",
-      "text": "L'interface TV InStay transforme la télévision en hub central du locataire, sans pour autant la rendre intrusive, unifiant divertissement, informations sur le logement et contrôles domotiques dans un environnement familier. Les invités accèdent au streaming, à la TV locale, aux informations Wi‑Fi, au tourisme et au règlement intérieur, et contrôlent lumière, climat, serrures et plus encore — directement depuis la TV."
+      "text": "L'interface TV InStay transforme la télévision en hub central du locataire, sans pour autant la rendre intrusive, unifiant divertissement, informations sur le logement et contrôles domotiques dans un environnement familier. Les invités accèdent au streaming, à la TV locale, aux informations Wi‑Fi, au tourisme et au règlement intérieur, et contrôlent lumière, climat, serrures et plus encore, directement depuis la TV."
     },
     "research": {
       "label": "Recherche",
@@ -133,7 +133,7 @@
       "date": "Date :"
     },
     "description": "Soltar est un système d'appareil connecté qui combine un wearable, des signaux haptiques et une musique s'adaptant aux mouvements pour favoriser la libération émotionnelle par la danse. En solo ou en groupe, l'appareil est conçu pour réduire l'anxiété sociale, renforcer la conscience corporelle et synchronise les participants via un rythme partagé.",
-    "problem": "Les espaces de danse peuvent paraître intimidants et brider l'expression. Il manque souvent un guidage pour aligner mouvement et émotion, et beaucoup ne peuvent pas se rendre aux événements. Soltar avait besoin d'une expérience portable, sûre et sociale, utilisable partout — en intérieur comme en extérieur.",
+    "problem": "Les espaces de danse peuvent paraître intimidants et brider l'expression. Il manque souvent un guidage pour aligner mouvement et émotion, et beaucoup ne peuvent pas se rendre aux événements. Soltar avait besoin d'une expérience portable, sûre et sociale, utilisable partout, en intérieur comme en extérieur.",
     "solution": "Nous avons conçu un écosystème connecté et une application qui utilise des moteurs à vibration, des capteurs IMU et une musique qui s'adapte pour guider le mouvement en temps réel. Les vibrations haptiques développent la conscience corporelle tandis que l'app ajuste la musique et les vibrations selon l'intensité et les objectifs. Prototypé avec plus de 30 participants ; modes solo et groupe ; UI minimale et playlists selon l'humeur.",
     "categoryValue": "UX/UI Design – Wearable Tech, Embodied Interaction, Emotional Wellbeing",
     "dateValue": "2025",
@@ -145,7 +145,7 @@
     },
     "app": {
       "label": "Application",
-      "text": "Soltar est un système d'appareil connecté qui fonctionne avec une app qui utilise des retours haptiques, de la musique adaptative et une détection du mouvement en temps réel pour guider une expérience de danse immersive — en solo ou en groupe. Conçu pour la libération émotionnelle et le lien social, il aide à dépasser l'anxiété, le gêne et le manque de temps pour les événements traditionnels."
+      "text": "Soltar est un système d'appareil connecté qui fonctionne avec une app qui utilise des retours haptiques, de la musique adaptative et une détection du mouvement en temps réel pour guider une expérience de danse immersive, en solo ou en groupe. Conçu pour la libération émotionnelle et le lien social, il aide à dépasser l'anxiété, le gêne et le manque de temps pour les événements traditionnels."
     },
     "wearable": {
       "label": "Appareil connecté",
@@ -179,7 +179,7 @@
       "category": "Catégorie :",
       "date": "Date :"
     },
-    "description": "Capsound est une plateforme de claviers personnalisables qui permet aux utilisateurs de concevoir, assembler et améliorer leurs propres claviers. Plutôt que d'acheter un produit figé et pré‑assemblé, les clients choisissent les composants — coques, keycaps, switches et PCB — pour créer une configuration adaptée à leurs préférences. En misant sur la modularité, la réutilisation et le recyclage, Capsound promeut une économie circulaire qui réduit les déchets et prolonge la durée de vie de chaque clavier.",
+    "description": "Capsound est une plateforme de claviers personnalisables qui permet aux utilisateurs de concevoir, assembler et améliorer leurs propres claviers. Plutôt que d'acheter un produit figé et pré‑assemblé, les clients choisissent les composants: coques, keycaps, switches et PCB, pour créer une configuration adaptée à leurs préférences. En misant sur la modularité, la réutilisation et le recyclage, Capsound promeut une économie circulaire qui réduit les déchets et prolonge la durée de vie de chaque clavier.",
     "problem": "La plupart des claviers du marché sont produits en série avec des designs fixes, limitant la personnalisation et forçant souvent à des compromis sur l'esthétique, le ressenti ou l'ergonomie. Lorsqu'un seul composant casse ou devient obsolète, le clavier entier est souvent jeté, générant des déchets inutiles. Les passionnés qui souhaitent construire leur propre clavier font face à des sources fragmentées, à des coûts plus élevés et à un manque de guidage pour débutants. Une solution unifiée, durable et accessible était nécessaire.",
     "solution": "Capsound propose une boutique centralisée où l'on peut acheter des composants compatibles à l'unité ou via des kits sélectionnés. Le système modulaire permet de réparer, mettre à niveau ou repenser complètement son clavier sans tout remplacer. En intégrant des programmes de recyclage pour les pièces usagées et des choix sur le type de livraison, Capsound rend la personnalisation des claviers mécaniques durable et accessible. Cette approche réduit les déchets matériels tout en permettant de créer un produit réellement aligné sur ses besoins et son style.",
     "categoryValue": "E‑commerce – UX/UI Design – Économie circulaire – Matériel personnalisable",
@@ -194,6 +194,55 @@
     },
     "credits": {
       "text": "Projet réalisé avec Tifenn Seveon à l'Université de Strasbourg."
+    }
+  },
+  "planetarium": {
+    "projectType": "UI/UX Design · Branding",
+    "labels": {
+      "description": "Description",
+      "problem": "Problématique :",
+      "solution": "Solution :",
+      "category": "Catégorie :",
+      "date": "Date :"
+    },
+    "title": "Planétarium",
+    "description": "L'utilisateur fait défiler l'application vers le bas et explore les différentes échelles de l'univers. Ce projet propose aux visiteurs une nouvelle approche avant de visiter le planétarium de Strasbourg. Son ambition est de proposer une narration, à l'image du planétarium, et un voyage dans l'univers.",
+    "problem": "Malgré une campagne publicitaire, de nombreux résidents et visiteurs ignoraient l'existence ou l'emplacement du planétarium. Notre recherche a révélé que 30% des répondants n'avaient jamais entendu parler du planétarium, et 50% savaient qu'il existait mais ne savaient pas où il se trouvait. Ce manque de visibilité nous a motivés à créer un projet pour aider le planétarium à toucher un public plus large.",
+    "solution": "Nous avons conçu une expérience numérique interactive accessible via des codes QR répartis dans toute la ville de Strasbourg. L'application web optimisée pour mobile guide les utilisateurs à travers un voyage de défilement dans les étoiles, combinant éducation, interactivité et géolocalisation. La fonctionnalité 'Aura' fournit une guidance spatiale, tandis que les éléments gamifiés renforcent l'engagement et encouragent les visites.",
+    "categoryValue": "UI/UX Design – Musée & Éducation",
+    "dateValue": "2023",
+    "headers": {
+      "overview": "L'exploration des échelles de l'univers",
+      "application": "L'application",
+      "aura": "L'Aura — Guide de géolocalisation",
+      "gamification": "Exploration gamifiée",
+      "research": "La recherche"
+    },
+    "application": {
+      "label": "Application",
+      "text": "L'application Planétarium est une expérience web optimisée pour mobile accessible via des codes QR placés dans toute Strasbourg, en particulier dans le centre-ville et les lieux culturels. Les utilisateurs défilent à travers un voyage narratif explorant le système solaire, du Soleil à Vénus, la Terre, la Lune, Jupiter et au-delà. Chaque défilement révèle des visuels, des faits et des animations qui créent une expérience d'apprentissage immersive, en passant en douceur dans l'espace tout en informant les utilisateurs sur le planétarium et en les encourageant à visiter."
+    },
+    "aura": {
+      "label": "L'Aura",
+      "text": "Une fonctionnalité innovante que nous appelons 'L'Aura' fournit aux utilisateurs une guidance spatiale. Elle indique discrètement la direction et la distance jusqu'au planétarium en fonction de l'emplacement de l'utilisateur. Fonctionnant comme un gyroscope, elle se déplace autour du bord de l'écran lorsque l'utilisateur change de direction. Ce repère visuel attire subtilement les utilisateurs vers le planétarium, à la fois virtuellement et physiquement, créant un lien fluide entre l'expérience numérique et la visite physique."
+    },
+    "gamification": {
+      "label": "Exploration gamifiée",
+      "text": "Pour renforcer l'engagement, l'application comprend des mini-jeux intégrés au voyage. Les utilisateurs peuvent appuyer sur les planètes pour déclencher de courts jeux et gagner des badges. Collecter tous les badges pourrait débloquer un petit bon de réduction pour la prochaine visite au planétarium. Les jeux restent optionnels et non intrusifs, assurant une expérience éducative fluide tout en ajoutant une motivation ludique à l'exploration."
+    },
+    "research": {
+      "label": "Recherche",
+      "intro": "Nos observations et interviews de rue ont révélé des problèmes critiques de visibilité avec le Planétarium de Strasbourg.",
+      "findings": {
+        "title": "Principaux constats :",
+        "unaware": "30% des répondants n'avaient jamais entendu parler du planétarium.",
+        "location": "50% savaient qu'il existait mais ne savaient pas où il se trouvait."
+      },
+      "goal": "Ce manque de visibilité nous a motivés à créer un projet pour aider le planétarium à toucher un public plus large grâce à des expériences numériques interactives intégrées dans les espaces culturels et touristiques de la ville."
+    },
+    "target": {
+      "label": "Publics cibles",
+      "text": "Notre solution cible deux personas clés : les touristes curieux découvrant Strasbourg qui tombent sur des codes QR dans les musées, et les résidents locaux redécouvrant leur ville qui rencontrent des codes lors de l'exploration. L'application parle à la fois de découverte spontanée et d'exploration intentionnelle, rendant le planétarium accessible à des publics diversifiés."
     }
   }
 }

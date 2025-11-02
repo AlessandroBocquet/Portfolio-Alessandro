@@ -142,7 +142,7 @@
       "date": "Date:"
     },
     "description": "Soltar is an embodied interaction system that blends a wearable, haptic cues, and adaptive music to unlock emotional release through dance. For solo or group use, it eases social anxiety, strengthens body awareness, and syncs people through shared rhythm.",
-    "problem": "Dance spaces can feel intimidating, limiting expression. People often lack guidance to align movement and emotion, and many can’t reach events. Soltar needed a portable, safe, and social experience that works anywhere—indoors or outdoors.",
+    "problem": "Dance spaces can feel intimidating, limiting expression. People often lack guidance to align movement and emotion, and many can’t reach events. Soltar needed a portable, safe, and social experience that works anywhere, indoors or outdoors.",
     "solution": "I co-designed a wearable + app that uses vibration motors, IMU sensors, and adaptive music to guide movement in real time. Haptics build body awareness while the app tunes music and vibrations to intensity and goals. Prototyped with 30+ participants; supports solo or group modes with a minimal UI and mood‑based playlists.",
     "categoryValue": "UX/UI Design – Wearable Tech, Embodied Interaction, Emotional Wellbeing",
     "dateValue": "2025",
@@ -154,11 +154,11 @@
     },
     "app": {
       "label": "Application",
-      "text": "Soltar is a wearable and app-based system that uses haptic feedback, adaptive music, and real-time motion sensing to guide users into an immersive dance experience—individually or in groups. Designed to support emotional release and social connection, it helps overcome barriers like anxiety, self-consciousness, and lack of time for traditional dance events."
+      "text": "Soltar is a wearable and app-based system that uses haptic feedback, adaptive music, and real-time motion sensing to guide users into an immersive dance experience, individually or in groups. Designed to support emotional release and social connection, it helps overcome barriers like anxiety, self-consciousness, and lack of time for traditional dance events."
     },
     "wearable": {
       "label": "Wearable device",
-      "text": "The Soltar wearable is a lightweight, body-mounted device integrating vibration motors, IMU sensors, and wireless connectivity to create an embodied guidance system for dance. Placed on the upper arms and wrists for optimal perception, it delivers adaptive vibration patterns that respond in real time to movement intensity, guiding rhythm and flow. The form factor is built from flexible fabric, secure fastenings, and a compact electronics module to ensure comfort, stability, and freedom of motion. Extensive iteration refined motor placement, vibration amplitude, and cable management, resulting in a design that is stable, perceptible, and comfortable for both individual and group dance sessions."
+      "text": "The Soltar wearable is a lightweight, body-mounted device combining vibration motors, IMU sensors, and wireless connectivity to create an embodied guidance system for dance. Worn on the upper arms and wrists, it delivers real-time vibration patterns that adapt to movement intensity, supporting rhythm and flow. Built from flexible fabric with secure fastenings and a compact electronics module, it ensures comfort, stability, and freedom of motion. Iterative testing refined motor placement, vibration strength, and cable layout, resulting in a perceptible, stable, and comfortable design for both solo and group dance."
     },
     "research": {
       "label": "Research",
@@ -169,7 +169,7 @@
         "literature": "Literature review on somaesthetic design, body mapping, and emotional regulation through bodily awareness.",
         "feasibility": "Technology feasibility testing with vibration motors, IMU sensors, and real-time music modulation via TouchDesigner."
       },
-      "outro": "Over 30 participants took part in iterative prototype testing across seven dimensions—vibration placement, haptic patterns, IMU positioning, music adaptation, wearable comfort, UI clarity, and group experience."
+      "outro": "Over 30 participants took part in iterative prototype testing across seven dimensions vibration placement, haptic patterns, IMU positioning, music adaptation, wearable comfort, UI clarity, and group experience."
     },
     "outcome": {
       "title": "Outcome",
@@ -193,9 +193,9 @@
       "category": "Category:",
       "date": "Date:"
     },
-    "description": "Capsound is a customizable keyboard platform that allows users to design, assemble, and upgrade their own keyboards. Instead of purchasing a fixed, pre-built product, customers can select individual components—cases, keycaps, switches, and PCBs—to create a setup tailored to their preferences. By focusing on modularity, reusability, and recycling, Capsound promotes a circular economy model that reduces waste and extends the lifespan of every keyboard.",
+    "description": "Capsound is a customizable keyboard platform that allows users to design, assemble, and upgrade their own keyboards. Instead of purchasing a fixed, pre-built product, customers can select individual components cases, keycaps, switches, and PCBs to create a setup tailored to their preferences. By focusing on modularity, reusability, and recycling, Capsound promotes a circular economy model that reduces waste and extends the lifespan of every keyboard.",
     "problem": "Most keyboards on the market are mass-produced with fixed designs, limiting personalisation and often forcing users to compromise on aesthetics, feel, or ergonomics. When a single component breaks or becomes outdated, the entire keyboard is often discarded, generating unnecessary waste. Enthusiasts who wish to build their own keyboards face fragmented sourcing, higher costs, and a lack of beginner-friendly guidance. A unified, sustainable, and accessible solution was needed.",
-    "solution": "Capsound offers a centralised shop where users can purchase compatible keyboard components individually or as part of curated build kits. The platform’s modular system enables customers to repair, upgrade, or fully redesign their keyboards without replacing the entire product. By integrating recycling programs for old parts and offering educational resources for first-time builders, Capsound makes mechanical keyboard customisation both sustainable and accessible. This approach reduces material waste while empowering users to create a product that reflects their exact needs and style.",
+    "solution": "Capsound is a centralised platform where users can buy compatible keyboard components individually or as curated build kits. Its modular system allows customers to repair, upgrade, or redesign their keyboards without replacing the whole product. With recycling programs for old parts and educational resources for beginners, Capsound makes mechanical keyboard customisation sustainable and accessible reducing waste while helping users create keyboards tailored to their needs and style.",
     "categoryValue": "E-commerce – Product Design – Circular Economy – Customisable Hardware",
     "dateValue": "2023",
     "ui": {
@@ -205,6 +205,55 @@
   "headers": { "credits": "Credits", "prototype": "Prototype" },
     "credits": {
       "text": "Project conceived and realized with Tifenn Seveon at the University of Strasbourg."
+    }
+  },
+  "planetarium": {
+    "projectType": "UI/UX Design · Branding",
+    "labels": {
+      "description": "Description",
+      "problem": "Problem:",
+      "solution": "Solution:",
+      "category": "Category:",
+      "date": "Date:"
+    },
+    "title": "Planetarium",
+    "description": "Users scroll through the application and explore the different scales of the universe. This project offers visitors a new approach before visiting the Strasbourg Planetarium. Its ambition is to provide a narrative, in the image of the planetarium, and a journey through the universe.",
+    "problem": "Despite an advertising campaign, many residents and visitors were unaware of the planetarium's existence or location. Our research revealed that 30% of respondents had never heard of the planetarium, and 50% knew it existed but did not know where it was located. This lack of visibility motivated us to create a project to help the planetarium reach a wider audience.",
+    "solution": "We designed an interactive digital experience accessible via QR codes across Strasbourg. The mobile-friendly web application guides users through a scrolling journey through the stars, combining education, interactivity, and geolocation. The 'Aura' feature provides spatial guidance, while gamified elements enhance engagement and encourage visits.",
+    "categoryValue": "UI/UX Design – Museum & Education",
+    "dateValue": "2023",
+    "headers": {
+      "overview": "Exploring the scales of the universe",
+      "application": "The application",
+      "aura": "The Aura - Geolocation Guide",
+      "gamification": "Gamified exploration",
+      "research": "The research"
+    },
+    "application": {
+      "label": "Application",
+      "text": "The Planetarium application is a mobile-friendly web experience accessible via QR codes placed across Strasbourg, especially in the city center and cultural venues. Users scroll through a narrative journey exploring the solar system,from the Sun to Venus, Earth, Moon, Jupiter, and beyond. Each scroll reveals visuals, facts, and animations that create an immersive learning experience, smoothly transitioning through space while informing users about the planetarium and encouraging them to visit."
+    },
+    "aura": {
+      "label": "The Aura",
+      "text": "An innovative feature we call 'The Aura' provides users with spatial guidance. It discreetly indicates the direction and distance to the planetarium based on the user's location. Functioning like a gyroscope, it moves around the screen edge as the user changes direction. This visual cue subtly draws users toward the planetarium, both virtually and physically, creating a seamless connection between the digital experience and the physical visit."
+    },
+    "gamification": {
+      "label": "Gamified exploration",
+      "text": "To enhance engagement, the app includes mini-games integrated into the journey. Users can tap on planets to trigger short games and earn badges. Collecting all badges could unlock a small discount voucher for the next planetarium visit. The games remain optional and non-intrusive, ensuring a fluid educational experience while adding playful motivation for exploration."
+    },
+    "research": {
+      "label": "Research",
+      "intro": "Our observations and street interviews revealed critical visibility issues with the Strasbourg Planetarium.",
+      "findings": {
+        "title": "Key findings:",
+        "unaware": "30% of respondents had never heard of the planetarium.",
+        "location": "50% knew it existed but did not know where it was located."
+      },
+      "goal": "This lack of visibility motivated us to create a project to help the planetarium reach a wider audience through interactive digital experiences integrated into the city's cultural and touristic spaces."
+    },
+    "target": {
+      "label": "Target audiences",
+      "text": "Our solution targets two key personas: curious tourists discovering Strasbourg who stumble upon QR codes in museums, and local residents rediscovering their city who encounter codes while exploring. The application speaks to both spontaneous discovery and intentional exploration, making the planetarium accessible to diverse audiences."
     }
   }
 }

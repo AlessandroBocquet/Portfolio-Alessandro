@@ -192,5 +192,54 @@
     "credits": {
       "text": "Progetto concepito con Tifenn Seveon all’Università di Strasburgo."
     }
+  },
+  "planetarium": {
+    "projectType": "UI/UX Design · Branding",
+    "labels": {
+      "description": "Descrizione",
+      "problem": "Problema:",
+      "solution": "Soluzione:",
+      "category": "Categoria:",
+      "date": "Data:"
+    },
+    "title": "Planetario",
+    "description": "L'utente scorre l'applicazione e esplora le diverse scale dell'universo. Questo progetto offre ai visitatori un nuovo approccio prima di visitare il planetario di Strasburgo. La sua ambizione è fornire una narrazione, nell'immagine del planetario, e un viaggio attraverso l'universo.",
+    "problem": "Nonostante una campagna pubblicitaria, molti residenti e visitatori non erano a conoscenza dell'esistenza o della posizione del planetario. La nostra ricerca ha rivelato che il 30% dei rispondenti non aveva mai sentito parlare del planetario, e il 50% sapeva che esisteva ma non sapeva dove si trovasse. Questa mancanza di visibilità ci ha motivato a creare un progetto per aiutare il planetario a raggiungere un pubblico più ampio.",
+    "solution": "Abbiamo progettato un'esperienza digitale interattiva accessibile tramite codici QR distribuiti in tutta Strasburgo. L'applicazione web ottimizzata per mobile guida gli utenti attraverso un viaggio di scorrimento tra le stelle, combinando educazione, interattività e geolocalizzazione. La funzionalità 'Aura' fornisce una guida spaziale, mentre gli elementi gamificati migliorano l'engagement e incoraggiano le visite.",
+    "categoryValue": "UI/UX Design – Museo & Educazione",
+    "dateValue": "2023",
+    "headers": {
+      "overview": "Esplorazione delle scale dell'universo",
+      "application": "L'applicazione",
+      "aura": "L'Aura — Guida di geolocalizzazione",
+      "gamification": "Esplorazione gamificata",
+      "research": "La ricerca"
+    },
+    "application": {
+      "label": "Applicazione",
+      "text": "L'applicazione Planetario è un'esperienza web ottimizzata per mobile accessibile tramite codici QR posizionati in tutta Strasburgo, in particolare nel centro città e nelle sedi culturali. Gli utenti scorrono attraverso un viaggio narrativo che esplora il sistema solare—dal Sole a Venere, Terra, Luna, Giove e oltre. Ogni scorrimento rivela visualizzazioni, fatti e animazioni che creano un'esperienza di apprendimento immersiva, passando fluidamente attraverso lo spazio mentre informano gli utenti sul planetario e li incoraggiano a visitarlo."
+    },
+    "aura": {
+      "label": "L'Aura",
+      "text": "Una funzionalità innovativa che chiamiamo 'L'Aura' fornisce agli utenti una guida spaziale. Indica discretamente la direzione e la distanza dal planetario in base alla posizione dell'utente. Funzionando come un giroscopio, si muove attorno al bordo dello schermo quando l'utente cambia direzione. Questo segnale visivo attira sottilmente gli utenti verso il planetario, sia virtualmente che fisicamente, creando una connessione fluida tra l'esperienza digitale e la visita fisica."
+    },
+    "gamification": {
+      "label": "Esplorazione gamificata",
+      "text": "Per migliorare l'engagement, l'app include mini-giochi integrati nel viaggio. Gli utenti possono toccare i pianeti per attivare giochi brevi e guadagnare badge. Raccogliere tutti i badge potrebbe sbloccare un piccolo buono sconto per la prossima visita al planetario. I giochi rimangono opzionali e non intrusivi, assicurando un'esperienza educativa fluida mentre aggiungono motivazione ludica all'esplorazione."
+    },
+    "research": {
+      "label": "Ricerca",
+      "intro": "Le nostre osservazioni e interviste per strada hanno rivelato problemi critici di visibilità con il Planetario di Strasburgo.",
+      "findings": {
+        "title": "Risultati chiave:",
+        "unaware": "Il 30% dei rispondenti non aveva mai sentito parlare del planetario.",
+        "location": "Il 50% sapeva che esisteva ma non sapeva dove si trovasse."
+      },
+      "goal": "Questa mancanza di visibilità ci ha motivato a creare un progetto per aiutare il planetario a raggiungere un pubblico più ampio attraverso esperienze digitali interattive integrate negli spazi culturali e turistici della città."
+    },
+    "target": {
+      "label": "Pubblico target",
+      "text": "La nostra soluzione si rivolge a due personas chiave: turisti curiosi che scoprono Strasburgo e si imbattono in codici QR nei musei, e residenti locali che riscoprono la loro città e incontrano codici durante l'esplorazione. L'applicazione parla sia di scoperta spontanea che di esplorazione intenzionale, rendendo il planetario accessibile a pubblici diversificati."
+    }
   }
 }
