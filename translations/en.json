@@ -8,11 +8,11 @@
   "hero": {
     "greeting": "Hello, I'm",
     "title": "UX & UI Designer",
-    "subtitle": "I craft digital experiences through design and code"
+    "subtitle": "Turning ideas into digital experiences."
   },
   "aboutDesc": "Hello, my name is Alessandro Bocquet. I'm a UX and UI designer studying in the master Digital and Interaction Design at the Politecnico di Milano. I mainly create my work through Figma and coding via HTML, CSS, and JavaScript (GSAP and jQuery).",
   "skillsTitle": "Design Stack",
-  "skillsDesc": "My diverse background in interaction design, digital heritage, and visual systems equips me to tackle visual and user experience challenges across all media with a thoughtful, product-oriented approach",
+  "skillsDesc": "My diverse background in interaction design, digital heritage, and visual systems equips me to tackle visual and user experience challenges across all media with a thoughtful, human-centered approach.",
   "stats": {
     "skills": "Skills",
     "years": "Years",
@@ -43,10 +43,10 @@
     }
   },
   "featuredProjectsTitle": "Featured Projects",
-  "featuredProjectsDesc": "A selection of my recent work in UX/UI design and visual creation",
+  "featuredProjectsDesc": "A selection of my recent work in UX/UI design and visual creation.",
   "contact": {
     "title": "🤝 Let's get in touch",
-    "description": "I'm always open to discussing new projects, creative ideas, or opportunities.",
+    "description": "Always happy to chat about new projects, fresh ideas, or potential collaborations.",
     "emailButton": "Say Hello",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -64,7 +64,7 @@
 
 
   "instay": {
-    "projectType": "Branding · UI/UX Design",
+    "projectType": "TV interface design · UX/UI Design",
     "labels": {
       "description": "Description",
       "problem": "Problem:",
@@ -73,9 +73,9 @@
       "date": "Date:"
     },
     "description": "InStay is a smart hospitality ecosystem integrating IoT devices, Smart TV, and a remote-control system to enhance the guest experience and streamline property management. Designed for both tenants and owners, it offers intuitive control, energy efficiency, and secure device management within short-term rentals.",
-    "problem": "Guests face difficulty adjusting lighting and climate, finding essential information, and adapting to unfamiliar systems. Owners deal with wasted energy, device misuse, and limited control over property resources. InStay needed a cohesive, user-friendly solution that works seamlessly across devices while maintaining security and brand identity.",
-    "solution": "We designed a connected ecosystem uniting Smart TV, IoT devices, and a dedicated remote within a single interface. The Smart TV serves as an intuitive hub for tenants, while owners manage and monitor via an app. Through iterative prototypes, we refined clarity, reduced clicks, and maintained a sense of hospitality. The final UI features a minimal aesthetic, clear iconography, and a soft palette that conveys trust, innovation, and simplicity.",
-    "categoryValue": "UX/UI Design – IoT, Hospitality Tech",
+    "problem": "Guests face difficulty adjusting lighting and climate, finding essential information and are deeply hesitant to log into their personal streaming accounts. Owners deal with wasted energy, device misuse, and limited control over property resources. InStay needed a cohesive, user-friendly solution that works seamlessly across devices while maintaining security and brand identity.",
+    "solution": "Our solution unites the Smart TV, IoT devices, the remote controller and the owner's application into one connected ecosystem. The Smart TV serves as an intuitive hub, giving guests complete control over their apartment and their stay. It provides a secure portal for personal streaming, with automated data deletion at check-out to ensure total privacy.",
+    "categoryValue": "TV interface design · UX/UI Design",
   "dateValue": "2025",
     "ownerApp": {
       "label": "Owner App",
@@ -88,28 +88,19 @@
     },
     "ui": {
       "label": "Smart TV UI",
-      "text": "The InStay Smart TV UI turns the television into the guest’s central hub, unifying entertainment, property information, and smart‑home controls in a familiar environment. Guests can access streaming, local TV, Wi‑Fi details, tourist information, house rules, and control lighting, climate, locks, and more—directly from the TV."
+      "text": "The InStay Smart TV UI turns the television into the guest's central hub, unifying entertainment, property information, and smart‑home controls in a familiar environment. Guests can access streaming, local TV, Wi‑Fi password, tourist information, house rules, and control lighting, climate, locks, and more, directly from the TV."
+    },
+    "centralHub": {
+      "header": "A central hub",
+      "text": "InStay also functions as a central control hub for all smart devices in the home. This includes air conditioners, smart lights, and smart locks."
+    },
+    "designProcess": {
+      "header": "The design process",
+      "text": "At each step of the design phase, we confronted our low-fidelity prototypes with user testing. Through iterative testing and feedback, we refined the interface, navigation structure, and visual hierarchy, gradually evolving from simple wireframes to a polished, high-fidelity design that meets both usability standards and aesthetic goals."
     },
     "research": {
       "label": "Research",
-      "heading": "InStay Research – From Insights to Interaction",
-      "intro": "InStay’s design was driven by lean research to make guest and owner interactions intuitive and efficient.",
-      "methods": {
-        "title": "Methods:",
-        "interviews": "Interviews: captured guest/owner pain points (lighting/climate setup, energy waste).",
-        "ia": "Tree tests with 47+ participants in 4 languages; 87.25% success validating hierarchy.",
-        "prototypes": "Prototypes: low→high fidelity to refine navigation, button layout, hierarchy and tests through each step."
-      },
-      "findings": {
-        "title": "Key findings:",
-        "reducedClicks": "Fewer clicks by surfacing core actions on the home screen.",
-        "addedActions": "Added clear Log Out and a Onboarding allowing to change language and having the house rules explained.",
-        "confirmedErgonomics": "Remote ergonomics and layout validated in hands‑on trials."
-      },
-      "outcome": {
-        "title": "Outcome:",
-        "text": "Delivered high usability and a warm feel, balancing control with hospitality."
-      }
+      "text": "We backed this ecosystem creation with user testing. Final results on our system showed a 90% success rate on the owner's app. For the Smart TV tests, compared to benchmarks done before, our system performed consistently 40% better in all tests, with an overall result of 87% success rate across 4 different languages."
     },
     "headers": {
       "ecosystem": "The ecosystem",
@@ -208,7 +199,7 @@
     }
   },
   "planetarium": {
-    "projectType": "UI/UX Design · Branding",
+    "projectType": "UX/UI Design · Branding",
     "labels": {
       "description": "Description",
       "problem": "Problem:",
@@ -217,7 +208,7 @@
       "date": "Date:"
     },
     "title": "Planetarium",
-    "description": "Users scroll through the application and explore the different scales of the universe. This project offers visitors a new approach before visiting the Strasbourg Planetarium. Its ambition is to provide a narrative, in the image of the planetarium, and a journey through the universe.",
+    "description": "Planetarium of Strasbourg app is an interactive digital experience designed to raise awareness of the Strasbourg Planetarium. Through a mobile-friendly web application accessible via QR codes across the city, users embark on a narrative journey through the universe, from the Sun to the farthest reaches of space. The experience combines storytelling, interactivity, and geolocation to connect the digital journey with a real-world destination.",
     "problem": "Despite an advertising campaign, many residents and visitors were unaware of the planetarium's existence or location. Our research revealed that 30% of respondents had never heard of the planetarium, and 50% knew it existed but did not know where it was located. This lack of visibility motivated us to create a project to help the planetarium reach a wider audience.",
     "solution": "We designed an interactive digital experience accessible via QR codes across Strasbourg. The mobile-friendly web application guides users through a scrolling journey through the stars, combining education, interactivity, and geolocation. The 'Aura' feature provides spatial guidance, while gamified elements enhance engagement and encourage visits.",
     "categoryValue": "UI/UX Design – Museum & Education",

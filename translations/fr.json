@@ -92,26 +92,17 @@
       "label": "Interface TV",
       "text": "L'interface TV InStay transforme la télévision en hub central du locataire, sans pour autant la rendre intrusive, unifiant divertissement, informations sur le logement et contrôles domotiques dans un environnement familier. Les invités accèdent au streaming, à la TV locale, aux informations Wi‑Fi, au tourisme et au règlement intérieur, et contrôlent lumière, climat, serrures et plus encore, directement depuis la TV."
     },
+    "centralHub": {
+      "header": "Un hub central",
+      "text": "InStay fonctionne également comme un hub de contrôle central pour tous les appareils intelligents de la maison. Cela inclut les climatiseurs, les lumières intelligentes et les serrures intelligentes."
+    },
+    "designProcess": {
+      "header": "Le processus de conception",
+      "text": "À chaque étape de la phase de conception, nous avons confronté nos prototypes basse fidélité à des tests utilisateurs. Grâce à des tests itératifs et des retours, nous avons affiné l'interface, la structure de navigation et la hiérarchie visuelle, évoluant progressivement de simples wireframes vers un design haute fidélité raffiné qui répond à la fois aux standards d'utilisabilité et aux objectifs esthétiques."
+    },
     "research": {
       "label": "Recherche",
-      "heading": "InStay – De l'idée à l'interaction",
-      "intro": "La conception d'InStay s'appuie sur une recherche ciblée pour rendre l'interaction intuitive et efficace côté invités et propriétaires.",
-      "methods": {
-        "title": "Méthodes :",
-        "interviews": "Entretiens : problèmes locataire/propriétaires (réglages lumière/climat, gaspillage énergétique).",
-        "ia": "Tree tests (47 participants, 4 langues) — 87,25% de réussite.",
-        "prototypes": "Prototypes : low→high fidelity pour affiner navigation, placement et hiérarchie."
-      },
-      "findings": {
-        "title": "Principaux constats :",
-        "reducedClicks": "Moins de clics en exposant les actions clés sur l'accueil.",
-        "addedActions": "Ajout de \"Déconnexion\" et \"Veille\" claires.",
-        "confirmedErgonomics": "Ergonomie et layout de la télécommande validés en essais pratiques."
-      },
-      "outcome": {
-        "title": "Résultat :",
-        "text": "Haute utilisabilité et ressenti chaleureux, entre contrôle et hospitalité."
-      }
+      "text": "Nous avons appuyé cette création d'écosystème par des tests utilisateurs. Les résultats finaux sur notre système ont montré un taux de réussite de 90% sur l'application propriétaire. Pour les tests Smart TV, comparés aux benchmarks réalisés auparavant, notre système a obtenu de manière constante 40% de meilleurs résultats dans tous les tests, avec un résultat global de 87% de taux de réussite sur 4 langues différentes."
     },
     "credits": {
       "text": "Projet réalisé avec Mert Güven, Luciano Lettieri  Michele, Simona Invitti et Sabrina Maida au Politecnico di Milano."
@@ -206,7 +197,7 @@
       "date": "Date :"
     },
     "title": "Planétarium",
-    "description": "L'utilisateur fait défiler l'application vers le bas et explore les différentes échelles de l'univers. Ce projet propose aux visiteurs une nouvelle approche avant de visiter le planétarium de Strasbourg. Son ambition est de proposer une narration, à l'image du planétarium, et un voyage dans l'univers.",
+    "description": "L'application Planétarium de Strasbourg est une expérience numérique interactive conçue pour sensibiliser le public au Planétarium de Strasbourg. Grâce à une application web adaptée aux mobiles, accessible via des codes QR répartis dans toute la ville, les utilisateurs s'embarquent dans un voyage narratif à travers l'univers, du Soleil aux confins de l'espace. L'expérience combine narration, interactivité et géolocalisation pour connecter le parcours numérique avec une destination réelle.",
     "problem": "Malgré une campagne publicitaire, de nombreux résidents et visiteurs ignoraient l'existence ou l'emplacement du planétarium. Notre recherche a révélé que 30% des répondants n'avaient jamais entendu parler du planétarium, et 50% savaient qu'il existait mais ne savaient pas où il se trouvait. Ce manque de visibilité nous a motivés à créer un projet pour aider le planétarium à toucher un public plus large.",
     "solution": "Nous avons conçu une expérience numérique interactive accessible via des codes QR répartis dans toute la ville de Strasbourg. L'application web optimisée pour mobile guide les utilisateurs à travers un voyage de défilement dans les étoiles, combinant éducation, interactivité et géolocalisation. La fonctionnalité 'Aura' fournit une guidance spatiale, tandis que les éléments gamifiés renforcent l'engagement et encouragent les visites.",
     "categoryValue": "UI/UX Design – Musée & Éducation",

@@ -13,6 +13,12 @@
     <meta property="og:description" content="A project case study for Planetarium.">
     <meta property="og:image" content="/assets/logoprovisoir.png">
     <meta property="og:url" content="/projets/Planetarium.html">
+    <script>
+        // Mark that user has visited the site (prevents loading screen on index.html)
+        if (typeof sessionStorage !== 'undefined') {
+            sessionStorage.setItem('hasVisitedSite', 'true');
+        }
+    </script>
 </head>
 <body>
     <section class="inside">
@@ -114,7 +120,7 @@
                     </div>
 
                     <section class="project-media-wide">
-                        <img src="/assets/PlanetariumAssets/PlanetariumAura.png" alt="Planetarium Aura geolocation feature" class="project-image-wide">
+                        <img src="/assets/PlanetariumAssets/TheAura.png" alt="Planetarium Aura geolocation feature" class="project-image-wide">
                     </section>
 
                     <section class="ui-section">
@@ -156,7 +162,7 @@
                     </div>
 
                     <section class="project-media-wide">
-                        <img src="/assets/PlanetariumAssets/PlanetariumResearch.png" alt="Planetarium research findings" class="project-image-wide">
+                        <img src="/assets/PlanetariumAssets/Research.png" alt="Planetarium research findings" class="project-image-wide">
                     </section>
 
                     <section class="ui-section">

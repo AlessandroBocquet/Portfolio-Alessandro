@@ -90,28 +90,19 @@
     },
     "ui": {
       "label": "Interfaccia TV",
-      "text": "L’interfaccia Smart TV InStay trasforma la televisione nell’hub centrale dell’ospite, unificando intrattenimento, informazioni sulla proprietà e controlli domotici in un ambiente familiare. Gli ospiti possono accedere allo streaming, alla TV locale, ai dettagli del Wi‑Fi, a informazioni turistiche e alle regole della casa, e controllare luci, clima, serrature e altro — direttamente dalla TV."
+      "text": "L'interfaccia Smart TV InStay trasforma la televisione nell'hub centrale dell'ospite, unificando intrattenimento, informazioni sulla proprietà e controlli domotici in un ambiente familiare. Gli ospiti possono accedere allo streaming, alla TV locale, ai dettagli del Wi‑Fi, a informazioni turistiche e alle regole della casa, e controllare luci, clima, serrature e altro — direttamente dalla TV."
+    },
+    "centralHub": {
+      "header": "Un hub centrale",
+      "text": "InStay funziona anche come hub di controllo centrale per tutti i dispositivi smart della casa. Questo include condizionatori d'aria, luci intelligenti e serrature intelligenti."
+    },
+    "designProcess": {
+      "header": "Il processo di progettazione",
+      "text": "Ad ogni fase del processo di design, abbiamo confrontato i nostri prototipi a bassa fedeltà con test utente. Attraverso test iterativi e feedback, abbiamo raffinato l'interfaccia, la struttura di navigazione e la gerarchia visiva, evolvendoci gradualmente da semplici wireframe a un design ad alta fedeltà raffinato che soddisfa sia gli standard di usabilità che gli obiettivi estetici."
     },
     "research": {
       "label": "Ricerca",
-      "heading": "InStay – Dagli insight all’interazione",
-      "intro": "Il design di InStay nasce da una ricerca mirata per rendere l’interazione intuitiva ed efficiente per ospiti e proprietari.",
-      "methods": {
-        "title": "Metodi:",
-        "interviews": "Interviste: pain point ospiti/proprietari (luci/clima, spreco energetico).",
-        "ia": "IA: tree test (47 partecipanti, 4 lingue) — successo 87,25%.",
-        "prototypes": "Prototipi: da low a high fidelity per affinare navigazione, layout e gerarchia."
-      },
-      "findings": {
-        "title": "Risultati chiave:",
-        "reducedClicks": "Meno clic mettendo in evidenza le azioni principali in home.",
-        "addedActions": "Aggiunte azioni chiare Logout e Standby.",
-        "confirmedErgonomics": "Ergonomia e layout del telecomando validati in prove pratiche."
-      },
-      "outcome": {
-        "title": "Esito:",
-        "text": "Alta usabilità e calore, equilibrio tra controllo e ospitalità."
-      }
+      "text": "Abbiamo supportato la creazione di questo ecosistema con test utente. I risultati finali sul nostro sistema hanno mostrato un tasso di successo del 90% sull'app proprietario. Per i test Smart TV, rispetto ai benchmark precedenti, il nostro sistema ha performato costantemente il 40% meglio in tutti i test, con un risultato complessivo dell'87% di tasso di successo su 4 lingue diverse."
     },
     "credits": {
       "text": "Progetto realizzato con Mert Güven, Luciano Lettieri  Michele, Simona Invitti e Sabrina Maida al Politecnico di Milano."
@@ -203,7 +194,7 @@
       "date": "Data:"
     },
     "title": "Planetario",
-    "description": "L'utente scorre l'applicazione e esplora le diverse scale dell'universo. Questo progetto offre ai visitatori un nuovo approccio prima di visitare il planetario di Strasburgo. La sua ambizione è fornire una narrazione, nell'immagine del planetario, e un viaggio attraverso l'universo.",
+    "description": "L'app del Planetario di Strasburgo è un'esperienza digitale interattiva progettata per aumentare la consapevolezza del Planetario di Strasburgo. Attraverso un'applicazione web ottimizzata per mobile, accessibile tramite codici QR in tutta la città, gli utenti si imbarcano in un viaggio narrativo attraverso l'universo, dal Sole alle zone più remote dello spazio. L'esperienza combina storytelling, interattività e geolocalizzazione per collegare il percorso digitale con una destinazione reale.",
     "problem": "Nonostante una campagna pubblicitaria, molti residenti e visitatori non erano a conoscenza dell'esistenza o della posizione del planetario. La nostra ricerca ha rivelato che il 30% dei rispondenti non aveva mai sentito parlare del planetario, e il 50% sapeva che esisteva ma non sapeva dove si trovasse. Questa mancanza di visibilità ci ha motivato a creare un progetto per aiutare il planetario a raggiungere un pubblico più ampio.",
     "solution": "Abbiamo progettato un'esperienza digitale interattiva accessibile tramite codici QR distribuiti in tutta Strasburgo. L'applicazione web ottimizzata per mobile guida gli utenti attraverso un viaggio di scorrimento tra le stelle, combinando educazione, interattività e geolocalizzazione. La funzionalità 'Aura' fornisce una guida spaziale, mentre gli elementi gamificati migliorano l'engagement e incoraggiano le visite.",
     "categoryValue": "UI/UX Design – Museo & Educazione",

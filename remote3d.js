@@ -54,6 +54,7 @@
     let loader = null;
     let rafId = null;
     let scrollProgress = 0;
+    let targetScrollProgress = 0;
     let isAnimating = false;
 
     const loadModels = () => {
@@ -76,19 +77,27 @@
       renderer.setClearColor(0x000000, 0);
       renderer.outputEncoding = THREE.sRGBEncoding;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.0;
+      renderer.toneMappingExposure = 1.3;
       renderer.physicallyCorrectLights = true;
 
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+      const ambientLight = new THREE.AmbientLight(0xffffff, 2.0);
       scene.add(ambientLight);
 
-      const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.6);
-      directionalLight1.position.set(5, 5, 5);
+      const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1.2);
+      directionalLight1.position.set(5, 6, 5);
       scene.add(directionalLight1);
 
-      const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
-      directionalLight2.position.set(-5, 3, -3);
+      const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.8);
+      directionalLight2.position.set(-5, 4, -3);
       scene.add(directionalLight2);
+
+      const directionalLight3 = new THREE.DirectionalLight(0xffffff, 0.6);
+      directionalLight3.position.set(0, 7, 3);
+      scene.add(directionalLight3);
+
+      const directionalLight4 = new THREE.DirectionalLight(0xffffff, 0.5);
+      directionalLight4.position.set(-3, 5, 6);
+      scene.add(directionalLight4);
 
       loader = new THREE.GLTFLoader();
       
@@ -128,16 +137,12 @@
           baseModel.traverse((child) => {
             if (child.isMesh) {
               child.material = new THREE.MeshPhysicalMaterial({
-                color: 0x000000,
-                transparent: true,
-                opacity: 1,
-                roughness: 0.6,
-                metalness: 0.0,
-                clearcoat: 0.3,
-                clearcoatRoughness: 0.4,
-                transmission: 0.1,
-                ior: 1.35,
-                thickness: 0.25
+                color: 0xc0c0c0,
+                roughness: 0.03,
+                metalness: 0.98,
+                clearcoat: 1.0,
+                clearcoatRoughness: 0.03,
+                envMapIntensity: 2.5
               });
               child.material.needsUpdate = true;
             }
@@ -242,22 +247,29 @@
       
       if (scrollStart <= 0 && scrollStart >= scrollEnd) {
         let rawProgress = Math.abs(scrollStart) / scrollDistance;
-        scrollProgress = Math.min(1, rawProgress);
+        targetScrollProgress = Math.max(0, Math.min(1, rawProgress));
         isAnimating = true;
       } else if (scrollStart > 0) {
-        scrollProgress = 0;
+        targetScrollProgress = 0;
         isAnimating = false;
       } else {
-        scrollProgress = 1;
+        targetScrollProgress = 1;
         isAnimating = false;
       }
-
-      updateAnimation();
     }
+
+    function lerp(start, end, factor) {
+      return start + (end - start) * factor;
+    }
+
+    let currentColor = { r: 1, g: 1, b: 1 };
 
     function updateAnimation() {
       if (!modelsReady || !model) return;
       if (isMobile) return; 
+
+      const lerpSpeed = 0.1;
+      scrollProgress = lerp(scrollProgress, targetScrollProgress, lerpSpeed);
 
       const easeInOutCubic = (t) => {
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
@@ -266,8 +278,7 @@
       const easedProgress = easeInOutCubic(scrollProgress);
 
       model.position.x = -2.16;
-      
-  model.position.y = 3.35 - (easedProgress * 5); 
+      model.position.y = 3.35 - (easedProgress * 5); 
 
       const startRotation = Math.PI; 
       const endRotation = 9.4;
@@ -275,21 +286,28 @@
       model.rotation.x = 0;
       model.rotation.z = 0;
 
+      const targetColor = {
+        r: lerp(1, 0xb5 / 255, easedProgress),
+        g: lerp(1, 0xc3 / 255, easedProgress),
+        b: lerp(1, 0xd7 / 255, easedProgress)
+      };
+
+      currentColor.r = lerp(currentColor.r, targetColor.r, 0.2);
+      currentColor.g = lerp(currentColor.g, targetColor.g, 0.2);
+      currentColor.b = lerp(currentColor.b, targetColor.b, 0.2);
+
       model.traverse((child) => {
         if (child.isMesh && child.material) {
-          const startR = 1, startG = 1, startB = 1; 
-          const endR = 0xb5 / 255, endG = 0xc3 / 255, endB = 0xd7 / 255;
-          const red = startR + (endR - startR) * easedProgress;
-          const green = startG + (endG - startG) * easedProgress;
-          const blue = startB + (endB - startB) * easedProgress;
-          
-          child.material.color.setRGB(red, green, blue);
+          child.material.color.setRGB(currentColor.r, currentColor.g, currentColor.b);
         }
       });
 
       const textProgress = scrollProgress > 0.2 ? 1 : scrollProgress / 0.2;
-      textOverlay.style.opacity = textProgress;
-      textOverlay.style.transform = `translate(-50%, -50%) scale(${0.9 + textProgress * 0.1})`;
+      const currentTextOpacity = parseFloat(textOverlay.style.opacity) || 0;
+      const textOpacity = lerp(currentTextOpacity, textProgress, 0.15);
+      textOverlay.style.opacity = textOpacity;
+      const scaleValue = lerp(0.9, 1, textProgress);
+      textOverlay.style.transform = `translate(-50%, -50%) scale(${scaleValue})`;
     }
 
     // Animation loop
@@ -298,8 +316,10 @@
       
       rafId = requestAnimationFrame(animate);
       
+      updateAnimation();
+      
       if (model) {
-        if (!isAnimating) {
+        if (!isAnimating && scrollProgress < 0.05) {
           model.rotation.y += 0.002;
         }
       }
