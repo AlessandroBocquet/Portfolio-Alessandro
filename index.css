@@ -1919,6 +1919,13 @@ html, body {
   to { transform: rotate(360deg); }
 }
 
+/* Disable scrolling during loading */
+html.loading,
+body.loading {
+  overflow: hidden;
+  height: 100%;
+}
+
 /* Hide main content during loading */
 body.loading .inside {
   opacity: 0;

@@ -2,6 +2,7 @@
 (function initLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     const body = document.body;
+    const html = document.documentElement;
     
     if (!loadingScreen || !body) {
         // Elements not found, skip loading screen
@@ -47,6 +48,7 @@
         // Not first visit or came from another page, hide loading screen immediately
         loadingScreen.classList.add('hidden');
         body.classList.remove('loading');
+        html.classList.remove('loading');
         // Mark that they've visited the site
         if (!hasVisitedSite) {
             sessionStorage.setItem('hasVisitedSite', 'true');
@@ -56,6 +58,7 @@
     
     // First visit - show loading screen and load assets
     body.classList.add('loading');
+    html.classList.add('loading');
     
     // Define assets to load in priority order
     const priorityAssets = [
@@ -124,6 +127,7 @@
             setTimeout(() => {
                 loadingScreen.classList.add('hidden');
                 body.classList.remove('loading');
+                html.classList.remove('loading');
                 // Remove loading screen from DOM after animation
                 setTimeout(() => {
                     if (loadingScreen.parentNode) {
@@ -159,6 +163,7 @@
                 setTimeout(() => {
                     loadingScreen.classList.add('hidden');
                     body.classList.remove('loading');
+                    html.classList.remove('loading');
                     // Remove loading screen from DOM after animation
                     setTimeout(() => {
                         if (loadingScreen.parentNode) {
@@ -180,6 +185,7 @@
             sessionStorage.setItem('hasVisitedSite', 'true');
             loadingScreen.classList.add('hidden');
             body.classList.remove('loading');
+            html.classList.remove('loading');
             setTimeout(() => {
                 if (loadingScreen.parentNode) {
                     loadingScreen.style.display = 'none';

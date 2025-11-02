@@ -124,7 +124,7 @@
 
 
   "soltar": {
-    "projectType": "Electronics · UX/UI Design · Motion",
+    "projectType": "Wearable · UX/UI Design · Electronics",
     "labels": {
       "description": "Description",
       "problem": "Problem:",
@@ -134,8 +134,8 @@
     },
     "description": "Soltar is an embodied interaction system that blends a wearable, haptic cues, and adaptive music to unlock emotional release through dance. For solo or group use, it eases social anxiety, strengthens body awareness, and syncs people through shared rhythm.",
     "problem": "Dance spaces can feel intimidating, limiting expression. People often lack guidance to align movement and emotion, and many can’t reach events. Soltar needed a portable, safe, and social experience that works anywhere, indoors or outdoors.",
-    "solution": "I co-designed a wearable + app that uses vibration motors, IMU sensors, and adaptive music to guide movement in real time. Haptics build body awareness while the app tunes music and vibrations to intensity and goals. Prototyped with 30+ participants; supports solo or group modes with a minimal UI and mood‑based playlists.",
-    "categoryValue": "UX/UI Design – Wearable Tech, Embodied Interaction, Emotional Wellbeing",
+    "solution": "We designed a wearable linked to an app that uses vibration motors, IMU sensors, and adaptive music to guide movement in real time. Haptics build body awareness while the app tunes music and vibrations to intensity and goals. Prototyped with 30+ participants; supports solo or group modes with a minimal UI and mood‑based playlists.",
+    "categoryValue": "Wearable · UX/UI Design · Electronics",
     "dateValue": "2025",
     "headers": {
       "overview": "Overview",
@@ -145,11 +145,11 @@
     },
     "app": {
       "label": "Application",
-      "text": "Soltar is a wearable and app-based system that uses haptic feedback, adaptive music, and real-time motion sensing to guide users into an immersive dance experience, individually or in groups. Designed to support emotional release and social connection, it helps overcome barriers like anxiety, self-consciousness, and lack of time for traditional dance events."
+      "text": "The app, designed to support emotional release and social connection, is kept minimalistic and intuitive. It's done to support social gathering to dance and create playlists based on the mood of the group."
     },
     "wearable": {
       "label": "Wearable device",
-      "text": "The Soltar wearable is a lightweight, body-mounted device combining vibration motors, IMU sensors, and wireless connectivity to create an embodied guidance system for dance. Worn on the upper arms and wrists, it delivers real-time vibration patterns that adapt to movement intensity, supporting rhythm and flow. Built from flexible fabric with secure fastenings and a compact electronics module, it ensures comfort, stability, and freedom of motion. Iterative testing refined motor placement, vibration strength, and cable layout, resulting in a perceptible, stable, and comfortable design for both solo and group dance."
+      "text": "The Soltar wearable is a lightweight, body-mounted device. Worn on the upper arms and wrists, it delivers real-time vibration patterns that adapt to movement intensity, supporting rhythm and flow. Built from flexible fabric with secure fastenings and a compact electronics module, it ensures comfort, stability, and freedom of motion. Iterative testing refined motor placement, vibration strength, and cable layout, resulting in a perceptible, stable, and comfortable design for both solo and group dance."
     },
     "research": {
       "label": "Research",
@@ -176,7 +176,7 @@
 
 
   "capsound": {
-  "projectType": "UX/UI Design",
+  "projectType": "E-commerce · UX/UI Design",
     "labels": {
       "description": "Description",
       "problem": "Problem:",
@@ -187,7 +187,7 @@
     "description": "Capsound is a customizable keyboard platform that allows users to design, assemble, and upgrade their own keyboards. Instead of purchasing a fixed, pre-built product, customers can select individual components cases, keycaps, switches, and PCBs to create a setup tailored to their preferences. By focusing on modularity, reusability, and recycling, Capsound promotes a circular economy model that reduces waste and extends the lifespan of every keyboard.",
     "problem": "Most keyboards on the market are mass-produced with fixed designs, limiting personalisation and often forcing users to compromise on aesthetics, feel, or ergonomics. When a single component breaks or becomes outdated, the entire keyboard is often discarded, generating unnecessary waste. Enthusiasts who wish to build their own keyboards face fragmented sourcing, higher costs, and a lack of beginner-friendly guidance. A unified, sustainable, and accessible solution was needed.",
     "solution": "Capsound is a centralised platform where users can buy compatible keyboard components individually or as curated build kits. Its modular system allows customers to repair, upgrade, or redesign their keyboards without replacing the whole product. With recycling programs for old parts and educational resources for beginners, Capsound makes mechanical keyboard customisation sustainable and accessible reducing waste while helping users create keyboards tailored to their needs and style.",
-    "categoryValue": "E-commerce – Product Design – Circular Economy – Customisable Hardware",
+    "categoryValue": "E-commerce · UX/UI Design",
     "dateValue": "2023",
     "ui": {
       "label": "Website UI",
