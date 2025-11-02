@@ -12,7 +12,12 @@
     return;
   }
 
-  initRemote3D();
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRemote3D);
+  } else {
+    initRemote3D();
+  }
 
   function initRemote3D() {
     const container = document.querySelector('.remote-3d-stage');
@@ -41,144 +46,185 @@
       return;
     }
 
-    // Scene setup
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, -0.5, 6);
-
-    const renderer = new THREE.WebGLRenderer({ 
-      canvas: canvas, 
-      alpha: true, 
-      antialias: true,
-      premultipliedAlpha: false
-    });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x000000, 0);
-    renderer.outputEncoding = THREE.sRGBEncoding;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.0;
-    renderer.physicallyCorrectLights = true;
-
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
-    scene.add(ambientLight);
-
-    const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.6);
-    directionalLight1.position.set(5, 5, 5);
-    scene.add(directionalLight1);
-
-    const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
-    directionalLight2.position.set(-5, 3, -3);
-    scene.add(directionalLight2);
-
-    // Load 3D model
+    // Intersection Observer for lazy loading
+    let modelsLoaded = false;
+    let scene = null;
+    let camera = null;
+    let renderer = null;
     let model = null;
     let baseModel = null;
-    const loader = new THREE.GLTFLoader();
-    
-    // Creates a simple box if model fails to load
-    const createFallbackModel = () => {
-      const geometry = new THREE.BoxGeometry(1, 2, 0.3);
-      const material = new THREE.MeshPhongMaterial({ 
-        color: 0x667eea,
-        shininess: 60
-      });
-      model = new THREE.Mesh(geometry, material);
-      model.position.set(-2.5, 3, 0);
-      scene.add(model);
-      console.log('Using fallback 3D model');
-    };
-
-    loader.load(
-      '/assets/remotebase.glb',
-      (gltf) => {
-        baseModel = gltf.scene;
-        baseModel.position.set(-3.8, -1.5, 0);
-        baseModel.rotation.y = 0;
-        baseModel.rotation.x = 0.2;
-        baseModel.rotation.z = -0.1;
-        baseModel.traverse((child) => {
-          if (child.isMesh) {
-            child.material = new THREE.MeshPhysicalMaterial({
-              color: 0xf5f5f5, // Frosted milky white
-              transparent: true,
-              opacity: 1,
-              roughness: 0.6,
-              metalness: 0.0,
-              clearcoat: 0.3,
-              clearcoatRoughness: 0.4,
-              transmission: 0.85,
-              ior: 1.35,
-              thickness: 0.25
-            });
-            child.material.needsUpdate = true;
-          }
-        });
-        // Scale the base
-        const box = new THREE.Box3().setFromObject(baseModel);
-        const size = box.getSize(new THREE.Vector3());
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 1.3 / maxDim;
-        baseModel.scale.setScalar(scale);
-        scene.add(baseModel);
-        console.log('Base model loaded successfully');
-      },
-      (progress) => {},
-      (error) => {
-        console.error('Error loading base model:', error);
-      }
-    );
-
-    loader.load(
-      '/assets/remotewebsite.glb',
-      (gltf) => {
-        model = gltf.scene;
-        
-        // Position based on device type
-        if (isMobile) {
-          model.position.set(0, 0, 0);
-          model.rotation.y = 0; 
-          model.rotation.x = 0;
-          model.rotation.z = 0;
-        } else {
-          model.position.set(-3.5, 3.5, 0); 
-        }
-        
-        // Enable transparency and glass materials
-        model.traverse((child) => {
-          if (child.isMesh) {
-            child.material.transparent = true;
-            child.material.needsUpdate = true;
-            if (child.material.transmission !== undefined) {
-              child.material.transmission = child.material.transmission;
-            }
-          }
-        });
-        
-        // Scale the model appropriately
-        const box = new THREE.Box3().setFromObject(model);
-        const size = box.getSize(new THREE.Vector3());
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 1.8/ maxDim;
-        model.scale.setScalar(scale);
-        
-        scene.add(model);
-        console.log('3D model loaded successfully');
-      },
-      (progress) => {
-      },
-      (error) => {
-        console.error('Error loading 3D model:', error);
-        createFallbackModel();
-      }
-    );
-
-    // Animation state
-    let scrollProgress = 0;
+    let loader = null;
     let rafId = null;
+    let scrollProgress = 0;
     let isAnimating = false;
 
+    // Setup scene and load models when section is near viewport
+    const loadModels = () => {
+      if (modelsLoaded) return;
+      modelsLoaded = true;
+      console.log('Starting to load 3D models...');
+
+      // Scene setup
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.set(0, -0.5, 6);
+
+      renderer = new THREE.WebGLRenderer({ 
+        canvas: canvas, 
+        alpha: true, 
+        antialias: true,
+        premultipliedAlpha: false
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x000000, 0);
+      renderer.outputEncoding = THREE.sRGBEncoding;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.0;
+      renderer.physicallyCorrectLights = true;
+
+      const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+      scene.add(ambientLight);
+
+      const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.6);
+      directionalLight1.position.set(5, 5, 5);
+      scene.add(directionalLight1);
+
+      const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
+      directionalLight2.position.set(-5, 3, -3);
+      scene.add(directionalLight2);
+
+      // Load 3D models
+      loader = new THREE.GLTFLoader();
+      
+      // Creates a simple box if model fails to load
+      const createFallbackModel = () => {
+        const geometry = new THREE.BoxGeometry(1, 2, 0.3);
+        const material = new THREE.MeshPhongMaterial({ 
+          color: 0x667eea,
+          shininess: 60
+        });
+        model = new THREE.Mesh(geometry, material);
+        model.position.set(-2.5, 3, 0);
+        scene.add(model);
+        console.log('Using fallback 3D model');
+      };
+
+      loader.load(
+        '/assets/remotebase.glb',
+        (gltf) => {
+          baseModel = gltf.scene;
+          baseModel.position.set(-3.8, -1.5, 0);
+          baseModel.rotation.y = 0;
+          baseModel.rotation.x = 0.2;
+          baseModel.rotation.z = -0.1;
+          baseModel.traverse((child) => {
+            if (child.isMesh) {
+              child.material = new THREE.MeshPhysicalMaterial({
+                color: 0x000000, // Black tint
+                transparent: true,
+                opacity: 1,
+                roughness: 0.6,
+                metalness: 0.0,
+                clearcoat: 0.3,
+                clearcoatRoughness: 0.4,
+                transmission: 0.1, // Reduced transmission for more solid black
+                ior: 1.35,
+                thickness: 0.25
+              });
+              child.material.needsUpdate = true;
+            }
+          });
+          // Scale the base
+          const box = new THREE.Box3().setFromObject(baseModel);
+          const size = box.getSize(new THREE.Vector3());
+          const maxDim = Math.max(size.x, size.y, size.z);
+          const scale = 1.3 / maxDim;
+          baseModel.scale.setScalar(scale);
+          scene.add(baseModel);
+          console.log('Base model loaded successfully');
+        },
+        (progress) => {},
+        (error) => {
+          console.error('Error loading base model:', error);
+        }
+      );
+
+      loader.load(
+        '/assets/remotewebsite.glb',
+        (gltf) => {
+          model = gltf.scene;
+          model.position.set(-3.5, 3.5, 0); 
+          
+          // Enable transparency and glass materials
+          model.traverse((child) => {
+            if (child.isMesh) {
+              child.material.transparent = true;
+              child.material.needsUpdate = true;
+              if (child.material.transmission !== undefined) {
+                child.material.transmission = child.material.transmission;
+              }
+            }
+          });
+          
+          // Scale the model appropriately
+          const box = new THREE.Box3().setFromObject(model);
+          const size = box.getSize(new THREE.Vector3());
+          const maxDim = Math.max(size.x, size.y, size.z);
+          const scale = 1.8/ maxDim;
+          model.scale.setScalar(scale);
+          
+          scene.add(model);
+          console.log('3D model loaded successfully');
+          
+          // Start animation loop after models are loaded
+          animate();
+          
+          // Set up scroll handler
+          window.addEventListener('scroll', handleScroll, { passive: true });
+          handleScroll();
+        },
+        (progress) => {
+        },
+        (error) => {
+          console.error('Error loading 3D model:', error);
+          createFallbackModel();
+          animate();
+          window.addEventListener('scroll', handleScroll, { passive: true });
+          handleScroll();
+        }
+      );
+    };
+
+    // Intersection Observer - load when section is 1000px away from viewport
+    const observerOptions = {
+      root: null,
+      rootMargin: '1000px 0px', // Start loading 1000px before entering viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !modelsLoaded) {
+          loadModels();
+          observer.disconnect(); // Stop observing once we start loading
+        }
+      });
+    }, observerOptions);
+
+    observer.observe(wrapper);
+
+    // Fallback: if user scrolls very fast or page loads already scrolled
+    setTimeout(() => {
+      const rect = wrapper.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 1500 && !modelsLoaded) {
+        loadModels();
+        observer.disconnect();
+      }
+    }, 500);
+
     function handleScroll() {
+      if (!scene || !model) return;
       if (isMobile) return; 
       
       const rect = wrapper.getBoundingClientRect();
@@ -243,6 +289,8 @@
 
     // Animation loop
     function animate() {
+      if (!scene || !renderer || !camera) return;
+      
       rafId = requestAnimationFrame(animate);
       
       if (model) {
@@ -255,29 +303,18 @@
       renderer.render(scene, camera);
     }
 
-    animate();
-
-    // Event listeners
-    if (!isMobile) {
-      window.addEventListener('scroll', handleScroll, { passive: true });
-    }
-    
+    // Resize handler
     window.addEventListener('resize', () => {
+      if (!camera || !renderer) return;
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // Initial update
-    if (!isMobile) {
-      handleScroll();
-    }
-
     // Cleanup
     window.addEventListener('beforeunload', () => {
       if (rafId) cancelAnimationFrame(rafId);
-      renderer.dispose();
-      window.removeEventListener('scroll', handleScroll);
+      if (renderer) renderer.dispose();
     });
   }
 

@@ -600,7 +600,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const randomEntropy = Math.random() * 10000000;
         const documentEntropy = document.readyState.charCodeAt(0) * document.title.length;
         
-        const baseArray = ['pattern-1', 'pattern-2', 'pattern-3', 'pattern-4', 'pattern-5'];
+        const baseArray = ['pattern-1', 'pattern-2', 'pattern-3', 'pattern-5'];
         const combinedEntropy = screenEntropy + browserEntropy + timingEntropy + randomEntropy + documentEntropy + pageLoadSeed;
         patterns = shuffleArray(baseArray, combinedEntropy);
         
@@ -629,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         heroMain.addEventListener('mouseenter', () => {
-            const baseArray = ['pattern-1', 'pattern-2', 'pattern-3', 'pattern-4', 'pattern-5'];
+            const baseArray = ['pattern-1', 'pattern-2', 'pattern-3', 'pattern-5'];
             patterns = shuffleArray(baseArray, mouseEntropy + Date.now());
             
             heroMain.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -649,6 +649,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYearElement = document.getElementById('current-year');
     const currentYear = new Date().getFullYear();
     currentYearElement.textContent = currentYear;
+    
+    // Copy background images to CSS variables for zoom effect
+    const heroCards = document.querySelectorAll('.hero-card');
+    heroCards.forEach(card => {
+        const bgImage = window.getComputedStyle(card).backgroundImage;
+        if (bgImage && bgImage !== 'none') {
+            card.style.setProperty('--bg-image', bgImage);
+        }
+    });
     
     // Language switching functionality
     const languageLinks = document.querySelectorAll('.dropdown-content a[data-lang]');
