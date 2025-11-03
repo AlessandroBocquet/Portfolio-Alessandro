@@ -12,6 +12,12 @@
     <!-- Preload 3D models for faster loading -->
     <link rel="preload" as="fetch" href="/assets/InstayAssets/remotebase.glb" crossorigin="anonymous">
     <link rel="preload" as="fetch" href="/assets/InstayAssets/remotewebsite.glb" crossorigin="anonymous">
+    <!-- Preload key images used by animations -->
+    <link rel="preload" as="image" href="/assets/InstayAssets/tvanimation/Try.png">
+    <link rel="preload" as="image" href="/assets/InstayAssets/beforeafter/after.png">
+    <link rel="preload" as="image" href="/assets/InstayAssets/beforeafter/after2.png">
+    <link rel="preload" as="image" href="/assets/InstayAssets/beforeafter/before.png">
+    <link rel="preload" as="image" href="/assets/InstayAssets/beforeafter/before2.png">
     <meta property="og:title" content="InStay Smart TV">
     <meta property="og:description" content="A modern Smart TV project case study.">
     <meta property="og:image" content="/assets/logoprovisoir.png">
@@ -110,7 +116,6 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <!-- Title above the TV frame animation -->
                                         <div class="skills-header-professional">
                         <h2 class="skills-title-professional" data-translate="instay.headers.alwaysPresent">Always present but invisible</h2>
                                         </div>
@@ -186,8 +191,6 @@
                                                 </div>
                                             </div>
                                         </section>
-
-                                        <!-- Mid caption centered between animations -->
                                         <div class="instay-crossfade-midcaption full-bleed-center">
                                             <figcaption class="instay-crossfade-caption" aria-label="From low fidelity to high fidelity">
                                                 <span class="cap cap-prefix" data-translate="instay.crossfade.prefix">From</span>
@@ -197,7 +200,6 @@
                                             </figcaption>
                                         </div>
 
-                                        <!-- Second Before → After crossfade -->
                                         <section class="instay-crossfade-stage full-bleed-center" aria-label="Low fidelity to high fidelity crossfade 2">
                                             <div class="instay-crossfade-wrapper">
                                                 <div class="instay-crossfade-pin">
@@ -213,7 +215,6 @@
                                         <div class="skills-header-professional">
                         <h2 class="skills-title-professional" data-translate="instay.headers.ecosystem">The ecosystem</h2>
                                         </div>
-                                        <!-- Scroll-driven horizontal screens gallery (moved here under The ecosystem) -->
                                         <section class="instay-scroll-gallery full-bleed-center" aria-label="InStay UI screens scroll gallery">
                                             <div class="instay-scroll-wrapper">
                                                 <div class="instay-scroll-pin">
@@ -344,5 +345,49 @@
     <script src="/remote3d.js"></script>
     <script src="/translations.js"></script>
     <script src="/index.js"></script>
+    <script>
+        // Preload additional animation images to avoid jank during scroll/animation
+        (function preloadAnimationImages() {
+            var imagesToPreload = [];
+
+            // tvanimation (specific request)
+            imagesToPreload.push("/assets/InstayAssets/tvanimation/Try.png");
+
+            // beforeafter (specific list)
+            imagesToPreload.push("/assets/InstayAssets/beforeafter/after.png");
+            imagesToPreload.push("/assets/InstayAssets/beforeafter/after2.png");
+            imagesToPreload.push("/assets/InstayAssets/beforeafter/before.png");
+            imagesToPreload.push("/assets/InstayAssets/beforeafter/before2.png");
+
+            // scrollanimation (load all)
+            imagesToPreload = imagesToPreload.concat([
+                "/assets/InstayAssets/scrollanimation/Home%20Screen.png",
+                "/assets/InstayAssets/scrollanimation/House%20Details.png",
+                "/assets/InstayAssets/scrollanimation/Profile.png",
+                "/assets/InstayAssets/scrollanimation/12.png",
+                "/assets/InstayAssets/scrollanimation/15.png",
+                "/assets/InstayAssets/scrollanimation/13.png",
+                "/assets/InstayAssets/scrollanimation/19.png"
+            ]);
+
+            // soltaranimation (load everything in folder)
+            imagesToPreload = imagesToPreload.concat([
+                "/assets/SoltarAssets/soltaranimation/1.png",
+                "/assets/SoltarAssets/soltaranimation/2.png",
+                "/assets/SoltarAssets/soltaranimation/3.png",
+                "/assets/SoltarAssets/soltaranimation/4.png",
+                "/assets/SoltarAssets/soltaranimation/5.png",
+                "/assets/SoltarAssets/soltaranimation/11.png"
+            ]);
+
+            // Start preloading
+            for (var i = 0; i < imagesToPreload.length; i++) {
+                var img = new Image();
+                img.decoding = "async";
+                img.loading = "eager";
+                img.src = imagesToPreload[i];
+            }
+        })();
+    </script>
 </body>
 </html>

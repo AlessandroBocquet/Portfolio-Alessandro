@@ -893,9 +893,9 @@ html, body {
 .remote-3d-stage {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  margin-top: -100vh;
+  margin-top: -20vh;
   margin-bottom: -100vh;
-  padding-top: 100vh;
+  padding-top: 20vh;
   padding-bottom: 100vh;
 }
 
