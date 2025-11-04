@@ -1,26 +1,28 @@
 // Idle warmup of case-study assets (no loading screen)
 (function warmupCaseStudyAssets() {
+    // Run only on homepage (homepage has .hero-main)
+    if (!document.querySelector('.hero-main')) return;
     const urls = [
         // InStay critical images
-        '/assets/InstayAssets/tvanimation/Try.png',
-        '/assets/InstayAssets/beforeafter/after.png',
-        '/assets/InstayAssets/beforeafter/after2.png',
-        '/assets/InstayAssets/beforeafter/before.png',
-        '/assets/InstayAssets/beforeafter/before2.png',
-        '/assets/InstayAssets/scrollanimation/Home%20Screen.png',
-        '/assets/InstayAssets/scrollanimation/House%20Details.png',
-        '/assets/InstayAssets/scrollanimation/Profile.png',
-        '/assets/InstayAssets/scrollanimation/12.png',
-        '/assets/InstayAssets/scrollanimation/13.png',
-        '/assets/InstayAssets/scrollanimation/15.png',
-        '/assets/InstayAssets/scrollanimation/19.png',
+        '/assets/InstayAssets/tvanimation/Try.webp',
+        '/assets/InstayAssets/beforeafter/after.webp',
+        '/assets/InstayAssets/beforeafter/after2.webp',
+        '/assets/InstayAssets/beforeafter/before.webp',
+        '/assets/InstayAssets/beforeafter/before2.webp',
+        '/assets/InstayAssets/scrollanimation/Home%20Screen.webp',
+        '/assets/InstayAssets/scrollanimation/House%20Details.webp',
+        '/assets/InstayAssets/scrollanimation/Profile.webp',
+        '/assets/InstayAssets/scrollanimation/12.webp',
+        '/assets/InstayAssets/scrollanimation/13.webp',
+        '/assets/InstayAssets/scrollanimation/15.webp',
+        '/assets/InstayAssets/scrollanimation/19.webp',
         // Soltar animation frames
-        '/assets/SoltarAssets/soltaranimation/1.png',
-        '/assets/SoltarAssets/soltaranimation/2.png',
-        '/assets/SoltarAssets/soltaranimation/3.png',
-        '/assets/SoltarAssets/soltaranimation/4.png',
-        '/assets/SoltarAssets/soltaranimation/5.png',
-        '/assets/SoltarAssets/soltaranimation/11.png'
+        '/assets/SoltarAssets/soltaranimation/1.webp',
+        '/assets/SoltarAssets/soltaranimation/2.webp',
+        '/assets/SoltarAssets/soltaranimation/3.webp',
+        '/assets/SoltarAssets/soltaranimation/4.webp',
+        '/assets/SoltarAssets/soltaranimation/5.webp',
+        '/assets/SoltarAssets/soltaranimation/11.webp'
     ];
     const glbs = [
         '/assets/InstayAssets/remotebase.glb',
