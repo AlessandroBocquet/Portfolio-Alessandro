@@ -231,6 +231,10 @@
     "target": {
       "label": "Pubblico target",
       "text": "La nostra soluzione si rivolge a due personas chiave: turisti curiosi che scoprono Strasburgo e si imbattono in codici QR nei musei, e residenti locali che riscoprono la loro città e incontrano codici durante l'esplorazione. L'applicazione parla sia di scoperta spontanea che di esplorazione intenzionale, rendendo il planetario accessibile a pubblici diversificati."
+    },
+    "phone": {
+      "text1": "Viaggia dal Sole ai pianeti lontani. Ogni scroll rivela immagini straordinarie e fatti astronomici affascinanti.",
+      "text2": "Un'esperienza di apprendimento immersiva che porta le meraviglie dello spazio direttamente a portata di mano."
     }
   }
 }

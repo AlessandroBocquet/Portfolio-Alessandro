@@ -1,9 +1,18 @@
 # Portfolio-Alessandro
-Portfolio de Alessandro BOCQUET. Codé et publié en HTML/CSS et JS
 
-## Structure des fichiers
-- `index.html` - Page principale
-- `projets/` - Pages des projets
-- `translations/` - Fichiers de traduction JSON
-- `translations.js` - Gestionnaire de traductions
-- `assets/` - Images et ressources
+Personal portfolio website of Alessandro Bocquet.
+Coded in HTML/CSS/JS by Alessandro Bocquet. 
+
+## Architecture
+
+├── index.html, index.css, index.js       # Homepage
+├── projects.css                           # Project styles
+├── translations.js                        # Translation system
+├── remote3d.js                           # 3D viewer
+├── projets/                              # Project pages
+├── translations/                         # Language files
+└── assets/                               # Images
+
+---
+
+© 2024 Alessandro Bocquet. All rights reserved.

@@ -715,4 +715,136 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Language switching - Remove this duplicate handler as it's already handled by TranslationManager
     // The TranslationManager.setupLanguageSwitcher() already handles all [data-lang] clicks
+    
+    // Planetarium Phone Scroll-Jacking
+    (function initPlanetariumPhone() {
+        const stage = document.querySelector('.planetarium-phone-stage');
+        if (!stage) return;
+        
+        const spacer = stage.querySelector('.planetarium-phone-spacer');
+        const img = stage.querySelector('.planetarium-phone-img');
+        const screen = stage.querySelector('.planetarium-phone-screen');
+        const textElement = document.getElementById('planetarium-phone-text-element');
+        
+        if (!spacer || !img || !screen) return;
+        
+        if (window.matchMedia('(max-width: 900px)').matches || 
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+        
+        let stageTop = 0;
+        let stageHeight = 0;
+        let maxTranslate = 0;
+        let rafId = null;
+        let currentTextIndex = 1;
+        let isTransitioning = false;
+        let hasCompletedSection = false;
+        let finalTranslateY = 0;
+        
+        function updateMetrics() {
+            stageTop = stage.offsetTop;
+            stageHeight = spacer.offsetHeight;
+            
+            const imgHeight = img.naturalHeight || img.offsetHeight;
+            const screenHeight = screen.offsetHeight;
+            // Limit scroll to show only 40% of the full image content
+            maxTranslate = Math.max(0, (imgHeight - screenHeight) * 0.4);
+        }
+        
+        function getTranslationKey(index) {
+            return `planetarium.phone.text${index}`;
+        }
+        
+        function updateText(newIndex) {
+            if (!textElement || currentTextIndex === newIndex || isTransitioning) return;
+            
+            isTransitioning = true;
+            currentTextIndex = newIndex;
+            
+            textElement.style.transition = 'opacity 0.5s ease-in-out';
+            textElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                const translationKey = getTranslationKey(newIndex);
+                textElement.setAttribute('data-translate', translationKey);
+                
+                if (window.translationManager && window.translationManager.translate) {
+                    textElement.textContent = window.translationManager.translate(translationKey);
+                }
+                
+                setTimeout(() => {
+                    textElement.style.opacity = '1';
+                    isTransitioning = false;
+                }, 50);
+            }, 500);
+        }
+        
+        function onScroll() {
+            if (rafId) return;
+            rafId = requestAnimationFrame(updatePhone);
+        }
+        
+        function updatePhone() {
+            rafId = null;
+            
+            const scrollY = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const stickyBottom = stageTop + stageHeight;
+            
+            if (scrollY < stageTop) {
+                hasCompletedSection = false;
+                img.style.transform = `translateY(0px)`;
+                updateText(1);
+                return;
+            } else if (scrollY >= stickyBottom) {
+                if (!hasCompletedSection) {
+                    hasCompletedSection = true;
+                    finalTranslateY = -maxTranslate;
+                    img.style.transform = `translateY(${finalTranslateY}px)`;
+                }
+                return;
+            }
+            
+            hasCompletedSection = false;
+            
+            const relativeScroll = scrollY - stageTop;
+            let progress = relativeScroll / stageHeight;
+            progress = Math.max(0, Math.min(1, progress));
+            
+            const translateY = -(progress * maxTranslate);
+            img.style.transform = `translateY(${translateY}px)`;
+            
+            const darkenOpacity = progress * 1.0;
+            screen.style.setProperty('--darken-opacity', darkenOpacity);
+            
+            if (progress < 0.20) { // Text change threshold
+                updateText(1);
+            } else {
+                updateText(2);
+            }
+        }
+        
+        if (img.complete && img.naturalHeight) {
+            updateMetrics();
+            updatePhone();
+        } else {
+            img.addEventListener('load', () => {
+                updateMetrics();
+                updatePhone();
+            });
+        }
+        
+        window.addEventListener('scroll', onScroll, { passive: true });
+        
+        window.addEventListener('resize', () => {
+            updateMetrics();
+            updatePhone();
+        });
+        
+        setTimeout(() => {
+            updateMetrics();
+            updatePhone();
+        }, 100);
+    })();
 });

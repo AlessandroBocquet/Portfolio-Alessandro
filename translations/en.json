@@ -245,6 +245,10 @@
     "target": {
       "label": "Target audiences",
       "text": "Our solution targets two key personas: curious tourists discovering Strasbourg who stumble upon QR codes in museums, and local residents rediscovering their city who encounter codes while exploring. The application speaks to both spontaneous discovery and intentional exploration, making the planetarium accessible to diverse audiences."
+    },
+    "phone": {
+      "text1": "The app offers a journey from the Sun to distant planets",
+      "text2": "Each scroll reveals new elements from our system in an immersive learning experience"
     }
   }
 }

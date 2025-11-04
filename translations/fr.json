@@ -234,6 +234,10 @@
     "target": {
       "label": "Publics cibles",
       "text": "Notre solution cible deux personas clés : les touristes curieux découvrant Strasbourg qui tombent sur des codes QR dans les musées, et les résidents locaux redécouvrant leur ville qui rencontrent des codes lors de l'exploration. L'application parle à la fois de découverte spontanée et d'exploration intentionnelle, rendant le planétarium accessible à des publics diversifiés."
+    },
+    "phone": {
+      "text1": "L'application propose un voyage du Soleil vers des planètes lointaines.",
+      "text2": "Chaque scroll révèle un nouvel élément de notre système et propose une expérience d'apprentissage immersive"
     }
   }
 }

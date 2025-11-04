@@ -126,6 +126,9 @@ class TranslationManager {
             await this.changeLanguage(storedLanguage);
         }
     }
+    translate(key) {
+        return this.getNestedValue(this.translations, key) || '';
+    }
 }
 document.addEventListener('DOMContentLoaded', () => {
     window.translationManager = new TranslationManager();
