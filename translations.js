@@ -119,6 +119,11 @@ class TranslationManager {
                 currentFlag.classList.add('active-flag');
             }
         }
+        
+        const langText = document.querySelector('.lang-text');
+        if (langText) {
+            langText.textContent = this.currentLanguage.toUpperCase();
+        }
     }
     async initializeFromStorage() {
         const storedLanguage = localStorage.getItem('preferred-language');
