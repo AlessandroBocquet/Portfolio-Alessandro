@@ -57,6 +57,44 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Navbar hide/show on scroll
+    (function initNavbarScroll() {
+        const navbar = document.querySelector('#menu');
+        const dropdown = document.querySelector('.dropdown');
+        if (!navbar) return;
+        
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        const scrollThreshold = 100;
+        
+        function updateNavbar() {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY < scrollThreshold) {
+                navbar.classList.remove('nav-hidden');
+                if (dropdown) dropdown.classList.remove('nav-hidden');
+            } else if (currentScrollY > lastScrollY) {
+                navbar.classList.add('nav-hidden');
+                if (dropdown) dropdown.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+                if (dropdown) dropdown.classList.remove('nav-hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+            ticking = false;
+        }
+        
+        function onScroll() {
+            if (!ticking) {
+                requestAnimationFrame(updateNavbar);
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+
     function initTypewriter() {
         const typewriterElement = document.querySelector('.typewriter-text');
         if (!typewriterElement) return;
