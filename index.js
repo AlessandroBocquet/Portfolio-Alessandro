@@ -815,7 +815,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const translateY = -(progress * maxTranslate);
             img.style.transform = `translateY(${translateY}px)`;
             
-            const darkenOpacity = progress * 1.0;
+            const darkenOpacity = progress * 1.8;
             screen.style.setProperty('--darken-opacity', darkenOpacity);
             
             if (progress < 0.20) { // Text change threshold
