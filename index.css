@@ -405,7 +405,7 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 }
 .skills-description-professional {
   font-size: 1.1rem;
