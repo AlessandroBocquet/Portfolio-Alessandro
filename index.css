@@ -438,16 +438,16 @@ img {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--texte);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0.8;
   letter-spacing: -0.01em;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .skills-category-clean2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--texte);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0.8;
   letter-spacing: -0.01em;
 }
