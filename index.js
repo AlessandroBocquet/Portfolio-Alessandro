@@ -1,3 +1,91 @@
+// Dark Mode Management - Load immediately to prevent flash
+(function initDarkMode() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Use saved preference if exists, otherwise use system preference
+    const shouldUseDarkMode = savedTheme === 'dark' || (savedTheme === null && prefersDark);
+    
+    if (shouldUseDarkMode) {
+        document.body.classList.add('dark-mode');
+        document.documentElement.classList.add('dark-mode');
+    }
+})();
+
+// Dark Mode Toggle Functionality
+function toggleDarkMode() {
+    const body = document.body;
+    const html = document.documentElement;
+    const isDarkMode = body.classList.toggle('dark-mode');
+    html.classList.toggle('dark-mode');
+    
+    // Save preference to localStorage
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+}
+
+// Initialize dark mode toggle button
+function initDarkModeToggle() {
+    const toggle = document.querySelector('.dark-mode-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    // Listen for system theme changes (only if user hasn't manually set a preference)
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addEventListener('change', (e) => {
+        const savedTheme = localStorage.getItem('theme');
+        // Only auto-switch if user hasn't manually set a preference
+        if (savedTheme === null) {
+            const body = document.body;
+            const html = document.documentElement;
+            if (e.matches) {
+                body.classList.add('dark-mode');
+                html.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                html.classList.remove('dark-mode');
+            }
+        }
+    });
+}
+
+// Sync dark mode toggle with scroll navbar
+function syncDarkModeToggleScroll() {
+    const toggle = document.querySelector('.dark-mode-toggle');
+    const navbar = document.querySelector('#menu');
+    const dropdown = document.querySelector('.dropdown');
+    
+    if (!toggle || !navbar) return;
+    
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const scrollThreshold = 100;
+    
+    function updateToggleVisibility() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY < scrollThreshold) {
+            toggle.classList.remove('nav-hidden');
+        } else if (currentScrollY > lastScrollY) {
+            toggle.classList.add('nav-hidden');
+        } else {
+            toggle.classList.remove('nav-hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+    
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateToggleVisibility);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 // Idle warmup of case-study assets (no loading screen)
 (function warmupCaseStudyAssets() {
     // Run only on homepage (homepage has .hero-main)
@@ -56,6 +144,10 @@
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Initialize dark mode toggle
+    initDarkModeToggle();
+    syncDarkModeToggleScroll();
 
     // Navbar hide/show on scroll
     (function initNavbarScroll() {

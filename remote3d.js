@@ -136,13 +136,18 @@
           baseModel.rotation.z = -0.1;
           baseModel.traverse((child) => {
             if (child.isMesh) {
+              // Check if dark mode is active
+              const isDarkMode = document.body.classList.contains('dark-mode');
+              // Use teal/blue color scheme matching brand
+              const baseColor = isDarkMode ? 0x4a9eff : 0x085bab;
+              
               child.material = new THREE.MeshPhysicalMaterial({
-                color: 0xc0c0c0,
-                roughness: 0.03,
-                metalness: 0.98,
+                color: baseColor,
+                roughness: 0.15,
+                metalness: 0.85,
                 clearcoat: 1.0,
-                clearcoatRoughness: 0.03,
-                envMapIntensity: 2.5
+                clearcoatRoughness: 0.05,
+                envMapIntensity: 2.0
               });
               child.material.needsUpdate = true;
             }
@@ -335,10 +340,36 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
+    // Dark mode toggle listener
+    const updateBaseColor = () => {
+      if (!baseModel) return;
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      const baseColor = isDarkMode ? 0x4a9eff : 0x085bab;
+      
+      baseModel.traverse((child) => {
+        if (child.isMesh && child.material) {
+          child.material.color.setHex(baseColor);
+          child.material.needsUpdate = true;
+        }
+      });
+    };
+    
+    // Watch for dark mode changes
+    const darkModeObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          updateBaseColor();
+        }
+      });
+    });
+    
+    darkModeObserver.observe(document.body, { attributes: true });
+
     // Cleanup
     window.addEventListener('beforeunload', () => {
       if (rafId) cancelAnimationFrame(rafId);
       if (renderer) renderer.dispose();
+      darkModeObserver.disconnect();
     });
   }
 

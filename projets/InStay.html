@@ -23,7 +23,6 @@
     <meta property="og:image" content="/assets/logoprovisoir.webp">
     <meta property="og:url" content="/projets/InStay%20Smart%20TV.html">
     <script>
-        // Mark that user has visited the site (prevents loading screen on index.html)
         if (typeof sessionStorage !== 'undefined') {
             sessionStorage.setItem('hasVisitedSite', 'true');
         }
@@ -41,6 +40,12 @@
                         <a href="/index.html#contact" data-translate="nav.contact">Contact</a>
                     </div>
                 </nav>
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <img src="/assets/lightmode.svg" class="sun-icon" alt="Light mode">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
                 <div class="dropdown">
                     <button class="dropbtn">
                         <span class="lang-text">EN</span>
