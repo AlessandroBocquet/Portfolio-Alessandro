@@ -805,8 +805,7 @@ header>:first-child :first-child {
   justify-content: center;
   align-items: center;
   width: auto;
-  height: 56px;
-  padding: 0 1rem;
+  padding: 8px;
   max-width: calc(100vw - 4rem);
   min-width: fit-content;
 }
@@ -1414,18 +1413,18 @@ header #menu.sticky a {
 }
 .contact-title-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
+  justify-content: center;
   line-height: 1.4;
+  margin-bottom: 1rem;
 }
 .contact-emoji {
-  font-size: 2rem;
+  font-size: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
-  height: 2rem;
 }
 .main-email {
   margin-bottom: 1rem;
@@ -1601,7 +1600,7 @@ header #menu.sticky a {
   }
   #menu {
       width: calc(100% - 1rem);
-      padding: 0 1rem;
+      padding: 8px;
       top: 3%;
   }
   .hero {
@@ -1805,13 +1804,10 @@ html, body {
 #contact {
     padding: 4rem 2rem;
     text-align: center;
-    background-color: var(--contact-bg);
     width: 100%;
     max-width: 950px;
     margin: 2rem auto;
     border-radius: 15px;
-    border: 1px solid var(--card-border);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
@@ -1825,8 +1821,9 @@ html, body {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--texte);
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-family: 'General Sans', sans-serif;
+    text-align: center;
 }
 
 .contact-description {
