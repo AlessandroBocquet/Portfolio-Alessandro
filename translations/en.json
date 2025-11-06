@@ -208,7 +208,7 @@
       "date": "Date:"
     },
     "title": "Planetarium",
-    "description": "Planetarium of Strasbourg app is an interactive digital experience designed to raise awareness of the Strasbourg Planetarium. Through a mobile-friendly web application accessible via QR codes across the city, users embark on a narrative journey through the universe, from the Sun to the farthest reaches of space. The experience combines storytelling, interactivity, and geolocation to connect the digital journey with a real-world destination.",
+    "description": "Planetarium of Strasbourg app is an interactive digital experience designed to raise awareness of the Strasbourg Planetarium. Through a mobile-friendly web application accessible via QR codes across the city, users embark on a narrative journey through the universe, from the sun to the farthest reaches of space. The experience combines storytelling, interactivity, and geolocation to connect the digital journey with a real-world destination.",
     "problem": "Despite an advertising campaign, many residents and visitors were unaware of the planetarium's existence or location. Our research revealed that 30% of respondents had never heard of the planetarium, and 50% knew it existed but did not know where it was located. This lack of visibility motivated us to create a project to help the planetarium reach a wider audience.",
     "solution": "We designed an interactive digital experience accessible via QR codes across Strasbourg. The mobile-friendly web application guides users through a scrolling journey through the stars, combining education, interactivity, and geolocation. The 'Aura' feature provides spatial guidance, while gamified elements enhance engagement and encourage visits.",
     "durationValue": "2 months",
@@ -222,7 +222,7 @@
     },
     "application": {
       "label": "Application",
-      "text": "The Planetarium application is a mobile-friendly web experience accessible via QR codes placed across Strasbourg, especially in the city center and cultural venues. Users scroll through a narrative journey exploring the solar system,from the Sun to Venus, Earth, Moon, Jupiter, and beyond. Each scroll reveals visuals, facts, and animations that create an immersive learning experience, smoothly transitioning through space while informing users about the planetarium and encouraging them to visit."
+      "text": "The Planetarium application is a mobile-friendly web experience accessible via QR codes placed across Strasbourg, especially in the city center and cultural venues. Users scroll through a narrative journey exploring the solar system,from the Sun to Venus, Earth, Moon, Jupiter, and beyond."
     },
     "aura": {
       "label": "The Aura",
