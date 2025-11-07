@@ -1,4 +1,4 @@
-// Remote 3D Scroll Animation
+// Remote 3D Animation
 
 (function() {
   'use strict';
@@ -138,7 +138,6 @@
             if (child.isMesh) {
               // Check if dark mode is active
               const isDarkMode = document.body.classList.contains('dark-mode');
-              // Use teal/blue color scheme matching brand
               const baseColor = isDarkMode ? 0x4a9eff : 0x085bab;
               
               child.material = new THREE.MeshPhysicalMaterial({
@@ -211,7 +210,6 @@
       );
     };
 
-    // Intersection Observer - load when section is 1000px away from viewport
     const observerOptions = {
       root: null,
       rootMargin: '1000px 0px',
@@ -229,7 +227,6 @@
 
     observer.observe(wrapper);
 
-    // Fallback: if user scrolls very fast or page loads already scrolled
     setTimeout(() => {
       const rect = wrapper.getBoundingClientRect();
       if (rect.top < window.innerHeight + 1500 && !modelsLoaded) {
@@ -332,7 +329,6 @@
       renderer.render(scene, camera);
     }
 
-    // Resize handler
     window.addEventListener('resize', () => {
       if (!camera || !renderer) return;
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -340,7 +336,6 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // Dark mode toggle listener
     const updateBaseColor = () => {
       if (!baseModel) return;
       const isDarkMode = document.body.classList.contains('dark-mode');
@@ -354,7 +349,6 @@
       });
     };
     
-    // Watch for dark mode changes
     const darkModeObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === 'class') {
@@ -373,7 +367,6 @@
     });
   }
 
-  // Load GLTFLoader if not available
   if (typeof THREE !== 'undefined' && !THREE.GLTFLoader) {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js';

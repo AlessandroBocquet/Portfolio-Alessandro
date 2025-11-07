@@ -269,7 +269,7 @@ html, body {
   margin-top: auto;
 }
 
-/* ----- Project header and thumbnail */
+/* Project header and thumbnail */
 .project-header {
   width: 100%;
   text-align: center;
@@ -544,7 +544,7 @@ html, body {
   }
 }
 
-/* --- Prototype CTA buttons --- */
+/* Prototype CTA */
 .prototype-cta {
   display: flex;
   flex-wrap: wrap;
@@ -592,7 +592,7 @@ html, body {
 }
 .prototype-label { white-space: nowrap; }
 
-/* InStay horizontal scroll */
+/* InStay scroll */
 .instay-scroll-gallery {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -683,7 +683,7 @@ html, body {
   scroll-snap-align: center;
 }
 
-/* InStay pinned zoom  */
+/* InStay zoom  */
 .instay-zoom-stage {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -889,7 +889,7 @@ html, body {
   }
 }
 
-/* Remote 3D Scroll Animation */
+/* Remote 3D Animation */
 .remote-3d-stage {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -963,7 +963,6 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  /* Disable scroll-jacking on mobile*/
   .remote-3d-stage {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
@@ -1023,7 +1022,7 @@ html, body {
   height: 60vh;
 }
 
-/* Planetarium Phone Mockup Scroll-Jacking */
+/* Planetarium Animation */
 .planetarium-phone-stage {
   position: relative;
   width: 100vw;
@@ -1161,7 +1160,6 @@ html, body {
   will-change: transform;
 }
 
-/* Mobile fallback - Hide entire section on mobile */
 @media (max-width: 900px) {
   .planetarium-phone-stage {
     display: none !important;

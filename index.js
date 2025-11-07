@@ -1,9 +1,7 @@
-// Dark Mode Management - Load immediately to prevent flash
 (function initDarkMode() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Use saved preference if exists, otherwise use system preference
     const shouldUseDarkMode = savedTheme === 'dark' || (savedTheme === null && prefersDark);
     
     if (shouldUseDarkMode) {
@@ -12,29 +10,26 @@
     }
 })();
 
-// Dark Mode Toggle Functionality
+// Dark Mode Toggle 
 function toggleDarkMode() {
     const body = document.body;
     const html = document.documentElement;
     const isDarkMode = body.classList.toggle('dark-mode');
     html.classList.toggle('dark-mode');
     
-    // Save preference to localStorage
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 }
 
-// Initialize dark mode toggle button
 function initDarkModeToggle() {
     const toggle = document.querySelector('.dark-mode-toggle');
     if (toggle) {
         toggle.addEventListener('click', toggleDarkMode);
     }
     
-    // Listen for system theme changes (only if user hasn't manually set a preference)
+    // Thing for the userpreference to be saved
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     mediaQuery.addEventListener('change', (e) => {
         const savedTheme = localStorage.getItem('theme');
-        // Only auto-switch if user hasn't manually set a preference
         if (savedTheme === null) {
             const body = document.body;
             const html = document.documentElement;
@@ -49,7 +44,6 @@ function initDarkModeToggle() {
     });
 }
 
-// Sync dark mode toggle with scroll navbar
 function syncDarkModeToggleScroll() {
     const toggle = document.querySelector('.dark-mode-toggle');
     const navbar = document.querySelector('#menu');
@@ -86,9 +80,7 @@ function syncDarkModeToggleScroll() {
     window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-// Idle warmup of case-study assets (no loading screen)
 (function warmupCaseStudyAssets() {
-    // Run only on homepage (homepage has .hero-main)
     if (!document.querySelector('.hero-main')) return;
     const urls = [
         // InStay critical images
@@ -104,7 +96,6 @@ function syncDarkModeToggleScroll() {
         '/assets/InstayAssets/scrollanimation/13.webp',
         '/assets/InstayAssets/scrollanimation/15.webp',
         '/assets/InstayAssets/scrollanimation/19.webp',
-        // Soltar animation frames
         '/assets/SoltarAssets/soltaranimation/1.webp',
         '/assets/SoltarAssets/soltaranimation/2.webp',
         '/assets/SoltarAssets/soltaranimation/3.webp',
@@ -145,11 +136,9 @@ function syncDarkModeToggleScroll() {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Initialize dark mode toggle
     initDarkModeToggle();
     syncDarkModeToggleScroll();
 
-    // Navbar hide/show on scroll
     (function initNavbarScroll() {
         const navbar = document.querySelector('#menu');
         const dropdown = document.querySelector('.dropdown');
@@ -506,7 +495,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // InStay horizontal scroll gallery
     (function initInStayScrollGallery() {
         const section = document.querySelector('.instay-scroll-gallery');
         const pin = section?.querySelector('.instay-scroll-pin');
@@ -613,7 +601,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scheduleDepthUpdate();
     })();
 
-    // InStay zoom section
+    // InStay zoom 
     (function initInStayZoomSection() {
         const stage = document.querySelector('.instay-zoom-stage');
         const pin = stage?.querySelector('.instay-zoom-pin');
@@ -774,7 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return shuffled;
     }
 
-    // Hero pattern initialization
+    // Hero pattern with randomness
     function initializePatterns() {
         if (!heroMain) return;
         
@@ -842,10 +830,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    
-    // Language switching - Remove this duplicate handler as it's already handled by TranslationManager
-    // The TranslationManager.setupLanguageSwitcher() already handles all [data-lang] clicks
-    
     // Planetarium Phone Scroll-Jacking
     (function initPlanetariumPhone() {
         const stage = document.querySelector('.planetarium-phone-stage');
@@ -878,7 +862,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const imgHeight = img.naturalHeight || img.offsetHeight;
             const screenHeight = screen.offsetHeight;
-            // Limit scroll to show only 40% of the full image content
             maxTranslate = Math.max(0, (imgHeight - screenHeight) * 0.4);
         }
         
@@ -948,7 +931,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const darkenOpacity = progress * 1.8;
             screen.style.setProperty('--darken-opacity', darkenOpacity);
             
-            if (progress < 0.20) { // Text change threshold
+            if (progress < 0.20) { 
                 updateText(1);
             } else {
                 updateText(2);

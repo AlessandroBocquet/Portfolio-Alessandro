@@ -20,7 +20,7 @@
     <link rel="preload" as="image" href="/assets/InstayAssets/beforeafter/before2.webp">
     <meta property="og:title" content="InStay Smart TV">
     <meta property="og:description" content="A modern Smart TV project case study.">
-    <meta property="og:image" content="/assets/logoprovisoir.webp">
+    <meta property="og:image" content="/assets/Logo.png">
     <meta property="og:url" content="/projets/InStay%20Smart%20TV.html">
     <script>
         if (typeof sessionStorage !== 'undefined') {
@@ -183,14 +183,11 @@
                                             </div>
                                         </section>
 
-                                        <!-- Before → After crossfade (scroll-revealed) -->
                                         <section class="instay-crossfade-stage full-bleed-center" aria-label="Low fidelity to high fidelity crossfade">
                                             <div class="instay-crossfade-wrapper">
                                                 <div class="instay-crossfade-pin">
                                                     <figure class="instay-crossfade-canvas">
-                                                        <!-- Base image (after) -->
                                                         <img class="instay-after" src="/assets/InstayAssets/beforeafter/after.webp" alt="High fidelity UI">
-                                                        <!-- Overlay image (before) that fades out on scroll -->
                                                         <img class="instay-before" src="/assets/InstayAssets/beforeafter/before.webp" alt="Low fidelity UI">
                                                     </figure>
                                                 </div>
@@ -252,7 +249,6 @@
                         <h2 class="skills-title-professional" data-translate="instay.headers.theRemote">The remote</h2>
                                         </div>
 
-                                        <!-- 3D Remote Scroll Animation -->
                                         <section class="remote-3d-stage full-bleed-center" aria-label="InStay Remote 3D Animation">
                                             <div class="remote-3d-wrapper">
                                                 <div class="remote-3d-pin">
@@ -296,7 +292,7 @@
                                                 </div>
                                             </div>
                                         </section>
-                                        <!-- Prototype CTA -->
+
                                         <section class="ui-section">
                                             <div class="brief-row">
                                                 <div class="brief-cell">
@@ -351,20 +347,15 @@
     <script src="/translations.js"></script>
     <script src="/index.js"></script>
     <script>
-        // Preload additional animation images to avoid jank during scroll/animation
         (function preloadAnimationImages() {
             var imagesToPreload = [];
 
-            // tvanimation (specific request)
             imagesToPreload.push("/assets/InstayAssets/tvanimation/Try.webp");
-
-            // beforeafter (specific list)
             imagesToPreload.push("/assets/InstayAssets/beforeafter/after.webp");
             imagesToPreload.push("/assets/InstayAssets/beforeafter/after2.webp");
             imagesToPreload.push("/assets/InstayAssets/beforeafter/before.webp");
             imagesToPreload.push("/assets/InstayAssets/beforeafter/before2.webp");
 
-            // scrollanimation (load all)
             imagesToPreload = imagesToPreload.concat([
                 "/assets/InstayAssets/scrollanimation/Home%20Screen.webp",
                 "/assets/InstayAssets/scrollanimation/House%20Details.webp",
@@ -375,7 +366,6 @@
                 "/assets/InstayAssets/scrollanimation/19.webp"
             ]);
 
-            // soltaranimation (load everything in folder)
             imagesToPreload = imagesToPreload.concat([
                 "/assets/SoltarAssets/soltaranimation/1.webp",
                 "/assets/SoltarAssets/soltaranimation/2.webp",
@@ -385,7 +375,6 @@
                 "/assets/SoltarAssets/soltaranimation/11.webp"
             ]);
 
-            // Start preloading
             for (var i = 0; i < imagesToPreload.length; i++) {
                 var img = new Image();
                 img.decoding = "async";

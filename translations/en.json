@@ -8,7 +8,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "title": "UX & UI Designer",
-    "subtitle": "Turning ideas into digital experiences."
+    "subtitle": "Turning ideas into digital experiences"
   },
   "aboutDesc": "Hello, my name is Alessandro Bocquet. I'm a UX and UI designer studying in the master Digital and Interaction Design at the Politecnico di Milano. I mainly create my work through Figma and coding via HTML, CSS, and JavaScript (GSAP and jQuery).",
   "skillsTitle": "Design Stack",
@@ -52,7 +52,7 @@
     "linkedin": "LinkedIn",
     "cv": "Resume"
   },
-  "mainFooter": "Website designed in HTML/CSS and JavaScript",
+  "mainFooter": "Website designed and coded in HTML/CSS and JavaScript",
   "common": {
   "viewPrototype": "View prototype",
   "viewTvPrototype": "View TV prototype",
