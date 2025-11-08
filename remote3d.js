@@ -359,7 +359,6 @@
     
     darkModeObserver.observe(document.body, { attributes: true });
 
-    // Cleanup
     window.addEventListener('beforeunload', () => {
       if (rafId) cancelAnimationFrame(rafId);
       if (renderer) renderer.dispose();

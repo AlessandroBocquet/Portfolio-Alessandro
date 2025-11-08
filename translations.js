@@ -30,9 +30,8 @@ class TranslationManager {
         }
     }
     setupLanguageSwitcher() {
-        // Use event delegation to avoid duplicate listeners - only set up once
         if (this._languageClickHandler) {
-            return; // Already set up
+            return; 
         }
         this._languageClickHandler = async (e) => {
             const languageButton = e.target.closest('[data-lang]');
@@ -52,7 +51,6 @@ class TranslationManager {
             console.warn('Invalid language:', language);
             return;
         }
-        // Prevent unnecessary language changes
         if (language === this.currentLanguage) {
             return;
         }
@@ -139,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.translationManager = new TranslationManager();
     window.translationManager.initializeFromStorage();
     
-    // Expose setLanguage for compatibility with existing code
     window.setLanguage = async (language) => {
         if (window.translationManager) {
             await window.translationManager.changeLanguage(language);
