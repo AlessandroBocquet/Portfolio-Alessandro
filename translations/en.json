@@ -46,7 +46,7 @@
   "featuredProjectsDesc": "A selection of my recent work in UX/UI design and visual creation.",
   "contact": {
     "title": "Let's get in touch",
-    "description": "Always happy to chat about new projects, fresh ideas, or potential collaborations.",
+    "description": "Always happy to chat about new projects, ideas, or potential collaborations.",
     "emailButton": "Say Hello",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -74,7 +74,7 @@
     },
     "description": "InStay is a smart hospitality ecosystem integrating IoT devices, Smart TV, and a remote-control system to enhance the guest experience and streamline property management. Designed for both tenants and owners, it offers intuitive control, energy efficiency, and secure device management within short-term rentals.",
     "problem": "Guests face difficulty adjusting lighting and climate, finding essential information and are deeply hesitant to log into their personal streaming accounts. Owners deal with wasted energy, device misuse, and limited control over property resources. InStay needed a cohesive, user-friendly solution that works seamlessly across devices while maintaining security and brand identity.",
-    "solution": "Our solution unites the Smart TV, IoT devices, the remote controller and the owner's application into one connected ecosystem. The Smart TV serves as an intuitive hub, giving guests complete control over their apartment and their stay. It provides a secure portal for personal streaming, with automated data deletion at check-out to ensure total privacy.",
+    "solution": "Our solution unites the Smart TV, IoT devices, the remote controller and the owner's application into one connected ecosystem. The Smart TV serves as an intuitive hub, giving guests complete control over their apartment and their stay. It provides a secure portal for personal streaming, with data deletion at check-out to ensure total privacy.",
     "durationValue": "4 months",
   "dateValue": "2025",
     "ownerApp": {
@@ -164,7 +164,7 @@
     },
     "outcome": {
       "title": "Outcome",
-      "text": "Our research allowed us to create a user flow supported by calibrated haptic feedback and adaptive music patterns. Iterative testing validated the system's effectiveness in facilitating bodily expression, reducing social anxiety, and creating authentic connections through synchronized movement."
+      "text": "Our research allowed us to create a user flow supported by calibrated haptic feedback and adaptive music patterns. Iterative testing validated the system's effectiveness in facilitating bodily expression, reducing social anxiety, and creating connections through synchronized movement."
     },
     "credits": {
       "text": "Project conceived and realized with Aranza Villarreal, Efe Eren Can Bakır, Kexin Ma, Sherif Rateb, Yifan Lu at Politecnico di Milano."
@@ -247,8 +247,8 @@
       "text": "Our solution targets two key personas: curious tourists discovering Strasbourg who stumble upon QR codes in museums, and local residents rediscovering their city who encounter codes while exploring. The application speaks to both spontaneous discovery and intentional exploration, making the planetarium accessible to diverse audiences."
     },
     "phone": {
-      "text1": "The app offers a journey from the Sun to distant planets",
-      "text2": "Each scroll reveals new elements from our system in an immersive learning experience"
+      "text1": "The app offers a journey from the Sun to distant planets across our system",
+      "text2": "Each scroll reveals new elements in an immersive learning experience"
     }
   }
 }
