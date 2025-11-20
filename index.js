@@ -762,59 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return shuffled;
     }
 
-    // Hero pattern with randomness
-    function initializePatterns() {
-        if (!heroMain) return;
-        
-        const screenEntropy = window.screen.width * window.screen.height;
-        const browserEntropy = navigator.userAgent.length + navigator.language.charCodeAt(0);
-        const timingEntropy = Date.now() + performance.now();
-        const randomEntropy = Math.random() * 10000000;
-        const documentEntropy = document.readyState.charCodeAt(0) * document.title.length;
-        
-        const baseArray = ['pattern-1', 'pattern-2', 'pattern-3', 'pattern-5'];
-        const combinedEntropy = screenEntropy + browserEntropy + timingEntropy + randomEntropy + documentEntropy + pageLoadSeed;
-        patterns = shuffleArray(baseArray, combinedEntropy);
-        
-        let randomValue = Math.random();
-        if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
-            const array32 = new Uint32Array(1);
-            crypto.getRandomValues(array32);
-            randomValue = array32[0] / (0xFFFFFFFF + 1);
-        }
-        
-        const randomInitialIndex = Math.floor(randomValue * patterns.length);
-        patternIndex = randomInitialIndex;
-        
-        setTimeout(() => {
-            heroMain.classList.add(patterns[patternIndex]);
-        }, 50);
-    }
-
-    if (heroMain) {
-        initializePatterns();
-        
-        let mouseEntropy = 0;
-        document.addEventListener('mousemove', (e) => {
-            mouseEntropy += e.clientX + e.clientY;
-        });
-        
-        heroMain.addEventListener('mouseenter', () => {
-            const baseArray = ['pattern-1', 'pattern-2', 'pattern-3', 'pattern-5'];
-            patterns = shuffleArray(baseArray, mouseEntropy + Date.now());
-            
-            heroMain.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            
-            baseArray.forEach(pattern => heroMain.classList.remove(pattern));
-            
-            patternIndex = (patternIndex + 1) % patterns.length;
-            heroMain.classList.add(patterns[patternIndex]);
-            
-            setTimeout(() => {
-                heroMain.style.transition = '';
-            }, 800);
-        });
-    }
+    // Hero section - pattern removed, using CSS-only lines
 });
 document.addEventListener('DOMContentLoaded', function() {
     const currentYearElement = document.getElementById('current-year');
