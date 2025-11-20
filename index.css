@@ -210,7 +210,7 @@ img {
 }
 
 .hero-name {
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 700;
   background: linear-gradient(135deg, var(--apple-teal) 0%, var(--apple-cyan) 25%, var(--apple-cyan) 50%, var(--apple-violet) 75%, var(--apple-purple) 100%);
   background-clip: text;
@@ -270,6 +270,7 @@ img {
 @media only screen and (max-width: 768px) {
   .hero-main {
     min-height: 35vh;
+    padding: 0 1rem;
   }
   
   .hero-typewriter {
