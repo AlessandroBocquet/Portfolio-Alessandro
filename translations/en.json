@@ -184,16 +184,24 @@
       "duration": "Duration:",
       "date": "Date:"
     },
-    "description": "Capsound is a customizable keyboard platform that allows users to design, assemble, and upgrade their own keyboards. Instead of purchasing a fixed, pre-built product, customers can select individual components cases, keycaps, switches, and PCBs to create a setup tailored to their preferences. By focusing on modularity, reusability, and recycling, Capsound promotes a circular economy model that reduces waste and extends the lifespan of every keyboard.",
-    "problem": "Most keyboards on the market are mass-produced with fixed designs, limiting personalisation and often forcing users to compromise on aesthetics, feel, or ergonomics. When a single component breaks or becomes outdated, the entire keyboard is often discarded, generating unnecessary waste. Enthusiasts who wish to build their own keyboards face fragmented sourcing, higher costs, and a lack of beginner-friendly guidance. A unified, sustainable, and accessible solution was needed.",
-    "solution": "Capsound is a centralised platform where users can buy compatible keyboard components individually or as curated build kits. Its modular system allows customers to repair, upgrade, or redesign their keyboards without replacing the whole product. With recycling programs for old parts and educational resources for beginners, Capsound makes mechanical keyboard customisation sustainable and accessible reducing waste while helping users create keyboards tailored to their needs and style.",
+    "description": "Capsound is a customizable keyboard platform that allows users to design, assemble, and upgrade their own keyboards. Instead of purchasing a fixed, pre-built product, customers can select individual components cases, keycaps, switches, and PCBs to create a setup tailored to their preferences.",
+    "problem": "Most keyboards on the market are mass-produced with fixed designs, limiting personalisation and it often leads to forcing users to compromise on aesthetics, feel, or ergonomics. When a single component breaks or becomes outdated, the entire keyboard is often discarded. Enthusiasts who wish to build their own keyboards face fragmented sourcing, higher costs, and a lack of beginner-friendly guidance.",
+    "solution": "Capsound is a centralised platform where users can buy compatible keyboard components individually. Its modular system allows customers to repair, upgrade, or redesign their keyboards without replacing the whole product. With recycling programs for old parts and educational resources for beginners, Capsound makes mechanical keyboard customisation sustainable and accessible reducing waste while helping users create keyboards tailored to their needs and style.",
     "durationValue": "2 months",
-    "dateValue": "2023",
+    "dateValue": "2024",
     "ui": {
       "label": "Website UI",
-      "text": "Capsound is a streamlined, customization‑first shop. A component configurator lets users mix cases, switches, keycaps, and PCBs with real‑time visuals and compatibility cues. “Reuse & Recycle” prompts suggest upgrades and trade‑ins, while clear hierarchy, modular cards, and step‑by‑step guidance keep the flow simple. High‑res renders and interactive previews make designs tangible, blending the excitement of personalization with practical, sustainable shopping."
+      "text": "Capsound is a streamlined, customization‑first shop. A component configurator lets users mix cases, switches, keycaps, and PCBs with real‑time visuals and compatibility cues. Reuse & Recycle prompts suggest upgrades and trade‑ins, while clear hierarchy, modular cards, and step‑by‑step guidance keep the flow simple. High‑res renders and interactive previews make designs tangible, blending the excitement of personalization with practical, sustainable shopping."
     },
-  "headers": { "credits": "Credits", "prototype": "Prototype" },
+    "uiElements": {
+      "label": "UI Elements",
+      "text": "Capsound's UI elements are done not just for clarity, but for long-term user retention and sustained engagement. Buttons, input fields, cards, and navigation components use clear affordances and responsive feedback to reduce friction, lowering the cognitive load. By adhering to consistent sizing, spacing, and state patterns (default, hover, active, disabled), the interface builds predictability and trust, two factors proven to improve return-usage."
+    },
+    "designSystem": {
+      "label": "Design System",
+      "text": "The Capsound design system establishes a cohesive visual language built on consistency, modularity, and scalability. It defines a color palette that balances brand identity with accessibility, typography scales that ensure readability across devices. Enabling rapid iteration for the user was a crucial focus point while creating the design system."
+    },
+    "headers": { "credits": "Credits", "prototype": "Prototype" },
     "credits": {
       "text": "Project conceived and realized with Tifenn Seveon at the University of Strasbourg."
     }

@@ -174,10 +174,18 @@
     "problem": "La plupart des claviers du marché sont produits en série avec des designs fixes, limitant la personnalisation et forçant souvent à des compromis sur l'esthétique, le ressenti ou l'ergonomie. Lorsqu'un seul composant casse ou devient obsolète, le clavier entier est souvent jeté, générant des déchets inutiles. Les passionnés qui souhaitent construire leur propre clavier font face à des sources fragmentées, à des coûts plus élevés et à un manque de guidage pour débutants. Une solution unifiée, durable et accessible était nécessaire.",
     "solution": "Capsound propose une boutique centralisée où l'on peut acheter des composants compatibles à l'unité ou via des kits sélectionnés. Le système modulaire permet de réparer, mettre à niveau ou repenser complètement son clavier sans tout remplacer. En intégrant des programmes de recyclage pour les pièces usagées et des choix sur le type de livraison, Capsound rend la personnalisation des claviers mécaniques durable et accessible. Cette approche réduit les déchets matériels tout en permettant de créer un produit réellement aligné sur ses besoins et son style.",
     "durationValue": "2 mois",
-    "dateValue": "2023",
+    "dateValue": "2024",
     "ui": {
       "label": "Interface du site",
       "text": "Capsound est une boutique pensée d'abord pour la personnalisation. Un configurateur de composants permet de combiner coques, switches, keycaps et PCB avec des visuels en temps réel et des indications de compatibilité. Des suggestions \"Réutiliser & Recycler\" encouragent les upgrades et reprises, tandis qu'une hiérarchie claire, des cartes modulaires et une interface intuitive simplifie le parcours. Des rendus haute définition et des aperçus interactifs rendent les designs tangibles, alliant excitation de la personnalisation et achat durable et pratique."
+    },
+    "uiElements": {
+      "label": "Éléments d'interface",
+      "text": "Les éléments d'interface de Capsound sont conçus non seulement pour la clarté, mais pour la fidélisation à long terme et l'engagement durable. Les boutons, champs de saisie, cartes et composants de navigation utilisent des affordances claires et un retour réactif pour réduire les frictions, diminuant ainsi la charge cognitive. En respectant des motifs cohérents de dimensionnement, d'espacement et d'états (par défaut, survol, actif, désactivé), l'interface construit prévisibilité et confiance, deux facteurs prouvés pour améliorer l'utilisation récurrente."
+    },
+    "designSystem": {
+      "label": "Design System",
+      "text": "Le design system de Capsound établit un langage visuel cohérent fondé sur la cohérence, la modularité et l'évolutivité. Il définit une palette de couleurs qui équilibre identité de marque et accessibilité, des échelles typographiques qui garantissent la lisibilité sur tous les appareils. Permettre une itération rapide pour l'utilisateur était un point crucial lors de la création du design system."
     },
     "headers": { 
       "credits": "Crédits", 

@@ -5,13 +5,13 @@
     "contact": "Contatti"
   },
   "hero": {
-    "greeting": "Ciao, sono",
+    "greeting": "Ciao, mi chiamo",
     "title": "UX & UI Designer",
     "subtitle": "Creare esperienze digitali attraverso design e codice"
   },
   "aboutDesc": "Ciao, mi chiamo Alessandro Bocquet. Sono un UX e UI designer che sta studiando nel master Digital and Interaction Design al Politecnico di Milano. Creo il mio lavoro principalmente con Figma e codificando con HTML, CSS e JavaScript (GSAP e jQuery).",
   "skillsTitle": "Competenze Design",
-  "skillsDesc": "Il mio background diversificato nel design di interazione, patrimonio digitale e sistemi visivi mi consente di affrontare le sfide visive e di esperienza utente su tutti i media con un approccio product oriented",
+  "skillsDesc": "Il mio background nel design di interazione e sistemi visivi mi consente di affrontare le sfide visive e di esperienza utente su tutti i media con un approccio product-oriented",
   "stats": {
     "skills": "Competenze",
     "years": "Anni",
@@ -42,10 +42,10 @@
     }
   },
   "featuredProjectsTitle": "Progetti in evidenza",
-  "featuredProjectsDesc": "Una selezione dei miei lavori recenti nel design UX/UI e nella creazione visiva",
+  "featuredProjectsDesc": "Ecco una selezione dei miei lavori recenti nel design UX/UI e nella creazione visiva",
   "contact": {
     "title": "Mettiamoci in contatto",
-    "description": "Sono sempre disponibile per discutere di nuovi progetti, idee creative o opportunità.",
+    "description": "Sono sempre disponibile per discutere di nuovi progetti, idee creative e opportunità.",
     "emailButton": "Contatto",
     "github": "GitHub",
     "linkedin": "LinkedIn",
@@ -124,7 +124,7 @@
       "date": "Data:"
     },
     "description": "Soltar è un sistema di interazione connessa che combina un dispositivo indossabile, segnali aptici di vibrazione e musica adattiva per favorire il rilascio emotivo attraverso la danza. Per uso individuale o di gruppo, riduce l'ansia sociale, rafforza la consapevolezza corporea e sincronizza le persone attraverso un ritmo condiviso.",
-    "problem": "Gli spazi di danza possono sembrare intimidatori, limitando l'espressione. Le persone spesso mancano di una guida per allineare movimento ed emozione, e molti non possono apprezzare eventi dal vivo. Soltar necessitava di un'esperienza portatile, sicura e sociale che funzionasse ovunque—al chiuso o all'aperto.",
+    "problem": "Gli spazi di danza possono sembrare intimidatori, limitando l'espressione. Le persone spesso mancano di una guida per allineare movimento ed emozione, e molti non possono apprezzare eventi dal vivo. Soltar necessitava di un'esperienza portatile, sicura e sociale che funzionasse ovunque,al chiuso o all'aperto.",
     "solution": "Abbiamo progettato un dispositivo indossabile + app che utilizza motori di vibrazione, sensori IMU e musica adattiva per guidare il movimento in tempo reale. L'aptica sviluppa la consapevolezza corporea mentre l'app regola musica e vibrazioni in base all'intensità e agli obiettivi. Prototipato per oltre 30 partecipanti; supporta modalità singola o di gruppo con un'interfaccia minimale e playlist basate sull'umore.",
     "durationValue": "4 mesi",
     "dateValue": "2025",
@@ -136,11 +136,11 @@
     },
     "app": {
       "label": "Applicazione",
-      "text": "Soltar è un sistema basato su dispositivo indossabile e app che utilizza feedback aptico, musica adattiva e rilevamento del movimento in tempo reale per guidare gli utenti in un'esperienza di danza immersiva—individualmente o in gruppo. Progettato per favorire il rilascio emotivo e la connessione sociale, aiuta a superare barriere come ansia, imbarazzo e mancanza di tempo per eventi di danza."
+      "text": "Soltar è un sistema basato su dispositivo indossabile e app che utilizza feedback aptico, musica adattiva e rilevamento del movimento in tempo reale per guidare gli utenti in un'esperienza di danza immersiva, individualmente o in gruppo. Progettato per favorire il rilascio emotivo e la connessione sociale, aiuta a superare barriere come ansia, imbarazzo e mancanza di tempo per eventi di danza."
     },
     "wearable": {
       "label": "Dispositivo indossabile",
-      "text": "Il dispositivo indossabile Soltar è un dispositivo leggero, montato sul corpo, che integra motori di vibrazione, sensori IMU e connettività wireless per creare un sistema di guida incarnata per la danza. Posizionato su braccia e polsi per una percezione ottimale, fornisce schemi di vibrazione adattivi che rispondono in tempo reale all'intensità del movimento, guidando ritmo e flusso. Il fattore di forma è costruito con tessuto flessibile, fissaggi sicuri e un modulo elettronico compatto per garantire comfort, stabilità e libertà di movimento. Iterazioni estensive hanno perfezionato il posizionamento dei motori, l'ampiezza delle vibrazioni e la gestione dei cavi, risultando in un design stabile, percettibile e confortevole per sessioni di danza individuali e di gruppo."
+      "text": "Soltar è un dispositivo indossabile leggero, montato sul corpo, che integra motori di vibrazione, sensori IMU e connettività wireless per creare un sistema di guida per la danza. Posizionato su braccia e polsi per una percezione ottimale, fornisce schemi di vibrazione adattivi che rispondono in tempo reale all'intensità del movimento, guidando ritmo e flusso. È costruito con tessuto flessibile, fissaggi sicuri e un modulo elettronico compatto per garantire comfort, stabilità e libertà di movimento. Iterazioni estensive hanno perfezionato il posizionamento dei motori, l'ampiezza delle vibrazioni e la gestione dei cavi, risultando in un design stabile, percettibile e confortevole."
     },
     "research": {
       "label": "Ricerca",
@@ -151,7 +151,7 @@
         "literature": "Revisione della letteratura su design somaestetico, mappatura corporea e regolazione emotiva attraverso la consapevolezza corporea.",
         "feasibility": "Test di fattibilità tecnologica con motori di vibrazione, sensori IMU e modulazione musicale in tempo reale tramite TouchDesigner."
       },
-      "outro": "Oltre 30 partecipanti hanno preso parte ai test iterativi del prototipo su sette dimensioni—posizionamento delle vibrazioni, schemi aptici, posizionamento IMU, adattamento musicale, comfort del dispositivo indossabile, chiarezza dell'interfaccia ed esperienza di gruppo."
+      "outro": "Oltre 30 partecipanti hanno preso parte ai test iterativi del prototipo su sette dimensioni: posizionamento delle vibrazioni, schemi aptici, posizionamento IMU, adattamento musicale, comfort del dispositivo indossabile, chiarezza dell'interfaccia ed esperienza di gruppo."
     },
     "outcome": {
       "title": "Risultati",
@@ -170,16 +170,24 @@
       "duration": "Durata:",
       "date": "Data:"
     },
-    "description": "Capsound è una piattaforma di tastiere personalizzabili che consente agli utenti di progettare, assemblare e aggiornare la propria tastiera. Invece di acquistare un prodotto fisso e preassemblato, i clienti possono selezionare singoli componenti — case, keycaps, switch e PCB — per creare una configurazione su misura. Puntando su modularità, riuso e riciclo, Capsound promuove un modello di economia circolare che riduce gli sprechi e prolunga la vita di ogni tastiera.",
+    "description": "Capsound è una piattaforma di tastiere personalizzabili che consente agli utenti di progettare, assemblare e aggiornare la propria tastiera. Invece di acquistare un prodotto fisso e preassemblato, i clienti possono selezionare singoli componenti: case, keycaps, switch e PCB, per creare una configurazione su misura. Puntando su modularità, riuso e riciclo, Capsound promuove un modello di economia circolare che riduce gli sprechi e prolunga la vita di ogni tastiera.",
     "problem": "La maggior parte delle tastiere in commercio è prodotta in serie con design fissi, limitando la personalizzazione e costringendo spesso a compromessi su estetica, feeling o ergonomia. Quando un componente si rompe o diventa obsoleto, spesso si butta l'intera tastiera, generando rifiuti inutili. Gli appassionati che vogliono costruire da sé incontrano fonti frammentate, costi più alti e poca guida per principianti. Serviva una soluzione unificata, sostenibile e accessibile.",
     "solution": "Capsound offre un negozio centralizzato dove acquistare componenti compatibili singolarmente o in kit curati. Il sistema modulare consente di riparare, aggiornare o riprogettare completamente la tastiera senza sostituirla interamente. Integrando programmi di riciclo dei pezzi usati e risorse educative per chi inizia, Capsound rende la personalizzazione delle meccaniche sostenibile e accessibile. Questo approccio riduce i rifiuti e permette di creare un prodotto perfettamente allineato a esigenze e stile personali.",
     "durationValue": "2 mesi",
-    "dateValue": "2023",
+    "dateValue": "2024",
     "ui": {
       "label": "Interfaccia del sito",
-      "text": "Capsound è uno shop essenziale, pensato per la personalizzazione. Un configuratore consente di combinare case, switch, keycaps e PCB con visuali in tempo reale e indicazioni di compatibilità. I suggerimenti “Riusa & Ricicla” propongono upgrade e trade‑in; gerarchia chiara, card modulari e guida passo‑passo semplificano il flusso. Render ad alta risoluzione e preview interattive rendono tangibili i design, unendo entusiasmo della personalizzazione e acquisto sostenibile e pratico."
+      "text": "Pensato per la personalizzazione, un configuratore consente di combinare case, switch, keycaps e PCB con visuali in tempo reale e indicazioni di compatibilità. I suggerimenti Riusa & Ricicla propongono upgrade e trade‑in; gerarchia chiara, card modulari e guida passo a passo semplificano il flusso. Render ad alta risoluzione e preview interattive rendono tangibili i design, unendo entusiasmo della personalizzazione e acquisto sostenibile e pratico."
     },
-  "headers": { "credits": "Crediti", "prototype": "Prototipo" },
+    "uiElements": {
+      "label": "Elementi UI",
+      "text": "Gli elementi UI di Capsound sono progettati non solo per chiarezza, ma per fidelizzazione a lungo termine e coinvolgimento duraturo. Pulsanti, campi di input, card e componenti di navigazione utilizzano affordance chiare e feedback reattivo per ridurre l'attrito, abbassando il carico cognitivo. Aderendo a pattern coerenti di dimensioni, spaziature e stati (predefinito, hover, attivo, disabilitato), l'interfaccia costruisce prevedibilità e fiducia, due fattori dimostrati per migliorare l'uso ricorrente."
+    },
+    "designSystem": {
+      "label": "Design System",
+      "text": "Il design system di Capsound stabilisce un linguaggio visivo coeso basato su coerenza, modularità e scalabilità. Definisce una palette di colori che bilancia identità di brand con accessibilità, scale tipografiche che garantiscono leggibilità su tutti i dispositivi. Consentire una rapida iterazione per l'utente è stato un punto focale cruciale durante la creazione del design system."
+    },
+    "headers": { "credits": "Crediti", "prototype": "Prototipo" },
     "credits": {
       "text": "Progetto concepito con Tifenn Seveon all’Università di Strasburgo."
     }
@@ -194,7 +202,7 @@
       "date": "Data:"
     },
     "title": "Planetario",
-    "description": "L'app del Planetario di Strasburgo è un'esperienza digitale interattiva progettata per aumentare la consapevolezza del Planetario di Strasburgo. Attraverso un'applicazione web ottimizzata per mobile, accessibile tramite codici QR in tutta la città, gli utenti si imbarcano in un viaggio narrativo attraverso l'universo, dal Sole alle zone più remote dello spazio. L'esperienza combina storytelling, interattività e geolocalizzazione per collegare il percorso digitale con una destinazione reale.",
+    "description": "L'app del Planetario di Strasburgo è un'esperienza digitale interattiva progettata per aumentare la visibilità del Planetario di Strasburgo. Attraverso un'applicazione web ottimizzata per mobile, accessibile tramite codici QR in tutta la città, gli utenti si imbarcano in un viaggio narrativo attraverso l'universo, dal Sole alle zone più remote dello spazio. L'esperienza combina storytelling, interattività e geolocalizzazione per collegare il percorso digitale con una destinazione reale.",
     "problem": "Nonostante una campagna pubblicitaria, molti residenti e visitatori non erano a conoscenza dell'esistenza o della posizione del planetario. La nostra ricerca ha rivelato che il 30% dei rispondenti non aveva mai sentito parlare del planetario, e il 50% sapeva che esisteva ma non sapeva dove si trovasse. Questa mancanza di visibilità ci ha motivato a creare un progetto per aiutare il planetario a raggiungere un pubblico più ampio.",
     "solution": "Abbiamo progettato un'esperienza digitale interattiva accessibile tramite codici QR distribuiti in tutta Strasburgo. L'applicazione web ottimizzata per mobile guida gli utenti attraverso un viaggio di scorrimento tra le stelle, combinando educazione, interattività e geolocalizzazione. La funzionalità 'Aura' fornisce una guida spaziale, mentre gli elementi gamificati migliorano l'engagement e incoraggiano le visite.",
     "durationValue": "2 mesi",
