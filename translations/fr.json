@@ -206,7 +206,7 @@
     },
     "title": "Planétarium",
     "description": "L'application Planétarium de Strasbourg est une expérience numérique interactive conçue pour sensibiliser le public au Planétarium de Strasbourg. Grâce à une application web adaptée aux mobiles, accessible via des codes QR répartis dans toute la ville, les utilisateurs s'embarquent dans un voyage narratif à travers l'univers, du Soleil aux confins de l'espace. L'expérience combine narration, interactivité et géolocalisation pour connecter le parcours numérique avec une destination réelle.",
-    "problem": "Malgré une campagne publicitaire, de nombreux résidents et visiteurs ignoraient l'existence ou l'emplacement du planétarium. Notre recherche a révélé que 30% des répondants n'avaient jamais entendu parler du planétarium, et 50% savaient qu'il existait mais ne savaient pas où il se trouvait. Ce manque de visibilité nous a motivés à créer un projet pour aider le planétarium à toucher un public plus large.",
+    "problem": "Malgré la campagne publicitaire, de nombreux résidents et visiteurs ignoraient l’existence du planétarium ou ne savaient pas où il se trouvait. Notre recherche a révélé que la plupart des touristes n’avaient pas prévu de visiter le planétarium.",
     "solution": "Nous avons conçu une expérience numérique interactive accessible via des codes QR répartis dans toute la ville de Strasbourg. L'application web optimisée pour mobile guide les utilisateurs à travers un voyage de défilement dans les étoiles, combinant éducation, interactivité et géolocalisation. La fonctionnalité 'Aura' fournit une guidance spatiale, tandis que les éléments gamifiés renforcent l'engagement et encouragent les visites.",
     "durationValue": "2 mois",
     "dateValue": "2023",
@@ -215,7 +215,8 @@
       "application": "L'application",
       "aura": "L'Aura — Guide de géolocalisation",
       "gamification": "Exploration gamifiée",
-      "research": "La recherche"
+      "research": "La recherche",
+      "credits": "Crédits"
     },
     "application": {
       "label": "Application",
@@ -239,9 +240,8 @@
       },
       "goal": "Ce manque de visibilité nous a motivés à créer un projet pour aider le planétarium à toucher un public plus large grâce à des expériences numériques interactives intégrées dans les espaces culturels et touristiques de la ville."
     },
-    "target": {
-      "label": "Publics cibles",
-      "text": "Notre solution cible deux personas clés : les touristes curieux découvrant Strasbourg qui tombent sur des codes QR dans les musées, et les résidents locaux redécouvrant leur ville qui rencontrent des codes lors de l'exploration. L'application parle à la fois de découverte spontanée et d'exploration intentionnelle, rendant le planétarium accessible à des publics diversifiés."
+    "credits": {
+      "text": "Projet réalisé avec Baptiste Fritz à l'Université de Strasbourg."
     },
     "phone": {
       "text1": "L'application propose un voyage du Soleil vers des planètes lointaines.",

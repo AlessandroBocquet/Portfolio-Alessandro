@@ -217,7 +217,7 @@
     },
     "title": "Planetarium",
     "description": "Planetarium of Strasbourg app is an interactive digital experience designed to raise awareness of the Strasbourg Planetarium. Through a mobile-friendly web application accessible via QR codes across the city, users embark on a narrative journey through the universe, from the sun to the farthest reaches of space. The experience combines storytelling, interactivity, and geolocation to connect the digital journey with a real-world destination.",
-    "problem": "Despite an advertising campaign, many residents and visitors were unaware of the planetarium's existence or location. Our research revealed that 30% of respondents had never heard of the planetarium, and 50% knew it existed but did not know where it was located. This lack of visibility motivated us to create a project to help the planetarium reach a wider audience.",
+    "problem": "Despite an advertising campaign, many residents and visitors were unaware of the planetarium's existence or location. Our research revealed that most tourists didn't plan on going to the planetarium.",
     "solution": "We designed an interactive digital experience accessible via QR codes across Strasbourg. The mobile-friendly web application guides users through a scrolling journey through the stars, combining education, interactivity, and geolocation. The 'Aura' feature provides spatial guidance, while gamified elements enhance engagement and encourage visits.",
     "durationValue": "2 months",
     "dateValue": "2023",
@@ -226,7 +226,8 @@
       "application": "The application",
       "aura": "The Aura - Geolocation Guide",
       "gamification": "Gamified exploration",
-      "research": "The research"
+      "research": "The research",
+      "credits": "Credits"
     },
     "application": {
       "label": "Application",
@@ -250,9 +251,8 @@
       },
       "goal": "This lack of visibility motivated us to create a project to help the planetarium reach a wider audience through interactive digital experiences integrated into the city's cultural and touristic spaces."
     },
-    "target": {
-      "label": "Target audiences",
-      "text": "Our solution targets two key personas: curious tourists discovering Strasbourg who stumble upon QR codes in museums, and local residents rediscovering their city who encounter codes while exploring. The application speaks to both spontaneous discovery and intentional exploration, making the planetarium accessible to diverse audiences."
+    "credits": {
+      "text": "Project conceived and realized with Baptiste Fritz at the University of Strasbourg."
     },
     "phone": {
       "text1": "The app offers a journey from the Sun to distant planets across our system",
