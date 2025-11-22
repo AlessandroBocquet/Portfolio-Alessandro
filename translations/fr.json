@@ -59,7 +59,7 @@
     "viewWebsitePrototype": "Voir le prototype du site"
   },
   "instay": {
-    "projectType": "Branding · UI/UX Design",
+    "projectType": "Interface TV · UX/UI Design",
     "labels": {
       "description": "Description",
       "problem": "Problématique :",
@@ -115,7 +115,7 @@
     }
   },
   "soltar": {
-    "projectType": "Branding · UI/UX · Motion",
+    "projectType": "Appareil connecté · UX/UI · Électronique",
     "labels": {
       "description": "Description",
       "problem": "Problématique :",
@@ -162,7 +162,7 @@
     }
   },
   "capsound": {
-    "projectType": "UX/UI Design",
+    "projectType": "E-commerce · UX/UI Design",
     "labels": {
       "description": "Description",
       "problem": "Problématique :",
@@ -196,7 +196,7 @@
     }
   },
   "planetarium": {
-    "projectType": "UI/UX Design · Branding",
+    "projectType": "UX/UI Design · Design d'expérience",
     "labels": {
       "description": "Description",
       "problem": "Problématique :",
