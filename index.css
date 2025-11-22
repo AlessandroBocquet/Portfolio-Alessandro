@@ -1767,10 +1767,9 @@ html, body {
 
 .contact-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 650;
     color: var(--texte);
     margin-bottom: 0;
-    font-family: 'General Sans', sans-serif;
     text-align: center;
 }
 
