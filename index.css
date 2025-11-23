@@ -266,7 +266,7 @@ body.dark-mode .hero-main.pattern-1 {
 }
 
 .unique-hero-title {
-  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background: linear-gradient(135deg, #667eea, #9d7bc9, #f093fb, #f5576c);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -548,6 +548,15 @@ body.dark-mode .hero-main.pattern-1 {
   .skills-professional-container {
     padding: 0 1rem;
   }
+  
+  .skills-title-professional {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  
+  .skills-title-professional2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  
   .skills-category-header {
     gap: 0.5rem;
   }
@@ -1583,8 +1592,13 @@ header #menu.sticky a {
   }
   
   .skills-title-professional {
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     margin-bottom: 0;
+  }
+  
+  .skills-title-professional2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 0.4rem;
   }
   
   h3 {
