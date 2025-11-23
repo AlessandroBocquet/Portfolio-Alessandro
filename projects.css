@@ -323,6 +323,14 @@ html, body {
     width: min(95vw, 916px);
     height: calc(min(95vw, 916px) * 0.598); 
   }
+  
+  .instay-scroll-gallery {
+    margin-top: 0;
+  }
+  
+  .instay-scroll-gallery.full-bleed-center {
+    margin-top: 0;
+  }
 }
 
 .project-thumbnail-large {
@@ -419,6 +427,7 @@ html, body {
 
 .brief-media {
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .brief-image {
@@ -444,6 +453,7 @@ html, body {
 @media only screen and (max-width: 1024px) {
   .brief-row {
     grid-template-columns: 1fr;
+    gap: 0;
   }
   .project-brief {
     gap: 1.5rem;
@@ -454,14 +464,26 @@ html, body {
   }
   .brief-label {
     font-size: 0.85rem;
+    border-top: 1.5px solid var(--apple-blue);
+    padding-top: 1rem;
+    margin-bottom: 0.25rem;
   }
   
   .brief-cell {
     border-top: none;
+    padding-top: 0;
   }
   
-  .brief-cell:first-child {
-    border-top: 1.5px solid var(--apple-blue);
+  .brief-value {
+    border-top: none;
+  }
+  
+  .owner-app-section {
+    margin-top: 0;
+  }
+  
+  .project-media-wide {
+    margin-top:1rem;
   }
   
   .prototype-cta {

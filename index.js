@@ -526,7 +526,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const vw = window.innerWidth;
             maxTranslate = Math.max(0, trackWidth - vw);
             const vh = window.innerHeight;
-            totalScroll = Math.max(vh, maxTranslate + vh * 0.35);
+            const isMobile = vw <= 768;
+            const mobileMultiplier = isMobile ? 0.15 : 0.35;
+            totalScroll = Math.max(vh, maxTranslate + vh * mobileMultiplier);
             sectionTop = section.getBoundingClientRect().top + window.scrollY;
             section.style.setProperty('--instay-scroll-length', `${totalScroll}px`);
         }
@@ -638,8 +640,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const canvasWidth = Math.min(toutMax, vw);
                 const startTarget = Math.max(vw, vh) * 1.4;
             endScale = 1.0;
-                startScale = Math.max(1.45, startTarget / canvasWidth); 
-                zoomLength = Math.max(vh * 1.6, (startScale - endScale) * 1100 + vh * 0.25);
+                startScale = Math.max(1.45, startTarget / canvasWidth);
+                const isMobile = vw <= 768;
+                const baseHeight = isMobile ? vh * 0.8 : vh * 1.6;
+                const endPadding = isMobile ? vh * 0.15 : vh * 0.25;
+                zoomLength = Math.max(baseHeight, (startScale - endScale) * 1100 + endPadding);
             stage.style.setProperty('--instay-zoom-length', `${Math.round(zoomLength)}px`);
             stageTop = stage.getBoundingClientRect().top + window.scrollY;
         }
@@ -696,7 +701,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function computeMetrics(sec) {
             const vh = window.innerHeight;
-            sec.scrollLength = Math.max(vh * 1.1, 700);
+            const vw = window.innerWidth;
+            const isMobile = vw <= 768;
+            const mobileHeight = isMobile ? Math.max(vh * 0.6, 400) : Math.max(vh * 1.1, 700);
+            sec.scrollLength = mobileHeight;
             sec.stage.style.setProperty('--instay-crossfade-length', `${Math.round(sec.scrollLength)}px`);
             sec.stageTop = sec.stage.getBoundingClientRect().top + window.scrollY;
         }

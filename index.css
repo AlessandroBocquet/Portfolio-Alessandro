@@ -477,12 +477,15 @@ body.dark-mode .hero-main.pattern-1 {
   background: rgba(161, 161, 161, 0.2);
 }
 @media only screen and (max-width: 768px) {
+  .competence-about {
+    padding-bottom: 1rem;
+  }
   .skills-professional-container {
   margin-top: 1rem;
 
   }
   .skills-header-professional {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     
   }
   .contact-title-wrapper{
