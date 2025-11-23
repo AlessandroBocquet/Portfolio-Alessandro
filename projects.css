@@ -483,7 +483,6 @@ html, body {
   }
   
   .project-media-wide {
-    margin-top:1rem;
   }
   
   .prototype-cta {
@@ -493,7 +492,7 @@ html, body {
 
 .project-media-wide {
   width: 100%;
-  margin-top: 2rem;
+
 }
 
 .project-image-wide {
