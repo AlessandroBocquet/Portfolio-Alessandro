@@ -1,0 +1,8 @@
+# Force le bon type MIME pour les fichiers XML
+AddType application/xml .xml
+AddType text/xml .xml
+
+# Empêche OVH de renvoyer du text/html pour sitemap
+<FilesMatch "\.xml$">
+    ForceType application/xml
+</FilesMatch>
