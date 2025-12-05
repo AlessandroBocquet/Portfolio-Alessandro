@@ -1178,7 +1178,7 @@ header #menu.sticky a {
 }
 
 .hero-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .hero-card:hover::before {
@@ -1249,7 +1249,7 @@ header #menu.sticky a {
 }
 
 .hero-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 @media only screen and (max-width: 1024px) {
