@@ -42,6 +42,20 @@ function initDarkModeToggle() {
             }
         }
     });
+    
+    window.addEventListener('storage', (e) => {
+        if (e.key === 'theme') {
+            const body = document.body;
+            const html = document.documentElement;
+            if (e.newValue === 'dark') {
+                body.classList.add('dark-mode');
+                html.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                html.classList.remove('dark-mode');
+            }
+        }
+    });
 }
 
 function syncDarkModeToggleScroll() {
