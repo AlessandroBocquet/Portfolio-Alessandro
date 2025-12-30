@@ -142,4 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
             await window.translationManager.changeLanguage(language);
         }
     };
+    
+    window.addEventListener('storage', (e) => {
+        if (e.key === 'preferred-language' && e.newValue) {
+            if (window.translationManager && e.newValue !== window.translationManager.currentLanguage) {
+                window.translationManager.changeLanguage(e.newValue);
+            }
+        }
+    });
 });
