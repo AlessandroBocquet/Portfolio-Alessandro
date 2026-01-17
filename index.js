@@ -10,7 +10,6 @@
     }
 })();
 
-// Dark Mode Toggle 
 function toggleDarkMode() {
     const body = document.body;
     const html = document.documentElement;
@@ -26,7 +25,6 @@ function initDarkModeToggle() {
         toggle.addEventListener('click', toggleDarkMode);
     }
     
-    // Thing for the userpreference to be saved
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     mediaQuery.addEventListener('change', (e) => {
         const savedTheme = localStorage.getItem('theme');
@@ -97,7 +95,6 @@ function syncDarkModeToggleScroll() {
 (function warmupCaseStudyAssets() {
     if (!document.querySelector('.hero-main')) return;
     const urls = [
-        // InStay critical images
         '/assets/InstayAssets/tvanimation/Try.webp',
         '/assets/InstayAssets/beforeafter/after.webp',
         '/assets/InstayAssets/beforeafter/after2.webp',
@@ -411,7 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         updateCursorPosition(correspondingLink);
                     }
                 }
-            }, 100); 
+            }, 100);
         });
         setTimeout(() => {
             const hash = window.location.hash;
@@ -617,7 +614,6 @@ document.addEventListener('DOMContentLoaded', function() {
         scheduleDepthUpdate();
     })();
 
-    // InStay zoom 
     (function initInStayZoomSection() {
         const stage = document.querySelector('.instay-zoom-stage');
         const pin = stage?.querySelector('.instay-zoom-pin');
@@ -783,15 +779,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return shuffled;
     }
-
-    // Hero section - pattern removed, using CSS-only lines
 });
 document.addEventListener('DOMContentLoaded', function() {
     const currentYearElement = document.getElementById('current-year');
     const currentYear = new Date().getFullYear();
     currentYearElement.textContent = currentYear;
     
-    // Hero card zoom effect
     const heroCards = document.querySelectorAll('.hero-card');
     heroCards.forEach(card => {
         const bgImage = window.getComputedStyle(card).backgroundImage;
@@ -800,7 +793,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Planetarium Phone Scroll-Jacking
     (function initPlanetariumPhone() {
         const stage = document.querySelector('.planetarium-phone-stage');
         if (!stage) return;
