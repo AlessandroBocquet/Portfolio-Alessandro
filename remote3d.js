@@ -210,9 +210,14 @@
       );
     };
 
+    // Start loading models immediately for better user experience
+    // Models will be ready by the time user scrolls to the section
+    loadModels();
+
+    // Fallback observer in case immediate load fails
     const observerOptions = {
       root: null,
-      rootMargin: '1000px 0px',
+      rootMargin: '5000px 0px',
       threshold: 0
     };
 
@@ -226,14 +231,6 @@
     }, observerOptions);
 
     observer.observe(wrapper);
-
-    setTimeout(() => {
-      const rect = wrapper.getBoundingClientRect();
-      if (rect.top < window.innerHeight + 1500 && !modelsLoaded) {
-        loadModels();
-        observer.disconnect();
-      }
-    }, 500);
 
     function handleScroll() {
       if (!modelsReady || !scene || !model) return;
@@ -270,8 +267,16 @@
       if (!modelsReady || !model) return;
       if (isMobile) return; 
 
-      const lerpSpeed = 0.1;
+      // Dynamic lerp speed: faster when difference is large (fast scrolling)
+      // This ensures animation keeps up with quick scrolls while staying smooth for slow scrolls
+      const difference = Math.abs(targetScrollProgress - scrollProgress);
+      const lerpSpeed = Math.min(0.3, 0.1 + difference * 0.8); // Range: 0.1 (slow) to 0.3 (fast)
       scrollProgress = lerp(scrollProgress, targetScrollProgress, lerpSpeed);
+      
+      // Snap to target if very close (prevents endless tiny movements)
+      if (difference < 0.001) {
+        scrollProgress = targetScrollProgress;
+      }
 
       const easeInOutCubic = (t) => {
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
