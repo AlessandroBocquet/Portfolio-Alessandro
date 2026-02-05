@@ -1124,6 +1124,50 @@ header #menu.sticky a {
   color: var(--gris);
 }
 
+/* Section Dividers */
+.section-divider {
+  width: 100%;
+  max-width: 950px;
+  margin: 4rem auto 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--skill-border), transparent);
+}
+
+.section-divider::before {
+  background: linear-gradient(90deg, transparent, var(--skill-border));
+}
+
+.section-divider::after {
+  background: linear-gradient(90deg, var(--skill-border), transparent);
+}
+
+.section-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--texte);
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+body.dark-mode .section-category {
+  background: transparent;
+}
+
 /* Enhanced Project Cards */
 .hero-card {
   position: relative;

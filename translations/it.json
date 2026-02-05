@@ -43,6 +43,10 @@
   },
   "featuredProjectsTitle": "Progetti in evidenza",
   "featuredProjectsDesc": "Ecco una selezione dei miei lavori recenti nel design UX/UI e nella creazione visiva",
+  "sections": {
+    "productDesign": "Product Design",
+    "interactionDesign": "Interaction Design"
+  },
   "contact": {
     "title": "Mettiamoci in contatto",
     "description": "Sono sempre disponibile per discutere di nuovi progetti, idee creative e opportunità.",
@@ -241,6 +245,40 @@
     "phone": {
       "text1": "Viaggia dal Sole ai pianeti lontani. Ogni scroll rivela immagini straordinarie e fatti astronomici affascinanti.",
       "text2": "Un'esperienza di apprendimento immersiva che porta le meraviglie dello spazio direttamente a portata di mano."
+    }
+  },
+  "sync": {
+    "projectType": "Design speculativo · Umano-IA · Ecologia",
+    "labels": {
+      "description": "Descrizione",
+      "problem": "Problema:",
+      "solution": "Soluzione:",
+      "duration": "Durata:",
+      "date": "Data:"
+    },
+    "description": "SYNC è un progetto di design speculativo che esplora un'IA più-che-umana per un pianeta vivente. In questo progetto, esploriamo come l'IA possa mediare tra i bisogni degli esseri umani, degli altri esseri viventi e dell'ambiente all'interno di un ecosistema minacciato—co-speculando con l'IA per immaginare futuri rigenerativi.",
+    "problem": "Gli approcci attuali alle sfide ambientali spesso privilegiano i bisogni umani rispetto all'ecosistema più ampio. I sistemi di IA sono tipicamente progettati con obiettivi antropocentrici, trascurando le complesse interdipendenze tra umani, altre specie e sistemi naturali. Gli ecosistemi minacciati richiedono un approccio più olistico che consideri tutti gli attori del mondo vivente.",
+    "solution": "SYNC propone un framework in cui l'IA agisce come mediatrice tra le attività umane e i bisogni ecologici. Co-speculando con l'IA, immaginiamo sistemi in grado di interpretare i segnali ambientali, bilanciare bisogni in competizione e facilitare pratiche rigenerative. Il progetto immagina futuri in cui la tecnologia serve da ponte tra le specie piuttosto che da strumento di dominio.",
+    "durationValue": "X mesi",
+    "dateValue": "2026",
+    "headers": {
+      "prototype": "Prototipo",
+      "credits": "Crediti"
+    },
+    "concept": {
+      "label": "Concetto",
+      "text": "SYNC reimmagina la relazione tra intelligenza artificiale e mondo naturale. Invece di vedere l'IA come uno strumento puramente umano, esploriamo il suo potenziale come mediatore interspecie—un sistema capace di comprendere e bilanciare i bisogni di interi ecosistemi."
+    },
+    "framework": {
+      "label": "Framework speculativo",
+      "text": "Attraverso la co-speculazione con l'IA, abbiamo sviluppato scenari e interfacce che visualizzano come potrebbe operare un'IA più-che-umana. Questi artefatti speculativi ci aiutano a mettere in discussione i paradigmi tecnologici attuali e a immaginare alternative centrate sulla rigenerazione ecologica."
+    },
+    "artifacts": {
+      "label": "Artefatti di design",
+      "text": "Il progetto include una serie di artefatti di design che materializzano la nostra visione speculativa: interfacce, visualizzazioni e prototipi che dimostrano come SYNC potrebbe funzionare all'interno di un ecosistema minacciato."
+    },
+    "credits": {
+      "text": "Progetto realizzato con Ilke Baspinar, Brigitte Guarneri, Simona Invitti, Michelle Mei e Giulia Montelli."
     }
   }
 }
