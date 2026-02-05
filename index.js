@@ -527,18 +527,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 return el.style.position.includes('sticky');
             } catch { return false; }
         })();
-        const useFallback = prefersReduced || !stickySupported;
+        const isMobile = () => window.innerWidth <= 768;
+        const useFallback = prefersReduced || !stickySupported || isMobile();
         if (useFallback) {
             section.classList.add('instay-fallback');
         }
 
         function computeMetrics() {
+            if (isMobile()) return;
             const trackWidth = track.scrollWidth;
             const vw = window.innerWidth;
             maxTranslate = Math.max(0, trackWidth - vw);
             const vh = window.innerHeight;
-            const isMobile = vw <= 768;
-            const mobileMultiplier = isMobile ? 0.15 : 0.35;
+            const mobileMultiplier = 0.35;
             totalScroll = Math.max(vh, maxTranslate + vh * mobileMultiplier);
             sectionTop = section.getBoundingClientRect().top + window.scrollY;
             section.style.setProperty('--instay-scroll-length', `${totalScroll}px`);

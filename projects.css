@@ -684,7 +684,49 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .instay-screen { height: 60vh; }
+  .instay-scroll-gallery {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .instay-scroll-wrapper {
+    padding: 0;
+  }
+  
+  .instay-scroll-wrapper::after {
+    display: none;
+  }
+  
+  .instay-scroll-pin {
+    position: relative;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .instay-scroll-pin::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .instay-scroll-track {
+    transform: none !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .instay-screen {
+    height: 50vh;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+  
+  .instay-screen.is-center {
+    transform: none;
+  }
 }
 
 .instay-scroll-gallery.instay-fallback .instay-scroll-wrapper::after {
@@ -800,7 +842,6 @@ html, body {
   .instay-zoom-stage .instay-zoom-pin { 
     position: relative !important;
     height: auto;
-    min-height: 50vh;
   }
   
   .instay-zoom-stage .instay-zoom-image { 
