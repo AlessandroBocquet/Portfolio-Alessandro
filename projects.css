@@ -482,9 +482,6 @@ html, body {
     margin-top: 0;
   }
   
-  .project-media-wide {
-  }
-  
   .prototype-cta {
     margin-top: 1rem;
   }
@@ -849,7 +846,6 @@ html, body {
     position: relative;
   }
 }
-}
 
 .instay-crossfade-stage {
   width: 100vw;
@@ -963,6 +959,47 @@ html, body {
   margin-bottom: -100vh;
   padding-top: 20vh;
   padding-bottom: 100vh;
+}
+
+/* SYNC full-page OBJ overlay */
+.project-sync .sync-obj-global {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.project-sync .sync-obj-global-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.project-sync .sync-obj-global-text {
+  position: absolute;
+  inset: auto auto 10vh 6vw;
+  max-width: min(520px, 50vw);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-sync .sync-obj-global-text p {
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+  background: linear-gradient(135deg, var(--apple-teal) 0%, var(--apple-cyan) 35%, var(--apple-violet) 70%, var(--apple-purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .project-sync .sync-obj-global {
+    display: none;
+  }
 }
 
 .remote-3d-wrapper {

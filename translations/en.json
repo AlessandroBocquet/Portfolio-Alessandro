@@ -275,11 +275,14 @@
     "description": "SYNC is a speculative design project that explores more-than-human AI for a living planet. In this project, we explore how AI can mediate between the needs of humans, other living beings, and the environment within an endangered ecosystem—co-speculating with AI to imagine regenerative futures.",
     "problem": "Current approaches to environmental challenges often prioritize human needs over the broader ecosystem. AI systems are typically designed with anthropocentric goals, neglecting the complex interdependencies between humans, other species, and natural systems. Endangered ecosystems require a more holistic approach that considers all stakeholders in the living world.",
     "solution": "SYNC proposes a framework where AI acts as a mediator between human activities and ecological needs. By co-speculating with AI, we envision systems that can interpret environmental signals, balance competing needs, and facilitate regenerative practices. The project imagines futures where technology serves as a bridge between species rather than a tool of domination.",
-    "durationValue": "X months",
+    "durationValue": "5 months",
     "dateValue": "2026",
     "headers": {
       "prototype": "Prototype",
       "credits": "Credits"
+    },
+    "obj": {
+      "caption": "A living artifact that evolves as you scroll."
     },
     "concept": {
       "label": "Concept",

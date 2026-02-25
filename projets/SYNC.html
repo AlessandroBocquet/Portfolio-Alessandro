@@ -18,7 +18,7 @@
     <link rel="icon" href="/assets/logoprovisoir.webp">
     <meta property="og:title" content="SYNC">
     <meta property="og:description" content="Exploring how AI can mediate between humans, living beings, and endangered ecosystems to imagine regenerative futures.">
-    <meta property="og:image" content="/assets/SYNCAssets/SYNCThumbnail.webp">
+    <meta property="og:image" content="/assets/SyncAssets/_DSC0847.png">
     <meta property="og:url" content="/projets/SYNC.html">
     <script>
         if (typeof sessionStorage !== 'undefined') {
@@ -26,11 +26,20 @@
         }
     </script>
 </head>
-<body>
+<body class="project-sync">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBDRN7W3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Full-page 3D overlay (SYNC OBJ) -->
+    <div class="sync-obj-global" aria-hidden="true">
+        <canvas class="sync-obj-global-canvas"></canvas>
+        <div class="sync-obj-global-text">
+            <p data-translate="sync.obj.caption">A living artifact that evolves as you scroll.</p>
+        </div>
+    </div>
+
     <section class="inside">
         <div class="tout">
             <header class="sticky">
@@ -67,7 +76,7 @@
                     </header>
                     <div class="full-bleed-center">
                         <figure class="project-thumbnail-large">
-                            <img src="/assets/SYNCAssets/SYNCThumbnail.webp" alt="SYNC hero thumbnail">
+                            <img src="/assets/SyncAssets/_DSC0847.png" alt="SYNC hero thumbnail">
                         </figure>
                     </div>
                     
@@ -90,7 +99,7 @@
                         <div class="brief-row">
                             <div class="brief-cell">
                                 <div class="brief-media">
-                                    <img src="/assets/SYNCAssets/ProjectImage1.webp" alt="SYNC presentation image" class="brief-image">
+                                    <img src="/assets/SyncAssets/_DSC0788.JPG" alt="SYNC presentation image" class="brief-image">
                                 </div>
                             </div>
                             <div class="brief-cell">
@@ -103,7 +112,7 @@
                         <div class="brief-row">
                             <div class="brief-cell">
                                 <div class="brief-label" data-translate="sync.labels.duration">Duration:</div>
-                                <p class="brief-value" data-translate="sync.durationValue">X months</p>
+                                <p class="brief-value" data-translate="sync.durationValue">4 months</p>
                             </div>
                             <div class="brief-cell">
                                 <div class="brief-label" data-translate="sync.labels.date">Date:</div>
@@ -136,7 +145,7 @@
 
                     <!-- Media Section - Image -->
                     <section class="project-media-wide">
-                        <img src="/assets/SYNCAssets/ConceptVisual.webp" alt="SYNC concept visualization" class="project-image-wide">
+                        <img src="/assets/SyncAssets/_DSC0754.png" alt="SYNC concept visualization" class="project-image-wide">
                     </section>
 
                     <!-- Speculative Framework Section -->
@@ -155,7 +164,7 @@
 
                     <!-- Design Artifacts Section -->
                     <section class="project-media-wide">
-                        <img src="/assets/SYNCAssets/DesignArtifacts.webp" alt="SYNC design artifacts" class="project-image-wide">
+                        <img src="/assets/SyncAssets/_DSC0844.png" alt="SYNC design artifacts" class="project-image-wide">
                     </section>
 
                     <section class="ui-section">
@@ -197,5 +206,6 @@
     </section>
     <script src="/translations.js"></script>
     <script src="/index.js"></script>
+    <script src="/sync3d.js"></script>
 </body>
 </html>

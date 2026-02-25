@@ -265,6 +265,9 @@
       "prototype": "Prototipo",
       "credits": "Crediti"
     },
+    "obj": {
+      "caption": "Un artefatto vivente che evolve mentre scorri."
+    },
     "concept": {
       "label": "Concetto",
       "text": "SYNC reimmagina la relazione tra intelligenza artificiale e mondo naturale. Invece di vedere l'IA come uno strumento puramente umano, esploriamo il suo potenziale come mediatore interspecie—un sistema capace di comprendere e bilanciare i bisogni di interi ecosistemi."
